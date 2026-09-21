@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LexCitizen makes India's Constitution easier to understand, one clear explainer at a time." />
+    <title>LexCitizen | Know your rights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="LexCitizen home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Lex<span class="brand-light">Citizen</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a class="active" href="#explore">Explore</a>
+          <a href="#daily">Daily brief</a>
+          <a href="#explore">Browse guides</a>
+        </nav>
+        <button class="icon-button menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <button class="outline-button header-button" id="signInButton">Sign in <span aria-hidden="true">↗</span></button>
+      </header>
+
+      <main id="top">
+        <section class="hero-section" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="kicker"><span class="kicker-line"></span> The citizen's field guide</p>
+            <h1 id="hero-title">The Constitution,<br /><em>made legible.</em></h1>
+            <p class="hero-intro">Understand your rights, duties, and the laws that shape everyday life in India. No legal jargon. Just the context you need.</p>
+            <div class="hero-actions">
+              <a class="solid-button" href="#explore">Start exploring <span aria-hidden="true">→</span></a>
+              <a class="text-button" href="#daily">Read today's brief <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <aside class="hero-note" aria-label="LexCitizen principle">
+            <div class="note-stamp">LEX<br />CITIZEN</div>
+            <p class="note-label">A note from the editor</p>
+            <p class="note-text">“A democracy works best when its people can read the fine print.”</p>
+            <p class="note-meta">Built for curious citizens<br />India · Since 2024</p>
+          </aside>
+        </section>
+
+        <section class="search-strip" id="explore" aria-label="Search legal topics">
+          <div>
+            <p class="section-eyebrow">Find your way in</p>
+            <h2>What do you want to understand?</h2>
+          </div>
+          <label class="search-box" for="searchInput">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Try “freedom of speech” or “Article 21”" autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+        </section>
+
+        <section class="category-row" aria-label="Browse by category">
+          <button class="category active" data-category="all"><span class="category-icon">✦</span><span>All topics</span><small>24</small></button>
+          <button class="category" data-category="rights" id="rightsCategory"><span class="category-icon">◌</span><span>Fundamental rights</span><small>08</small></button>
+          <button class="category" data-category="duties" id="dutiesCategory"><span class="category-icon">✓</span><span>Fundamental duties</span><small>11</small></button>
+          <button class="category" data-category="articles" id="articlesCategory"><span class="category-icon">§</span><span>Key articles</span><small>18</small></button>
+          <button class="category" data-category="amendments" id="amendmentsCategory"><span class="category-icon">↻</span><span>Amendments</span><small>05</small></button>
+          <button class="category" data-category="laws" id="lawsCategory"><span class="category-icon">▤</span><span>Everyday laws</span><small>12</small></button>
+        </section>
+
+        <section class="content-grid" aria-live="polite">
+          <div class="discover-column">
+            <div class="section-heading">
+              <div>
+                <p class="section-eyebrow">Curated for you</p>
+                <h2>Start with the essentials</h2>
+              </div>
+              <span class="result-count" id="resultCount">6 guides</span>
+            </div>
+            <div class="guide-grid" id="guideGrid">
+              <article class="guide-card featured" data-category="rights articles" data-search="article 21 right to life privacy personal liberty fundamental rights">
+                <div class="card-top"><span class="card-tag orange">Fundamental right</span><button class="bookmark" aria-label="Save Article 21" data-save="Article 21">♡</button></div>
+                <div class="card-number">21</div>
+                <h3>Right to life &amp; personal liberty</h3>
+                <p>The constitutional promise behind privacy, dignity, clean air, and so much more.</p>
+                <button class="read-link" data-guide="Article 21: Right to life & personal liberty">Read the explainer <span>→</span></button>
+              </article>
+              <article class="guide-card" data-category="duties" data-search="fundamental duties article 51a citizens responsibility environment national symbols">
+                <div class="card-top"><span class="card-tag green">Fundamental duty</span><button class="bookmark" aria-label="Save Fundamental Duties" data-save="Fundamental Duties">♡</button></div>
+                <div class="card-icon-large green-icon">◈</div>
+                <h3>Your 11 fundamental duties</h3>
+                <p>Rights come with responsibilities. Here is what the Constitution asks of every citizen.</p>
+                <button class="read-link" data-guide="Your 11 fundamental duties">Read the explainer <span>→</span></button>
+              </article>
+              <article class="guide-card" data-category="laws" data-search="consumer protection act law consumer rights complaint refund online shopping">
+                <div class="card-top"><span class="card-tag blue">Everyday law</span><button class="bookmark" aria-label="Save Consumer Protection" data-save="Consumer Protection Act">♡</button></div>
+                <div class="card-icon-large blue-icon">◫</div>
+                <h3>When a purchase goes wrong</h3>
+                <p>A plain-English guide to your rights under the Consumer Protection Act.</p>
+                <button class="read-link" data-guide="When a purchase goes wrong">Read the explainer <span>→</span></button>
+              </article>
+              <article class="guide-card" data-category="amendments" data-search="73rd amendment panchayati raj local government amendment history">
+                <div class="card-top"><span class="card-tag purple">Amendment</span><button class="bookmark" aria-label="Save 73rd Amendment" data-save="73rd Amendment">♡</button></div>
+                <div class="card-icon-large purple-icon">73</div>
+                <h3>The 73rd Amendment</h3>
+                <p>How local government became a constitutional promise in every village.</p>
+                <button class="read-link" data-guide="The 73rd Amendment">Read the explainer <span>→</span></button>
+              </article>
+              <article class="guide-card" data-category="articles rights" data-search="article 14 equality before law equal protection fundamental rights">
+                <div class="card-top"><span class="card-tag orange">Key article</span><button class="bookmark" aria-label="Save Article 14" data-save="Article 14">♡</button></div>
+                <div class="card-number">14</div>
+                <h3>Equality before the law</h3>
+                <p>What equal protection actually means, and where the law draws its lines.</p>
+                <button class="read-link" data-guide="Article 14: Equality before the law">Read the explainer <span>→</span></button>
+              </article>
+              <article class="guide-card" data-category="laws" data-search="right to information RTI public information government transparency application">
+                <div class="card-top"><span class="card-tag blue">Everyday law</span><button class="bookmark" aria-label="Save Right to Information" data-save="Right to Information">♡</button></div>
+                <div class="card-icon-large blue-icon">RTI</div>
+                <h3>Ask the government</h3>
+                <p>How the Right to Information Act helps you find out what public offices know.</p>
+                <button class="read-link" data-guide="Ask the government: Right to Information">Read the explainer <span>→</span></button>
+              </article>
+            </div>
+            <div class="empty-state" id="emptyState" hidden>No guides match that search yet. Try a broader phrase.</div>
+          </div>
+
+          <aside class="sidebar" id="daily">
+            <div class="daily-card">
+              <div class="daily-header"><span class="section-eyebrow">The daily brief</span><span class="date-chip">21 SEP 2026</span></div>
+              <div class="daily-illustration" aria-hidden="true"><span class="sun">☼</span><span class="pillar pillar-one"></span><span class="pillar pillar-two"></span><span class="pillar pillar-three"></span><span class="base"></span></div>
+              <p class="daily-kicker">In two minutes</p>
+              <h2>Why the Preamble still matters</h2>
+              <p class="daily-copy">Justice. Liberty. Equality. Fraternity. Four ideas that quietly set the direction for everything that follows.</p>
+              <button class="dark-button" data-guide="Why the Preamble still matters">Read today's brief <span>→</span></button>
+            </div>
+            <div class="timeline-card">
+              <div class="section-heading compact"><div><p class="section-eyebrow">On the timeline</p><h2>Constitutional moments</h2></div><button class="next-button" aria-label="Next timeline moment">→</button></div>
+              <div class="timeline-item"><span class="timeline-year">1950</span><div><strong>The Constitution comes into force</strong><p>26 January · Republic Day</p></div></div>
+              <div class="timeline-item"><span class="timeline-year">1976</span><div><strong>42nd Amendment</strong><p>“Socialist” and “secular” enter the Preamble</p></div></div>
+            </div>
+          </aside>
+        </section>
+
+      </main>
+      <footer class="site-footer"><span>LexCitizen</span><span>Learn the law. Live your rights.</span><span>India · Open knowledge project</span></footer>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <dialog class="guide-dialog" id="guideDialog"><button class="dialog-close" id="dialogClose" aria-label="Close guide">×</button><p class="section-eyebrow">LexCitizen explainer</p><h2 id="dialogTitle"></h2><p id="dialogBody"></p><div class="dialog-facts"><span><strong>Format</strong>Plain-English guide</span><span><strong>Level</strong>Start here</span></div><button class="solid-button" id="dialogSave">Save to reading list <span>+</span></button></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
