@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign in to your LexCitizen legal education account." />
+    <title>Sign in | LexCitizen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="signin.css" />
+    <script src="signin.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell signin-shell">
+      <header class="site-header signin-header">
+        <a class="brand" href="index.html" aria-label="LexCitizen home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Lex<span class="brand-light">Citizen</span></span>
+        </a>
+        <a class="outline-button header-button" href="index.html">Back to guides <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main class="signin-main">
+        <section class="signin-card" aria-labelledby="signin-title">
+          <div class="signin-aside">
+            <p class="kicker"><span class="kicker-line"></span> Your citizen's field guide</p>
+            <h1>Knowledge is a right.<br /><em>Make it yours.</em></h1>
+            <p class="signin-aside-copy">Continue learning about the Constitution, your rights, and the laws that shape everyday life.</p>
+            <div class="constitutional-mark" aria-hidden="true">
+              <span class="chakra-ring"></span>
+              <span class="mark-caption">JUSTICE · LIBERTY · EQUALITY</span>
+            </div>
+            <p class="aside-footnote">Clear legal learning, for every citizen.</p>
+          </div>
+
+          <div class="signin-panel">
+            <div class="signin-heading">
+              <p class="section-eyebrow">Welcome back</p>
+              <h2 id="signin-title">Sign in to LexCitizen</h2>
+              <p class="panel-intro">Choose your account type to continue.</p>
+            </div>
+
+            <div class="account-tabs" role="tablist" aria-label="Account type">
+              <button class="account-tab active" id="userTab" type="button" role="tab" aria-selected="true" aria-controls="loginForm" data-mode="user">User</button>
+              <button class="account-tab" id="adminTab" type="button" role="tab" aria-selected="false" aria-controls="loginForm" data-mode="admin">Admin</button>
+            </div>
+
+            <div class="portal-notice" id="portalNotice" hidden>
+              <span class="portal-symbol" aria-hidden="true">§</span>
+              <span><strong>Administrator Portal</strong><small>Authorized personnel only.</small></span>
+            </div>
+
+            <p class="form-message" id="formMessage" role="status" aria-live="polite" hidden></p>
+
+            <form id="loginForm" novalidate>
+              <div class="form-field">
+                <label for="identityInput" id="identityLabel">Email address</label>
+                <input id="identityInput" name="identity" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-describedby="identityError" required />
+                <small class="field-error" id="identityError"></small>
+              </div>
+              <div class="form-field">
+                <label for="passwordInput">Password</label>
+                <div class="password-control">
+                  <input id="passwordInput" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" aria-describedby="passwordError" required />
+                  <button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+                </div>
+                <small class="field-error" id="passwordError"></small>
+              </div>
+
+              <div class="form-options">
+                <label class="remember-option" for="rememberMe"><input id="rememberMe" name="remember" type="checkbox" /> <span>Remember me</span></label>
+                <a class="subtle-link" id="forgotPasswordLink" href="#forgot-password">Forgot password?</a>
+              </div>
+
+              <button class="solid-button signin-submit" id="submitButton" type="submit">
+                <span id="submitLabel">Sign in</span><span class="submit-arrow" aria-hidden="true">→</span>
+              </button>
+            </form>
+
+            <div class="demo-note">
+              <p class="demo-note-title">Prototype demo access</p>
+              <p id="demoCredentials">Email: learner@lexcitizen.demo<br />Password: CitizenDemo1!</p>
+              <small>Demo only. This browser-only prototype does not provide secure authentication.</small>
+            </div>
+
+            <p class="create-account">New to LexCitizen? <a class="subtle-link" id="createAccountLink" href="#create-account">Create account</a></p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer signin-footer">
+        <span>LexCitizen</span><span>Learn the law. Live your rights.</span><span>India · Open knowledge project</span>
+      </footer>
+    </div>
+  </body>
+</html>

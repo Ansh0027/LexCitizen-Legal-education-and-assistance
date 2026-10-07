@@ -98,7 +98,6 @@ dialog.addEventListener('click', (event) => {
   if (event.target === dialog) dialog.close();
 });
 
-document.querySelector('#signInButton').addEventListener('click', () => showToast('Sign in is ready for the next release.'));
 const menuButton = document.querySelector('#menuButton');
 menuButton.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') === 'true';
