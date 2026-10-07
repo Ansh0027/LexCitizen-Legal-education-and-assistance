@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="LexCitizen administrator dashboard prototype." />
+    <meta name="description" content="Manage LexCitizen account requests and review reading activity." />
     <title>Administrator portal | LexCitizen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="signin.css" />
+    <link rel="stylesheet" href="contributions.css" />
+    <script src="admin.js" defer></script>
   </head>
   <body>
     <div class="app-shell signin-shell">
@@ -17,13 +19,33 @@
         <a class="brand" href="index.html" aria-label="LexCitizen home">
           <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Lex<span class="brand-light">Citizen</span></span>
         </a>
-        <a class="outline-button header-button" href="signin.html">Sign out <span aria-hidden="true">↗</span></a>
+        <button class="outline-button" id="adminLogout" type="button">Sign out ↗</button>
       </header>
       <main class="prototype-dashboard">
-        <p class="section-eyebrow">Authorized personnel · Prototype</p>
+        <p class="section-eyebrow">Authorized personnel</p>
         <h1>Administrator<br /><em>Portal.</em></h1>
-        <p>This is the future landing page for LexCitizen administrators.</p>
-        <div class="dashboard-notice"><strong>Demo portal only</strong><br />This browser-only prototype does not verify administrator identity or provide protected access. Connect a secure backend with role-based authorization before using real admin functions.</div>
+        <p id="adminGreeting">Checking administrator session…</p>
+        <div class="admin-overview" id="adminOverview" hidden></div>
+        <p class="library-message" id="adminMessage" role="status" aria-live="polite" hidden></p>
+        <section class="admin-section" aria-labelledby="approvalHeading">
+          <div class="section-heading"><div><p class="section-eyebrow">Review new account requests</p><h2 id="approvalHeading">Approval queue</h2></div><span class="result-count" id="pendingCount"></span></div>
+          <div class="admin-request-list" id="pendingAccounts"></div>
+          <p class="admin-empty" id="noPendingAccounts" hidden>There are no account requests waiting for review.</p>
+        </section>
+        <section class="admin-section" aria-labelledby="accountHeading">
+          <div class="section-heading"><div><p class="section-eyebrow">Account activity</p><h2 id="accountHeading">Accounts</h2></div><span class="result-count" id="accountCount"></span></div>
+          <div class="admin-account-list" id="accountList"></div>
+        </section>
+        <section class="admin-section" aria-labelledby="editorialHeading">
+          <div class="section-heading"><div><p class="section-eyebrow">Verify sources before publishing</p><h2 id="editorialHeading">Editorial review queue</h2></div><span class="result-count" id="editorialQueueCount"></span></div>
+          <p class="editorial-guidance">Check citations and official proof. Edit the final public title, summary, topic, citation, and article text before publishing. A rejection reason is returned privately to the contributor.</p>
+          <div class="editorial-queue" id="editorialQueue"></div>
+          <p class="admin-empty" id="noEditorialSubmissions" hidden>There are no legal-content proposals to review.</p>
+        </section>
+        <section class="admin-section" aria-labelledby="materialHeading">
+          <div class="section-heading"><div><p class="section-eyebrow">Articles and case notes</p><h2 id="materialHeading">Reading library</h2></div><span class="result-count" id="adminMaterialCount"></span></div>
+          <div class="admin-material-list" id="adminMaterials"></div>
+        </section>
         <div class="dashboard-actions">
           <a class="solid-button" href="index.html">Return to LexCitizen <span aria-hidden="true">→</span></a>
           <a class="text-button" href="signin.html">Return to sign in <span aria-hidden="true">↗</span></a>

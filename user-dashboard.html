@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="LexCitizen learner dashboard prototype." />
+    <meta name="description" content="Your saved LexCitizen readings and learning progress." />
     <title>Your learning dashboard | LexCitizen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="signin.css" />
+    <link rel="stylesheet" href="contributions.css" />
+    <script src="library.js" defer></script>
   </head>
   <body>
     <div class="app-shell signin-shell">
@@ -17,17 +19,111 @@
         <a class="brand" href="index.html" aria-label="LexCitizen home">
           <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Lex<span class="brand-light">Citizen</span></span>
         </a>
-        <a class="outline-button header-button" href="signin.html">Sign out <span aria-hidden="true">↗</span></a>
+        <nav class="dashboard-nav" aria-label="Account navigation">
+          <a href="index.html">Explore guides</a>
+          <button class="outline-button" id="logoutButton" type="button">Sign out</button>
+        </nav>
       </header>
-      <main class="prototype-dashboard">
-        <p class="section-eyebrow">Learner space · Prototype</p>
-        <h1>Your learning,<br /><em>all in one place.</em></h1>
-        <p>This is the future home for your saved rights, duties, constitutional articles, and legal learning progress.</p>
-        <div class="dashboard-notice"><strong>Demo dashboard</strong><br />This prototype sign-in is not connected to an account service. Personalised data and protected access will require a secure backend.</div>
-        <div class="dashboard-actions">
-          <a class="solid-button" href="index.html#explore">Explore legal guides <span aria-hidden="true">→</span></a>
-          <a class="text-button" href="signin.html">Return to sign in <span aria-hidden="true">↗</span></a>
-        </div>
+      <main class="library-dashboard">
+        <section class="library-welcome">
+          <p class="section-eyebrow">Your learner space</p>
+          <h1>Keep learning,<br /><em>at your own pace.</em></h1>
+          <p id="accountGreeting">Your saved readings and progress, together in one place.</p>
+        </section>
+        <p class="library-message" id="libraryMessage" role="status" aria-live="polite" hidden></p>
+        <section class="continue-section" aria-labelledby="continueTitle">
+          <div class="section-heading">
+            <div><p class="section-eyebrow">Pick up where you left off</p><h2 id="continueTitle">Continue reading</h2></div>
+          </div>
+          <div class="continue-reading" id="continueReading"><p>Loading your reading progress…</p></div>
+        </section>
+        <section class="saved-section" aria-labelledby="savedTitle">
+          <div class="section-heading">
+            <div><p class="section-eyebrow">Your personal reading list</p><h2 id="savedTitle">Saved readings</h2></div>
+            <span class="result-count" id="savedCount"></span>
+          </div>
+          <div class="library-grid" id="savedReadings"></div>
+          <p class="library-empty" id="savedEmpty" hidden>No saved readings yet. Explore a guide and select “Save to reading list” to keep it here.</p>
+        </section>
+        <section class="contribution-section" aria-labelledby="contributionTitle">
+          <div class="section-heading">
+            <div><p class="section-eyebrow">Help keep legal learning accurate</p><h2 id="contributionTitle">Suggest an update</h2></div>
+          </div>
+          <p class="contribution-intro">Suggest a correction, a new explainer, or a judicial decision update. Include a reliable citation and source link so our editors can verify it. Nothing is published until an administrator reviews and edits the final version.</p>
+          <p class="contribution-message" id="contributionMessage" role="status" aria-live="polite" hidden></p>
+          <form class="contribution-form" id="contributionForm">
+            <div class="contribution-field">
+              <label for="requestType">What would you like to suggest?</label>
+              <select id="requestType" name="requestType" required>
+                <option value="correction">Correct or update an existing reading</option>
+                <option value="judicial_update">Share a judicial decision or court update</option>
+                <option value="new_article">Suggest a new legal education article</option>
+              </select>
+            </div>
+            <div class="contribution-field" id="targetMaterialField">
+              <label for="targetMaterial">Existing reading</label>
+              <select id="targetMaterial" name="targetMaterialSlug"></select>
+            </div>
+            <div class="contribution-field">
+              <label for="proposalTitle">Proposed headline</label>
+              <input id="proposalTitle" name="title" maxlength="180" required placeholder="A clear, specific headline" />
+            </div>
+            <div class="contribution-field">
+              <label for="proposalCategory">Topic</label>
+              <select id="proposalCategory" name="category" required>
+                <option>Fundamental rights</option>
+                <option>Fundamental duties</option>
+                <option>Constitutional amendments</option>
+                <option>Constitutional theory</option>
+                <option>Everyday laws</option>
+                <option>Law and research</option>
+                <option>Judicial decisions</option>
+              </select>
+            </div>
+            <div class="contribution-field contribution-field-full">
+              <label for="proposalExcerpt">Short summary</label>
+              <textarea id="proposalExcerpt" name="excerpt" rows="2" maxlength="400" required placeholder="Summarise the proposed correction or update"></textarea>
+            </div>
+            <div class="contribution-field contribution-field-full">
+              <label for="proposalBody">Proposed legal information</label>
+              <textarea id="proposalBody" name="proposedBody" rows="7" maxlength="20000" minlength="80" required placeholder="Explain the information in your own words. Include the relevant facts and why it matters."></textarea>
+            </div>
+            <div class="contribution-field contribution-field-full">
+              <label for="proposalCitation">Proof: exact legal citation <span>(required)</span></label>
+              <input id="proposalCitation" name="citation" maxlength="1000" required placeholder="For example, case name, court, date and neutral citation or statute and section" />
+            </div>
+            <div class="contribution-field contribution-field-full">
+              <label for="proposalSourceUrl">Official source URL <span>(required)</span></label>
+              <input id="proposalSourceUrl" name="sourceUrl" type="url" maxlength="2048" required placeholder="https://..." />
+              <small>Prefer official court, government, legislature, or gazette sources.</small>
+            </div>
+            <div class="contribution-field contribution-field-full">
+              <label for="proposalEvidence">Supporting document <span>(optional)</span></label>
+              <input id="proposalEvidence" name="evidence" type="file" accept=".pdf,.txt,.png,.jpg,.jpeg,application/pdf,text/plain,image/png,image/jpeg" />
+              <small>One PDF, text file, PNG, or JPEG, up to 5 MB. Do not upload personal or confidential information.</small>
+            </div>
+            <div class="contribution-submit">
+              <button class="solid-button" type="submit" id="submitContribution">Send for editorial review <span aria-hidden="true">→</span></button>
+              <small>Editors verify sources and decide what, if anything, is published. Submitting does not guarantee publication.</small>
+            </div>
+          </form>
+        </section>
+        <section class="my-submissions-section" aria-labelledby="mySubmissionsTitle">
+          <div class="section-heading">
+            <div><p class="section-eyebrow">Follow your proposals</p><h2 id="mySubmissionsTitle">My submissions</h2></div>
+          </div>
+          <div class="my-submissions-list" id="mySubmissions"></div>
+          <p class="library-empty" id="noSubmissions" hidden>You have not submitted any reading suggestions yet.</p>
+        </section>
+        <section class="explore-library" aria-labelledby="libraryTitle">
+          <div class="section-heading">
+            <div><p class="section-eyebrow">Rights · law · research · decisions</p><h2 id="libraryTitle">Reading library</h2></div>
+            <span class="result-count" id="materialCount"></span>
+          </div>
+          <label class="library-search" for="librarySearch"><span aria-hidden="true">⌕</span><input id="librarySearch" type="search" placeholder="Search articles, rights, research…" /></label>
+          <div class="library-filters" id="libraryFilters" aria-label="Filter reading library"></div>
+          <div class="library-grid" id="allReadings"></div>
+        </section>
       </main>
       <footer class="site-footer signin-footer"><span>LexCitizen</span><span>Learn the law. Live your rights.</span><span>India · Open knowledge project</span></footer>
     </div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Read and save legal education materials on LexCitizen." />
+    <title>Reading | LexCitizen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="signin.css" />
+    <script src="reader.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell signin-shell">
+      <header class="site-header signin-header">
+        <a class="brand" href="index.html" aria-label="LexCitizen home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Lex<span class="brand-light">Citizen</span></span>
+        </a>
+        <nav class="dashboard-nav" aria-label="Reading navigation">
+          <a href="user-dashboard.html">My library</a>
+          <button class="outline-button" id="readerLogout" type="button">Sign out</button>
+        </nav>
+      </header>
+      <main class="reader-page" id="readerPage">
+        <a class="back-link" href="index.html">← Back to LexCitizen</a>
+        <p class="section-eyebrow" id="readerCategory">Loading your reading…</p>
+        <h1 id="readerTitle"></h1>
+        <p class="reader-excerpt" id="readerExcerpt"></p>
+        <div class="reader-toolbar">
+          <span id="readerProgressLabel">Progress saved to your account</span>
+          <button class="library-save-button" id="readerSave" type="button" aria-pressed="false">Save reading</button>
+        </div>
+        <article class="reader-body" id="readerBody"></article>
+        <aside class="reader-source"><strong>For further reading</strong><p id="readerSource"></p><a id="readerSourceLink" target="_blank" rel="noopener noreferrer">Open source ↗</a></aside>
+        <p class="reader-disclaimer">LexCitizen materials are for general educational purposes and are not legal advice. Verify current law and consult a qualified professional about a specific matter.</p>
+        <div class="reader-end"><a class="solid-button" href="index.html">Explore LexCitizen <span aria-hidden="true">→</span></a></div>
+        <p class="reader-message" id="readerMessage" role="status" aria-live="polite" hidden></p>
+      </main>
+      <footer class="site-footer signin-footer"><span>LexCitizen</span><span>Learn the law. Live your rights.</span><span>India · Open knowledge project</span></footer>
+    </div>
+  </body>
+</html>

@@ -63,10 +63,16 @@
               <div class="form-field">
                 <label for="passwordInput">Password</label>
                 <div class="password-control">
-                  <input id="passwordInput" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" aria-describedby="passwordError" required />
+                  <input id="passwordInput" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" aria-describedby="passwordError" minlength="10" required />
                   <button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
                 </div>
                 <small class="field-error" id="passwordError"></small>
+              </div>
+
+              <div class="form-field" id="confirmPasswordField" hidden>
+                <label for="confirmPasswordInput">Confirm password</label>
+                <input id="confirmPasswordInput" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Enter your password again" aria-describedby="confirmPasswordError" minlength="10" />
+                <small class="field-error" id="confirmPasswordError"></small>
               </div>
 
               <div class="form-options">
@@ -80,12 +86,12 @@
             </form>
 
             <div class="demo-note">
-              <p class="demo-note-title">Prototype demo access</p>
-              <p id="demoCredentials">Email: learner@lexcitizen.demo<br />Password: CitizenDemo1!</p>
-              <small>Demo only. This browser-only prototype does not provide secure authentication.</small>
+              <p class="demo-note-title">Your reading, kept in your account</p>
+              <p>Save legal explainers and pick up where you left off on your next visit.</p>
+              <small>Your password is securely hashed by the LexCitizen server and is never stored as readable text.</small>
             </div>
 
-            <p class="create-account">New to LexCitizen? <a class="subtle-link" id="createAccountLink" href="#create-account">Create account</a></p>
+            <p class="create-account" id="accountModePrompt">New to LexCitizen? <a class="subtle-link" id="createAccountLink" href="#create-account">Create account</a></p>
           </div>
         </section>
       </main>

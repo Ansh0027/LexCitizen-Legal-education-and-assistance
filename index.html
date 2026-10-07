@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contributions.css" />
   </head>
   <body>
     <div class="app-shell">
@@ -21,6 +22,7 @@
           <a class="active" href="#explore">Explore</a>
           <a href="#daily">Daily brief</a>
           <a href="#explore">Browse guides</a>
+          <a href="#communityUpdates">Verified updates</a>
           <a class="mobile-nav-signin" href="signin.html">Sign in</a>
         </nav>
         <button class="icon-button menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -139,12 +141,19 @@
             </div>
           </aside>
         </section>
+        <section class="community-updates" id="communityUpdates" aria-labelledby="communityUpdatesTitle" hidden>
+          <div class="section-heading">
+            <div><p class="section-eyebrow">Reader contributions · editor verified</p><h2 id="communityUpdatesTitle">Verified community updates</h2></div>
+          </div>
+          <p class="community-updates-intro">These corrections and legal updates were checked and published by the LexCitizen editorial team. Read the evidence-linked explainer for each update.</p>
+          <div class="community-update-grid" id="communityUpdateGrid"></div>
+        </section>
 
       </main>
       <footer class="site-footer"><span>LexCitizen</span><span>Learn the law. Live your rights.</span><span>India · Open knowledge project</span></footer>
     </div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <dialog class="guide-dialog" id="guideDialog"><button class="dialog-close" id="dialogClose" aria-label="Close guide">×</button><p class="section-eyebrow">LexCitizen explainer</p><h2 id="dialogTitle"></h2><p id="dialogBody"></p><div class="dialog-facts"><span><strong>Format</strong>Plain-English guide</span><span><strong>Level</strong>Start here</span></div><button class="solid-button" id="dialogSave">Save to reading list <span>+</span></button></dialog>
+    <dialog class="guide-dialog" id="guideDialog"><button class="dialog-close" id="dialogClose" aria-label="Close guide">×</button><p class="section-eyebrow">LexCitizen explainer</p><h2 id="dialogTitle"></h2><p id="dialogBody"></p><div class="dialog-facts"><span><strong>Format</strong>Plain-English guide</span><span><strong>Level</strong>Start here</span></div><a class="solid-button" id="openFullArticle" href="signin.html">Open full reading <span>→</span></a><button class="solid-button" id="dialogSave">Save to reading list <span>+</span></button></dialog>
     <script src="app.js"></script>
   </body>
 </html>

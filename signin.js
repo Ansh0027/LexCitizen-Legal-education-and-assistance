@@ -8,17 +8,18 @@ if (loginForm) {
   const formMessage = document.querySelector('#formMessage');
   const identityError = document.querySelector('#identityError');
   const passwordError = document.querySelector('#passwordError');
+  const confirmPasswordInput = document.querySelector('#confirmPasswordInput');
+  const confirmPasswordError = document.querySelector('#confirmPasswordError');
+  const confirmPasswordField = document.querySelector('#confirmPasswordField');
   const submitButton = document.querySelector('#submitButton');
   const submitLabel = document.querySelector('#submitLabel');
   const portalNotice = document.querySelector('#portalNotice');
-  const demoCredentials = document.querySelector('#demoCredentials');
+  const forgotPasswordLink = document.querySelector('#forgotPasswordLink');
+  const accountModePrompt = document.querySelector('#accountModePrompt');
+  const adminTab = document.querySelector('#adminTab');
   const tabs = document.querySelectorAll('.account-tab');
   let loginMode = 'user';
-
-  const demoAccounts = {
-    user: { identity: 'learner@lexcitizen.demo', password: 'CitizenDemo1!' },
-    admin: { identity: 'admin@lexcitizen.demo', username: 'admin', password: 'AdminDemo1!' },
-  };
+  let registrationMode = false;
 
   function showMessage(message, type) {
     formMessage.textContent = message;
@@ -27,31 +28,76 @@ if (loginForm) {
   }
 
   function clearErrors() {
-    identityError.textContent = '';
-    passwordError.textContent = '';
-    identityInput.removeAttribute('aria-invalid');
-    passwordInput.removeAttribute('aria-invalid');
+    [identityError, passwordError, confirmPasswordError].forEach((error) => { error.textContent = ''; });
+    [identityInput, passwordInput, confirmPasswordInput].forEach((input) => input.removeAttribute('aria-invalid'));
     formMessage.hidden = true;
     formMessage.textContent = '';
   }
 
   function setMode(mode) {
     loginMode = mode;
+    registrationMode = false;
     const isAdmin = mode === 'admin';
     tabs.forEach((tab) => {
       const selected = tab.dataset.mode === mode;
       tab.classList.toggle('active', selected);
       tab.setAttribute('aria-selected', String(selected));
     });
+    document.querySelector('.account-tabs').classList.remove('registering');
+    adminTab.hidden = false;
     identityLabel.textContent = isAdmin ? 'Admin email or username' : 'Email address';
     identityInput.type = isAdmin ? 'text' : 'email';
     identityInput.inputMode = isAdmin ? 'text' : 'email';
     identityInput.autocomplete = isAdmin ? 'username' : 'email';
     identityInput.placeholder = isAdmin ? 'Admin email or username' : 'you@example.com';
-    document.querySelector('#submitLabel').textContent = isAdmin ? 'Admin sign in' : 'Sign in';
+    identityInput.setAttribute('aria-label', identityLabel.textContent);
+    passwordInput.autocomplete = 'current-password';
+    passwordInput.placeholder = 'Enter your password';
+    confirmPasswordField.hidden = true;
+    confirmPasswordInput.required = false;
+    forgotPasswordLink.hidden = false;
     portalNotice.hidden = !isAdmin;
-    const demo = demoAccounts[mode];
-    demoCredentials.textContent = `Email / username: ${demo.identity}${demo.username ? ` / ${demo.username}` : ''}\nPassword: ${demo.password}`;
+    document.querySelector('#signin-title').textContent = isAdmin ? 'Administrator sign in' : 'Sign in to LexCitizen';
+    document.querySelector('.panel-intro').textContent = isAdmin
+      ? 'Sign in to the administrator portal.'
+      : 'Choose your account type to continue.';
+    submitLabel.textContent = isAdmin ? 'Admin sign in' : 'Sign in';
+    accountModePrompt.innerHTML = 'New to LexCitizen? <a class="subtle-link" id="createAccountLink" href="#create-account">Create account</a>';
+    document.querySelector('#createAccountLink').addEventListener('click', beginRegistration);
+    clearErrors();
+  }
+
+  function beginRegistration(event) {
+    event.preventDefault();
+    registrationMode = true;
+    document.querySelector('.account-tabs').classList.add('registering');
+    loginMode = 'user';
+    tabs.forEach((tab) => {
+      const selected = tab.dataset.mode === 'user';
+      tab.classList.toggle('active', selected);
+      tab.setAttribute('aria-selected', String(selected));
+    });
+    adminTab.hidden = true;
+    portalNotice.hidden = true;
+    identityLabel.textContent = 'Email address';
+    identityInput.type = 'email';
+    identityInput.inputMode = 'email';
+    identityInput.autocomplete = 'email';
+    identityInput.placeholder = 'you@example.com';
+    identityInput.setAttribute('aria-label', 'Email address');
+    passwordInput.autocomplete = 'new-password';
+    passwordInput.placeholder = 'Create a password';
+    confirmPasswordField.hidden = false;
+    confirmPasswordInput.required = true;
+    forgotPasswordLink.hidden = true;
+    document.querySelector('#signin-title').textContent = 'Create your account';
+    document.querySelector('.panel-intro').textContent = 'Save readings and continue where you left off.';
+    submitLabel.textContent = 'Create account';
+    accountModePrompt.innerHTML = 'Already have an account? <a class="subtle-link" id="signInLink" href="#sign-in">Sign in</a>';
+    document.querySelector('#signInLink').addEventListener('click', (signInEvent) => {
+      signInEvent.preventDefault();
+      setMode('user');
+    });
     clearErrors();
   }
 
@@ -71,28 +117,38 @@ if (loginForm) {
       valid = false;
     }
 
-    if (!password) {
-      passwordError.textContent = 'Enter your password.';
+    if (typeof password !== 'string' || password.length < 10 || new TextEncoder().encode(password).length > 72) {
+      passwordError.textContent = 'Use at least 10 characters and no more than 72 UTF-8 bytes.';
       passwordInput.setAttribute('aria-invalid', 'true');
       valid = false;
-    } else if (password.length < 8 || !/[A-Za-z]/.test(password) || !/[0-9]/.test(password)) {
-      passwordError.textContent = 'Use at least 8 characters, including a letter and a number.';
+    } else if (!/[A-Za-z]/.test(password) || !/[0-9]/.test(password)) {
+      passwordError.textContent = 'Use a password with at least one letter and one number.';
       passwordInput.setAttribute('aria-invalid', 'true');
+      valid = false;
+    }
+
+    if (registrationMode && confirmPasswordInput.value !== password) {
+      confirmPasswordError.textContent = 'The passwords do not match.';
+      confirmPasswordInput.setAttribute('aria-invalid', 'true');
       valid = false;
     }
     return valid;
   }
 
-  // TODO: Replace demo authentication with a secure backend API.
-  // Never validate or store production passwords only on the frontend.
-  async function authenticateDemo(identity, password) {
-    const account = demoAccounts[loginMode];
-    const identityMatches = identity.toLowerCase() === account.identity.toLowerCase()
-      || (account.username && identity.toLowerCase() === account.username.toLowerCase());
-    return identityMatches && password === account.password;
+  async function sendRequest(endpoint, body) {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json', 'X-LexCitizen-Request': '1' },
+      body: JSON.stringify(body),
+    });
+    const result = response.status === 204 ? {} : await response.json();
+    if (!response.ok) throw new Error(result.error || 'The request could not be completed.');
+    return result;
   }
 
   tabs.forEach((tab) => tab.addEventListener('click', () => setMode(tab.dataset.mode)));
+  document.querySelector('#createAccountLink').addEventListener('click', beginRegistration);
 
   passwordToggle.addEventListener('click', () => {
     const showPassword = passwordInput.type === 'password';
@@ -113,35 +169,46 @@ if (loginForm) {
     }
 
     submitButton.disabled = true;
-    submitLabel.textContent = 'Signing in…';
+    submitLabel.textContent = registrationMode ? 'Creating account…' : 'Signing in…';
+    let redirecting = false;
     try {
-      const authenticated = await authenticateDemo(identity, password);
-      if (!authenticated) {
-        showMessage('Those demo credentials were not recognised. Check the sample credentials below and try again.', 'error');
+      if (registrationMode) {
+        await sendRequest('/api/auth/register', {
+          email: identity,
+          password,
+          remember: document.querySelector('#rememberMe').checked,
+        });
+        setMode('user');
+        showMessage('Account request submitted. An administrator must approve it before you can sign in.', 'success');
         return;
       }
-      showMessage('Demo sign-in successful. Opening your dashboard…', 'success');
+      const result = await sendRequest('/api/auth/login', {
+        identity,
+        password,
+        mode: loginMode,
+        remember: document.querySelector('#rememberMe').checked,
+      });
+      showMessage('Sign-in successful. Opening your account…', 'success');
+      redirecting = true;
       window.setTimeout(() => {
-        window.location.href = loginMode === 'admin' ? 'admin-dashboard.html' : 'user-dashboard.html';
-      }, 650);
+        const requestedDestination = new URLSearchParams(window.location.search).get('next');
+        const safeReaderDestination = /^reader\.html\?slug=[a-z0-9-]+$/i.test(requestedDestination || '');
+        window.location.href = result.user.role === 'admin'
+          ? 'admin-dashboard.html'
+          : safeReaderDestination ? requestedDestination : 'user-dashboard.html';
+      }, 450);
     } catch (error) {
-      console.error('Sign-in request failed:', error);
-      showMessage('Sign-in could not be completed. Please try again.', 'error');
+      showMessage(error.message || 'Sign-in could not be completed. Please try again.', 'error');
     } finally {
-      if (!formMessage.classList.contains('success')) {
+      if (!redirecting) {
         submitButton.disabled = false;
-        submitLabel.textContent = loginMode === 'admin' ? 'Admin sign in' : 'Sign in';
+        submitLabel.textContent = registrationMode ? 'Create account' : loginMode === 'admin' ? 'Admin sign in' : 'Sign in';
       }
     }
   });
 
-  document.querySelector('#forgotPasswordLink').addEventListener('click', (event) => {
+  forgotPasswordLink.addEventListener('click', (event) => {
     event.preventDefault();
-    showMessage('Password recovery will be available when a secure account service is connected.', 'error');
-  });
-
-  document.querySelector('#createAccountLink').addEventListener('click', (event) => {
-    event.preventDefault();
-    showMessage('Account registration is not enabled in this prototype yet.', 'error');
+    showMessage('Password recovery is not available yet. Contact the site administrator to reset your account.', 'error');
   });
 }
