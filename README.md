@@ -1,4 +1,6 @@
 LexCitizen - Your Legal friend
-Author :-
+<br>
+Author :-<br>
         Ansh Kumar Yadav
+        <br>
         Nikhil Verma
