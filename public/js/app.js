@@ -9,6 +9,31 @@ const dialogTitle = document.querySelector('#dialogTitle');
 const dialogBody = document.querySelector('#dialogBody');
 let activeCategory = 'all';
 let toastTimer;
+document.body.classList.add('reader-motion-ready');
+
+const revealObserver = 'IntersectionObserver' in window
+  ? new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 })
+  : null;
+
+function observeRevealElements(elements) {
+  elements.forEach((element) => {
+    element.classList.add('reveal-on-scroll');
+    if (revealObserver) revealObserver.observe(element);
+    else element.classList.add('is-visible');
+  });
+}
+
+observeRevealElements(document.querySelectorAll(
+  '.hero-preamble, .hero-copy, .hero-note, .search-strip, .category-row, .origin-feature, .guide-card, .daily-card, .timeline-card',
+));
+
 const guideSlugs = {
   'Article 21: Right to life & personal liberty': 'article-21-right-to-life',
   'Your 11 fundamental duties': 'fundamental-duties',
@@ -58,6 +83,7 @@ async function loadCommunityUpdates() {
       card.append(category, title, excerpt, citation, link);
       return card;
     }));
+    observeRevealElements(grid.querySelectorAll('.community-update-card'));
     section.hidden = false;
   } catch (error) {
     console.error('Could not load published community updates:', error);
@@ -157,6 +183,7 @@ function updateGuides() {
     const searchMatch = !query || guide.dataset.search.includes(query);
     const isVisible = categoryMatch && searchMatch;
     guide.classList.toggle('hidden', !isVisible);
+    guide.classList.toggle('is-visible', isVisible);
     if (isVisible) visible += 1;
   });
   resultCount.textContent = `${visible} guide${visible === 1 ? '' : 's'}`;
@@ -200,6 +227,38 @@ document.querySelectorAll('.bookmark').forEach((button) => {
     }
   });
 });
+
+const timelineMoments = [
+  { year: '1950', title: 'The Constitution comes into force', note: '26 January · Republic Day' },
+  { year: '1976', title: '42nd Amendment', note: '“Socialist” and “secular” enter the Preamble' },
+  { year: '1993', title: 'Panchayats gain constitutional status', note: 'Part IX comes into force on 24 April' },
+  { year: '2005', title: 'Right to Information Act', note: 'A framework for access to public records' },
+];
+let timelineOffset = 0;
+const timelineContainer = document.querySelector('#timelineMoments');
+const nextTimelineMoment = document.querySelector('#nextTimelineMoment');
+
+if (timelineContainer && nextTimelineMoment) {
+  nextTimelineMoment.addEventListener('click', () => {
+    timelineOffset = (timelineOffset + 1) % timelineMoments.length;
+    const visibleMoments = [0, 1].map((offset) => timelineMoments[(timelineOffset + offset) % timelineMoments.length]);
+    timelineContainer.replaceChildren(...visibleMoments.map((moment) => {
+      const item = document.createElement('div');
+      item.className = 'timeline-item';
+      const year = document.createElement('span');
+      year.className = 'timeline-year';
+      year.textContent = moment.year;
+      const content = document.createElement('div');
+      const title = document.createElement('strong');
+      title.textContent = moment.title;
+      const note = document.createElement('p');
+      note.textContent = moment.note;
+      content.append(title, note);
+      item.append(year, content);
+      return item;
+    }));
+  });
+}
 
 function openGuide(title) {
   dialogTitle.textContent = title;

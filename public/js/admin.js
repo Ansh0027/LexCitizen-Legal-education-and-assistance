@@ -61,7 +61,11 @@ if (adminMessage) {
     const identity = makeElement('div');
     identity.append(makeElement('h3', '', account.email));
     identity.append(makeElement('p', 'admin-account-meta', `Joined ${formatDate(account.created_at)} · Last login ${formatDate(account.last_login_at)}`));
-    const status = makeElement('span', `admin-status ${account.approval_status}`, account.role === 'admin' ? 'Administrator' : account.approval_status);
+    const status = makeElement(
+      'span',
+      `admin-status ${account.role === 'admin' ? 'admin' : 'approved'}`,
+      account.role === 'admin' ? 'Administrator' : 'Member',
+    );
     heading.append(identity, status);
     card.append(heading);
 
@@ -75,30 +79,11 @@ if (adminMessage) {
     activity.append(makeActivityList('Reading progress', account.reading_progress, (reading) => `${reading.category} · ${reading.position_percent}% read · updated ${formatDate(reading.updated_at)}`));
     card.append(activity);
 
-    if (account.approval_status === 'pending') {
-      card.append(makeDecisionButtons(account.id));
-    }
     return card;
   }
 
-  function makeDecisionButtons(accountId) {
-    const actions = makeElement('div', 'admin-request-actions');
-    const approve = makeElement('button', 'admin-decision approve', 'Approve account');
-    approve.type = 'button';
-    approve.addEventListener('click', () => decideRequest(accountId, 'approve', approve));
-    const reject = makeElement('button', 'admin-decision reject', 'Deny request');
-    reject.type = 'button';
-    reject.addEventListener('click', () => decideRequest(accountId, 'reject', reject));
-    actions.append(approve, reject);
-    return actions;
-  }
-
   function renderAccounts() {
-    const pending = accountRows.filter((account) => account.role === 'user' && account.approval_status === 'pending');
-    document.querySelector('#pendingCount').textContent = `${pending.length} pending`;
     document.querySelector('#accountCount').textContent = `${accountRows.length} accounts`;
-    document.querySelector('#pendingAccounts').replaceChildren(...pending.map(makeAccountCard));
-    document.querySelector('#noPendingAccounts').hidden = pending.length > 0;
     document.querySelector('#accountList').replaceChildren(...accountRows.map(makeAccountCard));
   }
 
@@ -115,7 +100,22 @@ if (adminMessage) {
       card.append(summary);
       card.append(makeElement('p', '', material.excerpt));
       card.append(makeElement('p', 'admin-material-source', `Source: ${material.source}`));
-      material.body.split(/\n\n+/).forEach((paragraph) => card.append(makeElement('p', '', paragraph)));
+      const body = makeElement('div', 'admin-material-body');
+      body.hidden = true;
+      card.append(body);
+      card.addEventListener('toggle', async () => {
+        if (!card.open || card.dataset.bodyLoaded === 'true') return;
+        body.hidden = false;
+        body.append(makeElement('p', '', 'Loading official text...'));
+        try {
+          const result = await apiRequest(`/api/materials/${encodeURIComponent(material.slug)}`);
+          body.replaceChildren(...result.material.body.split(/\n\n+/)
+            .map((paragraph) => makeElement('p', '', paragraph)));
+          card.dataset.bodyLoaded = 'true';
+        } catch (error) {
+          body.replaceChildren(makeElement('p', 'library-message error', error.message));
+        }
+      }, { once: false });
       return card;
     }));
   }
@@ -271,23 +271,6 @@ if (adminMessage) {
     }
   }
 
-  async function decideRequest(accountId, decision, clickedButton) {
-    const buttons = clickedButton.parentElement.querySelectorAll('button');
-    buttons.forEach((button) => { button.disabled = true; });
-    try {
-      await apiRequest(`/api/admin/accounts/${encodeURIComponent(accountId)}/decision`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ decision }),
-      });
-      showAdminMessage(decision === 'approve' ? 'Account request approved. The user can now sign in.' : 'Account request denied.', 'success');
-      await refreshAdminData();
-    } catch (error) {
-      buttons.forEach((button) => { button.disabled = false; });
-      showAdminMessage(error.message);
-    }
-  }
-
   async function refreshAdminData() {
     const [overviewResponse, accountsResponse, materialsResponse, submissionsResponse] = await Promise.all([
       apiRequest('/api/admin/overview'),
@@ -300,7 +283,6 @@ if (adminMessage) {
     overviewElement.replaceChildren();
     [
       ['Accounts', overviewResponse.overview.accounts],
-      ['Pending approvals', overviewResponse.overview.pending_accounts],
       ['Reading materials', overviewResponse.overview.materials],
       ['Saved readings', overviewResponse.overview.saved_readings],
       ['Legal proposals', overviewResponse.overview.pending_proposals],

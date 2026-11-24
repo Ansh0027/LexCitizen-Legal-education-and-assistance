@@ -14,6 +14,7 @@ if (libraryMessage) {
   const categories = ['All topics'];
   let materials = [];
   let library = { saved: [], progress: [] };
+  let learning = { performance: {}, attempts: [], nextOffset: 0, hasMore: false };
   let selectedCategory = 'All topics';
 
   function showLibraryMessage(message, type = 'error') {
@@ -169,6 +170,39 @@ if (libraryMessage) {
     renderAll();
   }
 
+  function renderLearningPerformance() {
+    const performance = learning.performance;
+    document.querySelector('#assessmentCount').textContent = String(performance.attemptCount || 0);
+    document.querySelector('#assessmentAccuracy').textContent = `${performance.overallAccuracy || 0}%`;
+    document.querySelector('#assessmentBest').textContent = `${performance.bestPercentage || 0}%`;
+    const history = document.querySelector('#assessmentHistory');
+    const empty = document.querySelector('#assessmentsEmpty');
+    const loadMore = document.querySelector('#loadMoreAssessments');
+    const titlesBySlug = new Map(materials.map((material) => [material.slug, material.title]));
+    const assessmentLabels = { practice: 'Practice', quiz: 'Quick quiz', test: 'Final test' };
+
+    history.replaceChildren(...learning.attempts.map((attempt) => {
+      const card = document.createElement('article');
+      card.className = 'assessment-history-card';
+      const details = document.createElement('div');
+      const title = document.createElement('h3');
+      title.textContent = titlesBySlug.get(attempt.material_slug) || attempt.material_slug;
+      const meta = document.createElement('p');
+      const completedAt = new Date(attempt.created_at);
+      const dateLabel = Number.isNaN(completedAt.getTime()) ? '' : completedAt.toLocaleString();
+      meta.textContent = `${assessmentLabels[attempt.assessment_type] || 'Assessment'} · ${attempt.score}/${attempt.max_score} correct${dateLabel ? ` · ${dateLabel}` : ''}`;
+      details.append(title, meta);
+
+      const score = document.createElement('strong');
+      score.className = 'assessment-history-score';
+      score.textContent = `${attempt.percentage}%`;
+      card.append(details, score);
+      return card;
+    }));
+    empty.hidden = learning.attempts.length > 0;
+    loadMore.hidden = !learning.hasMore;
+  }
+
   function showContributionMessage(text, type = 'error') {
     contributionMessage.textContent = text;
     contributionMessage.className = `contribution-message ${type}`;
@@ -275,17 +309,20 @@ if (libraryMessage) {
     try {
       const { user } = await apiRequest('/api/auth/me');
       document.querySelector('#accountGreeting').textContent = `Signed in as ${user.email}. Your reading list belongs to your account.`;
-      const [materialResponse, libraryResponse, submissionResponse] = await Promise.all([
+      const [materialResponse, libraryResponse, submissionResponse, learningResponse] = await Promise.all([
         apiRequest('/api/materials'),
         apiRequest('/api/me/library'),
         apiRequest('/api/me/submissions'),
+        apiRequest('/api/me/assessments'),
       ]);
       materials = materialResponse.materials;
       library = libraryResponse;
+      learning = learningResponse;
       renderTargetOptions();
       updateContributionType();
       renderFilters();
       render();
+      renderLearningPerformance();
       renderSubmissions(submissionResponse.submissions);
     } catch (error) {
       if (error.message === 'Not signed in.' || error.message === 'Please sign in to continue.') {
@@ -297,6 +334,21 @@ if (libraryMessage) {
   }
 
   librarySearch.addEventListener('input', renderAll);
+  document.querySelector('#loadMoreAssessments').addEventListener('click', async (event) => {
+    const button = event.currentTarget;
+    button.disabled = true;
+    try {
+      const nextPage = await apiRequest(`/api/me/assessments?offset=${learning.nextOffset}`);
+      learning.attempts.push(...nextPage.attempts);
+      learning.nextOffset = nextPage.nextOffset;
+      learning.hasMore = nextPage.hasMore;
+      renderLearningPerformance();
+    } catch (error) {
+      showLibraryMessage(error.message);
+    } finally {
+      button.disabled = false;
+    }
+  });
   document.querySelector('#logoutButton').addEventListener('click', async () => {
     try {
       await apiRequest('/api/auth/logout', { method: 'POST' });

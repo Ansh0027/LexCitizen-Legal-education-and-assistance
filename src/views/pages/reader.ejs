@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Read and save legal education materials on LexCitizen." />
+    <title>Reading | LexCitizen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/signin.css" />
+    <script src="js/reader.js" defer></script>
+    <link rel="stylesheet" href="css/modern-ui.css" />
+    <link rel="stylesheet" href="css/learning.css" />
+</head>
+  <body>
+    <div class="app-shell signin-shell">
+      <header class="site-header signin-header">
+        <a class="brand" href="index.html" aria-label="LexCitizen home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>Lex<span class="brand-light">Citizen</span></span>
+        </a>
+        <nav class="dashboard-nav" aria-label="Reading navigation">
+          <a href="user-dashboard.html">My library</a>
+          <button class="outline-button" id="readerLogout" type="button">Sign out</button>
+        </nav>
+      </header>
+      <main class="reader-page" id="readerPage">
+        <a class="back-link" href="index.html">← Back to LexCitizen</a>
+        <section class="reader-hero reveal-on-scroll" aria-labelledby="readerTitle">
+          <div class="reader-hero-copy">
+            <p class="section-eyebrow" id="readerCategory">Loading your reading…</p>
+            <h1 id="readerTitle"></h1>
+            <p class="reader-excerpt" id="readerExcerpt"></p>
+            <div class="reader-meta">
+              <span class="reader-meta-icon" aria-hidden="true">◷</span>
+              <span id="readerReadingTime">A short, clear explainer</span>
+              <span class="reader-meta-divider" aria-hidden="true"></span>
+              <span>Plain-language guide</span>
+            </div>
+          </div>
+          <div class="reader-art" aria-hidden="true">
+            <svg viewBox="0 0 300 250" role="presentation">
+              <circle class="reader-art-orbit" cx="156" cy="122" r="95" />
+              <path class="reader-art-page" d="M92 48h91l34 34v120H92z" />
+              <path class="reader-art-fold" d="M183 48v35h34" />
+              <path class="reader-art-line" d="M111 108h72M111 126h87M111 144h62" />
+              <circle class="reader-art-glass" cx="178" cy="150" r="34" />
+              <path class="reader-art-handle" d="m202 176 25 26" />
+              <path class="reader-art-spark" d="M63 77v18m-9-9h18M229 48v13m-7-6h14" />
+              <circle class="reader-art-dot" cx="72" cy="166" r="5" />
+            </svg>
+            <span class="reader-art-caption">LEARN · PRACTICE · TEST</span>
+          </div>
+        </section>
+
+        <nav class="reader-jump-nav" aria-label="On this page">
+          <a href="#readerBody">The explainer</a>
+          <a href="#readerKeyIdeas">Key ideas</a>
+          <a href="#readerCheck">Practice &amp; test</a>
+        </nav>
+
+        <div class="reader-toolbar" aria-label="Reading controls">
+          <div class="reader-progress-copy">
+            <span class="reader-progress-label" id="readerProgressLabel">Your reading progress</span>
+            <div class="reader-progress-track" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span id="readerProgressFill"></span>
+            </div>
+          </div>
+          <div class="reader-toolbar-actions">
+            <div class="reader-font-controls" role="group" aria-label="Text size">
+              <button id="readerTextSmaller" type="button" aria-label="Decrease text size">A−</button>
+              <button id="readerTextLarger" type="button" aria-label="Increase text size">A+</button>
+            </div>
+            <button class="library-save-button" id="readerSave" type="button" aria-pressed="false">Save reading</button>
+          </div>
+        </div>
+
+        <section class="reader-content-section reveal-on-scroll" aria-labelledby="readerBodyHeading">
+          <div class="reader-section-heading">
+            <p class="section-eyebrow">Take it one idea at a time</p>
+            <h2 id="readerBodyHeading">The explainer</h2>
+          </div>
+          <article class="reader-body" id="readerBody"></article>
+        </section>
+
+        <section class="reader-learning-section reveal-on-scroll" id="readerKeyIdeas" aria-labelledby="readerKeyIdeasHeading">
+          <div class="reader-section-heading">
+            <p class="section-eyebrow">Remember the essentials</p>
+            <h2 id="readerKeyIdeasHeading">Key ideas, made clear</h2>
+            <p>Open a card to pause on one useful idea before you move on.</p>
+          </div>
+          <div class="reader-idea-grid" id="readerIdeaGrid"></div>
+        </section>
+
+        <section class="reader-check-section reveal-on-scroll" id="readerCheck" aria-labelledby="readerCheckHeading" hidden>
+          <div class="reader-check-intro">
+            <span class="reader-check-icon" aria-hidden="true">✦</span>
+            <div>
+              <p class="section-eyebrow">Learn · practise · remember</p>
+              <h2 id="readerCheckHeading">Practice, quiz &amp; test</h2>
+              <p>Try a scenario, check the key idea, then take a short test. Your scores are saved to your learning dashboard.</p>
+            </div>
+          </div>
+          <div class="learning-stage-grid" id="readerAssessmentStages"></div>
+        </section>
+
+        <section class="reader-related-section reveal-on-scroll" id="readerRelated" aria-labelledby="readerRelatedHeading" hidden>
+          <div class="reader-section-heading">
+            <p class="section-eyebrow">Keep exploring</p>
+            <h2 id="readerRelatedHeading">Your next reading</h2>
+          </div>
+          <div class="reader-related-grid" id="readerRelatedGrid"></div>
+        </section>
+
+        <aside class="reader-source reveal-on-scroll"><strong>For further reading</strong><p id="readerSource"></p><a id="readerSourceLink" target="_blank" rel="noopener noreferrer">Open source ↗</a></aside>
+        <p class="reader-disclaimer">LexCitizen materials are for general educational purposes and are not legal advice. Verify current law and consult a qualified professional about a specific matter.</p>
+        <div class="reader-end"><a class="solid-button" href="index.html#explore">Explore more guides <span aria-hidden="true">→</span></a></div>
+        <p class="reader-message" id="readerMessage" role="status" aria-live="polite" hidden></p>
+      </main>
+      <footer class="site-footer signin-footer"><span>LexCitizen</span><span>Learn the law. Live your rights.</span><span>India · Open knowledge project</span></footer>
+    </div>
+  </body>
+</html>

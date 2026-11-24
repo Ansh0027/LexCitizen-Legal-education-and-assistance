@@ -8,11 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="signin.css" />
-    <link rel="stylesheet" href="contributions.css" />
-    <script src="library.js" defer></script>
-    <link rel="stylesheet" href="modern-ui.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/signin.css" />
+    <link rel="stylesheet" href="css/contributions.css" />
+    <script src="js/library.js" defer></script>
+    <link rel="stylesheet" href="css/modern-ui.css" />
+    <link rel="stylesheet" href="css/learning.css" />
 </head>
   <body>
     <div class="app-shell signin-shell">
@@ -37,6 +38,20 @@
             <div><p class="section-eyebrow">Pick up where you left off</p><h2 id="continueTitle">Continue reading</h2></div>
           </div>
           <div class="continue-reading" id="continueReading"><p>Loading your reading progress…</p></div>
+        </section>
+        <section class="learning-performance-section" aria-labelledby="performanceTitle">
+          <div class="section-heading">
+            <div><p class="section-eyebrow">Practice · quizzes · tests</p><h2 id="performanceTitle">Your learning performance</h2></div>
+          </div>
+          <p class="performance-intro">Every completed attempt is saved to your account. Review your accuracy and scores as you keep learning.</p>
+          <div class="performance-summary" aria-label="Learning performance summary">
+            <article class="performance-stat"><span>Attempts</span><strong id="assessmentCount">0</strong></article>
+            <article class="performance-stat"><span>Overall accuracy</span><strong id="assessmentAccuracy">0%</strong></article>
+            <article class="performance-stat"><span>Best score</span><strong id="assessmentBest">0%</strong></article>
+          </div>
+          <div class="assessment-history" id="assessmentHistory" aria-live="polite"></div>
+          <p class="library-empty" id="assessmentsEmpty" hidden>No scores yet. Complete a practice, quiz, or test in a reading to track your progress here.</p>
+          <button class="outline-button load-more-assessments" id="loadMoreAssessments" type="button" hidden>Load more scores</button>
         </section>
         <section class="saved-section" aria-labelledby="savedTitle">
           <div class="section-heading">

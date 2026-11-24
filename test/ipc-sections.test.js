@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
 
-const ipcSectionsPath = path.join(__dirname, '..', 'ipc-sections.json');
+const ipcSectionsPath = path.join(__dirname, '..', 'public', 'ipc-sections.json');
 
 test('IPC section index covers chapters, numbered sections, insertions, and historical statuses', () => {
   const sections = JSON.parse(fs.readFileSync(ipcSectionsPath, 'utf8'));

@@ -4,12 +4,15 @@ const { createServer } = require('node:net');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { DatabaseSync } = require('node:sqlite');
+const crypto = require('node:crypto');
+const bcrypt = require('bcryptjs');
+const { MongoClient } = require('mongoose').mongo;
 const { after, before, test } = require('node:test');
 
 const projectDirectory = path.resolve(__dirname, '..');
 const temporaryDirectory = fs.mkdtempSync(path.join(os.tmpdir(), 'lexcitizen-test-'));
-const databasePath = path.join(temporaryDirectory, 'test.sqlite');
+const testDatabaseName = `LexCitizen_test_${crypto.randomUUID().replace(/-/g, '')}`;
+const mongoUri = `mongodb://127.0.0.1:27017/${testDatabaseName}`;
 const adminEmail = 'admin@lexcitizen.test';
 const adminPassword = 'AdminPassword!123';
 let processHandle;
@@ -53,14 +56,37 @@ function makeClient() {
 }
 
 before(async () => {
+  const legacyClient = new MongoClient(mongoUri);
+  await legacyClient.connect();
+  await legacyClient.db(testDatabaseName).collection('materials').insertOne({
+    slug: 'legacy-library-migration',
+    title: 'Legacy library migration check',
+    category: 'Law and research',
+    excerpt: 'A prior reading kept intact during the collection migration.',
+    body: 'This reading confirms older library documents are copied into the shared content collection.',
+    source: 'Test source',
+    source_url: 'https://example.test/legacy',
+  });
+  await legacyClient.db(testDatabaseName).collection('users').insertOne({
+    _id: 'legacy-pending-account',
+    email: 'legacy-pending@example.test',
+    password_hash: await bcrypt.hash('LegacyCitizen123!', 12),
+    role: 'user',
+    approval_status: 'pending',
+    created_at: new Date(),
+    last_login_at: null,
+  });
+  await legacyClient.close();
+
   port = await availablePort();
   baseUrl = `http://127.0.0.1:${port}`;
-  processHandle = spawn(process.execPath, ['server.js'], {
+  processHandle = spawn(process.execPath, ['src/server.js'], {
     cwd: projectDirectory,
     env: {
       ...process.env,
       PORT: String(port),
-      DB_PATH: databasePath,
+      MONGODB_URI: mongoUri,
+      EVIDENCE_PATH: temporaryDirectory,
       SESSION_SECRET: 'test-session-secret-is-long-enough-to-run-safely',
       ADMIN_EMAIL: adminEmail,
       ADMIN_PASSWORD: adminPassword,
@@ -79,7 +105,49 @@ after(async () => {
       setTimeout(resolve, 3000);
     });
   }
+  const mongoClient = new MongoClient(mongoUri);
+  await mongoClient.connect();
+  await mongoClient.db(testDatabaseName).dropDatabase();
+  await mongoClient.close();
   fs.rmSync(temporaryDirectory, { recursive: true, force: true });
+});
+
+test('legacy materials migrate into content and catalogue responses omit full text', async () => {
+  const response = await fetch(`${baseUrl}/api/materials`);
+  assert.equal(response.status, 200);
+  const { materials } = await response.json();
+  assert.equal(materials.length, 9);
+  assert.equal(Object.hasOwn(materials[0], 'body'), false);
+
+  const legacy = await (await fetch(`${baseUrl}/api/materials/legacy-library-migration`)).json();
+  assert.match(legacy.material.body, /shared content collection/);
+  assert.equal(legacy.material.record_type, 'learning_material');
+
+  const mongoClient = new MongoClient(mongoUri);
+  await mongoClient.connect();
+  const database = mongoClient.db(testDatabaseName);
+  assert.equal(await database.collection('content').countDocuments(), 9);
+  assert.equal(await database.collection('materials').countDocuments(), 1);
+  await mongoClient.close();
+});
+
+test('existing pending accounts are unlocked and obsolete approval flags are removed', async () => {
+  const mongoClient = new MongoClient(mongoUri);
+  await mongoClient.connect();
+  const legacyUser = await mongoClient.db(testDatabaseName).collection('users').findOne(
+    { email: 'legacy-pending@example.test' },
+  );
+  assert.equal(legacyUser.approval_status, undefined);
+  await mongoClient.close();
+
+  const client = makeClient();
+  const login = await client('/api/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ identity: 'legacy-pending@example.test', password: 'LegacyCitizen123!', mode: 'user' }),
+  });
+  assert.equal(login.status, 200);
+  assert.equal((await client('/api/me/library')).status, 200);
 });
 
 test('users register with hashed passwords and persist private reading data', async () => {
@@ -93,28 +161,32 @@ test('users register with hashed passwords and persist private reading data', as
     body: JSON.stringify({ email: 'learner@example.test', password: 'CitizenPass123!', role: 'admin' }),
   });
   assert.equal(registration.status, 201);
-  assert.deepEqual(await registration.json(), { approvalRequired: true });
+  assert.deepEqual(await registration.json(), { created: true });
   assert.equal(registration.headers.get('x-content-type-options'), 'nosniff');
   assert.equal((await fetch(`${baseUrl}/server.js`)).status, 404);
-  assert.equal((await fetch(`${baseUrl}/data/test.sqlite`)).status, 404);
-  assert.equal((await fetch(`${baseUrl}/test.sqlite`)).status, 404);
+  assert.equal((await fetch(`${baseUrl}/src/config/database.js`)).status, 404);
+  assert.equal((await fetch(`${baseUrl}/.env.example`)).status, 404);
 
-  const db = new DatabaseSync(databasePath);
-  const account = db.prepare('SELECT id, password_hash, role, approval_status, last_login_at FROM users WHERE email = ?').get('learner@example.test');
+  const mongoClient = new MongoClient(mongoUri);
+  await mongoClient.connect();
+  const account = await mongoClient.db(testDatabaseName).collection('users').findOne(
+    { email: 'learner@example.test' },
+    { projection: { password_hash: 1, role: 1, last_login_at: 1 } },
+  );
   assert.equal(account.role, 'user');
-  assert.equal(account.approval_status, 'pending');
+  assert.equal(Object.hasOwn(account, 'approval_status'), false);
   assert.equal(account.last_login_at, null);
   assert.notEqual(account.password_hash, 'CitizenPass123!');
   assert.match(account.password_hash, /^\$2[aby]\$/);
-  db.close();
+  await mongoClient.close();
 
-  const pendingLogin = await client('/api/auth/login', {
+  const userLogin = await client('/api/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ identity: 'learner@example.test', password: 'CitizenPass123!', mode: 'user' }),
   });
-  assert.equal(pendingLogin.status, 403);
-  assert.match((await pendingLogin.json()).error, /awaiting administrator approval/i);
+  assert.equal(userLogin.status, 200);
+  assert.equal((await client('/api/me/library')).status, 200);
 
   const unauthorizedAdminMode = await client('/api/auth/login', {
     method: 'POST',
@@ -139,25 +211,112 @@ test('users register with hashed passwords and persist private reading data', as
   assert.equal(adminLogin.status, 200);
   const pendingAccounts = await adminClient('/api/admin/accounts');
   const learner = (await pendingAccounts.json()).accounts.find((item) => item.email === 'learner@example.test');
-  assert.equal(learner.approval_status, 'pending');
+  assert.equal(Object.hasOwn(learner, 'approval_status'), false);
   assert.deepEqual(learner.saved_readings, []);
   assert.deepEqual(learner.reading_progress, []);
 
-  const decision = await adminClient(`/api/admin/accounts/${learner.id}/decision`, {
+  const removedApprovalEndpoint = await adminClient(`/api/admin/accounts/${learner.id}/decision`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ decision: 'approve' }),
   });
-  assert.equal(decision.status, 200);
-  assert.equal((await decision.json()).approval_status, 'approved');
+  assert.equal(removedApprovalEndpoint.status, 404);
+  assert.equal((await client('/api/admin/accounts')).status, 403);
 
-  const userLogin = await client('/api/auth/login', {
+  const signedOutClient = makeClient();
+  assert.equal((await signedOutClient('/api/me/assessments')).status, 401);
+  const assessmentResponse = await client('/api/materials/article-21-right-to-life/assessments');
+  assert.equal(assessmentResponse.status, 200);
+  const { assessments } = await assessmentResponse.json();
+  assert.deepEqual(Object.keys(assessments), ['practice', 'quiz', 'test']);
+  assert.equal(assessments.test.questions.length, 3);
+  assert.equal(Object.hasOwn(assessments.quiz.questions[0], 'correctChoiceId'), false);
+
+  const practiceAttempt = await client('/api/me/assessments', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ identity: 'learner@example.test', password: 'CitizenPass123!', mode: 'user' }),
+    body: JSON.stringify({
+      slug: 'article-21-right-to-life',
+      type: 'practice',
+      answers: [{ questionId: 'practice-1', choiceId: 'verify' }],
+    }),
   });
-  assert.equal(userLogin.status, 200);
-  assert.equal((await client('/api/admin/accounts')).status, 403);
+  assert.equal(practiceAttempt.status, 201);
+  assert.equal((await practiceAttempt.json()).attempt.percentage, 100);
+
+  const invalidAttempt = await client('/api/me/assessments', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      slug: 'article-21-right-to-life',
+      type: 'quiz',
+      answers: [{ questionId: 'quiz-1', choiceId: 'not-a-choice' }],
+      score: 100,
+    }),
+  });
+  assert.equal(invalidAttempt.status, 400);
+
+  const quizAttempt = await client('/api/me/assessments', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      slug: 'article-21-right-to-life',
+      type: 'quiz',
+      answers: [{ questionId: 'quiz-1', choiceId: 'choice-0' }],
+      score: 100,
+    }),
+  });
+  assert.equal(quizAttempt.status, 201);
+  const quizAttemptData = await quizAttempt.json();
+  assert.equal(quizAttemptData.attempt.score, 0);
+  assert.equal(quizAttemptData.attempt.percentage, 0);
+  assert.equal(quizAttemptData.results[0].correctChoiceId, 'choice-1');
+
+  const testAttempt = await client('/api/me/assessments', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      slug: 'article-21-right-to-life',
+      type: 'test',
+      answers: [
+        { questionId: 'test-1', choiceId: 'life-liberty' },
+        { questionId: 'test-2', choiceId: 'fair-just-reasonable' },
+        { questionId: 'test-3', choiceId: 'dignity-privacy-health' },
+      ],
+    }),
+  });
+  assert.equal(testAttempt.status, 201);
+  assert.equal((await testAttempt.json()).attempt.score, 3);
+  const learningResults = await client('/api/me/assessments');
+  const learningData = await learningResults.json();
+  assert.equal(learningData.performance.attemptCount, 3);
+  assert.equal(learningData.performance.overallAccuracy, 80);
+  assert.equal(learningData.performance.bestPercentage, 100);
+  assert.equal(learningData.attempts.length, 3);
+  assert.equal(learningData.hasMore, false);
+
+  const { user: assessmentLearner } = await (await client('/api/auth/me')).json();
+  const paginationClient = new MongoClient(mongoUri);
+  await paginationClient.connect();
+  const attemptCollection = paginationClient.db(testDatabaseName).collection('learning_attempts');
+  await attemptCollection.insertMany(Array.from({ length: 48 }, (_, index) => ({
+    user_id: assessmentLearner.id,
+    material_slug: 'pagination-test',
+    assessment_type: 'quiz',
+    score: 1,
+    max_score: 1,
+    percentage: 100,
+    answers: [],
+    created_at: new Date(Date.now() + index),
+  })));
+  const firstAttemptPage = await (await client('/api/me/assessments')).json();
+  assert.equal(firstAttemptPage.attempts.length, 50);
+  assert.equal(firstAttemptPage.hasMore, true);
+  const secondAttemptPage = await (await client('/api/me/assessments?offset=50')).json();
+  assert.equal(secondAttemptPage.attempts.length, 1);
+  assert.equal(secondAttemptPage.hasMore, false);
+  await attemptCollection.deleteMany({ user_id: assessmentLearner.id, material_slug: 'pagination-test' });
+  await paginationClient.close();
 
   const proposalForm = new FormData();
   proposalForm.append('requestType', 'correction');
@@ -228,6 +387,54 @@ test('users register with hashed passwords and persist private reading data', as
   const ownSubmissions = await client('/api/me/submissions');
   assert.equal((await ownSubmissions.json()).submissions[0].status, 'approved');
 
+  const migrationClient = new MongoClient(mongoUri);
+  await migrationClient.connect();
+  await migrationClient.db(testDatabaseName).collection('content').insertOne({
+    slug: 'test-central-act',
+    title: 'Test Central Act, 2024',
+    category: 'Central Acts',
+    excerpt: 'A source-managed Central Act used to verify editorial protection.',
+    body: 'Original official text that must not be overwritten.',
+    source: 'Act No. 1 of 2024',
+    source_url: 'https://indiacode.gov.in/handle/123456789/1',
+    record_type: 'central_act',
+    source_provider: 'india-code',
+    source_item_id: 'test-central-act-uuid',
+    official_text_available: true,
+    content_completeness: 'full_text',
+  });
+  await migrationClient.close();
+
+  const centralActCorrection = new FormData();
+  centralActCorrection.append('requestType', 'correction');
+  centralActCorrection.append('targetMaterialSlug', 'test-central-act');
+  centralActCorrection.append('title', 'Proposed official Act correction');
+  centralActCorrection.append('category', 'Everyday laws');
+  centralActCorrection.append('excerpt', 'A proposed change to an official Act transcription for testing.');
+  centralActCorrection.append('proposedBody', 'The proposed replacement is long enough to pass validation but must never replace text maintained by the official India Code source.');
+  centralActCorrection.append('citation', 'Test citation, official source, section 1');
+  centralActCorrection.append('sourceUrl', 'https://indiacode.gov.in/handle/123456789/1');
+  const protectedProposalResponse = await client('/api/me/submissions', { method: 'POST', body: centralActCorrection });
+  assert.equal(protectedProposalResponse.status, 201);
+  const protectedProposal = await protectedProposalResponse.json();
+  const protectedReview = await adminClient(`/api/admin/submissions/${protectedProposal.id}/review`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      decision: 'approve',
+      finalTitle: 'Proposed official Act correction',
+      finalCategory: 'Everyday laws',
+      finalExcerpt: 'A proposed change to an official Act transcription for testing.',
+      finalBody: 'The proposed replacement is long enough to pass validation but must never replace text maintained by the official India Code source.',
+      finalCitation: 'Test citation, official source, section 1',
+      finalSourceUrl: 'https://indiacode.gov.in/handle/123456789/1',
+      reviewNote: 'Test official source protection.',
+    }),
+  });
+  assert.equal(protectedReview.status, 409);
+  const protectedAct = await (await fetch(`${baseUrl}/api/materials/test-central-act`)).json();
+  assert.equal(protectedAct.material.body, 'Original official text that must not be overwritten.');
+
   const save = await client('/api/me/saved/article-21-right-to-life', {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
@@ -257,6 +464,7 @@ test('users register with hashed passwords and persist private reading data', as
   const logout = await client('/api/auth/logout', { method: 'POST' });
   assert.equal(logout.status, 204);
   assert.equal((await client('/api/me/library')).status, 401);
+  assert.equal((await client('/api/me/assessments')).status, 401);
 
   const reLogin = await client('/api/auth/login', {
     method: 'POST',
@@ -269,40 +477,43 @@ test('users register with hashed passwords and persist private reading data', as
   const restoredData = await restoredLibrary.json();
   assert.equal(restoredData.saved[0].slug, 'article-21-right-to-life');
   assert.equal(restoredData.progress[0].position_percent, 42);
+  assert.equal((await client('/api/me/assessments')).status, 200);
+  const restoredLearning = await (await client('/api/me/assessments')).json();
+  assert.equal(restoredLearning.performance.attemptCount, 3);
+  const attemptMongoClient = new MongoClient(mongoUri);
+  await attemptMongoClient.connect();
+  assert.equal(await attemptMongoClient.db(testDatabaseName).collection('learning_attempts').countDocuments({
+    material_slug: 'article-21-right-to-life',
+  }), 3);
+  await attemptMongoClient.close();
 
   const adminAccountDetails = await adminClient('/api/admin/accounts');
   const approvedLearner = (await adminAccountDetails.json()).accounts.find((item) => item.email === 'learner@example.test');
-  assert.equal(approvedLearner.approval_status, 'approved');
+  assert.equal(Object.hasOwn(approvedLearner, 'approval_status'), false);
   assert.ok(approvedLearner.last_login_at);
   assert.equal(approvedLearner.saved_readings[0].title, 'Article 21: Right to life and personal liberty');
   assert.equal(approvedLearner.reading_progress[0].position_percent, 42);
   const adminMaterials = await adminClient('/api/admin/materials');
   const adminMaterialsData = await adminMaterials.json();
-  assert.equal(adminMaterialsData.materials.length, 8);
+  assert.equal(adminMaterialsData.materials.length, 10);
   const publishedSummary = adminMaterialsData.materials.find((material) => material.slug === 'article-21-right-to-life');
   assert.equal(publishedSummary.saved_count, 1);
 
-  const rejectedRegistration = await client('/api/auth/register', {
+  const selfServiceClient = makeClient();
+  const selfServiceRegistration = await selfServiceClient('/api/auth/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email: 'declined@example.test', password: 'CitizenPass456!' }),
   });
-  assert.equal(rejectedRegistration.status, 201);
-  const accountsBeforeRejection = await adminClient('/api/admin/accounts');
-  const declinedAccount = (await accountsBeforeRejection.json()).accounts.find((item) => item.email === 'declined@example.test');
-  const rejection = await adminClient(`/api/admin/accounts/${declinedAccount.id}/decision`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ decision: 'reject' }),
-  });
-  assert.equal(rejection.status, 200);
-  const deniedLogin = await client('/api/auth/login', {
+  assert.equal(selfServiceRegistration.status, 201);
+  assert.deepEqual(await selfServiceRegistration.json(), { created: true });
+  const directLogin = await selfServiceClient('/api/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ identity: 'declined@example.test', password: 'CitizenPass456!', mode: 'user' }),
   });
-  assert.equal(deniedLogin.status, 403);
-  assert.match((await deniedLogin.json()).error, /declined/i);
+  assert.equal(directLogin.status, 200);
+  assert.equal((await selfServiceClient('/api/me/library')).status, 200);
 
   const denialRequest = new FormData();
   for (const [key, value] of proposalForm.entries()) {
@@ -367,11 +578,43 @@ test('admin account role is checked by the server', async () => {
   assert.equal(overview.status, 200);
   const overviewData = (await overview.json()).overview;
   assert.ok(overviewData.accounts >= 2);
-  assert.equal(overviewData.pending_accounts, 0);
-  const selfApproval = await client('/api/admin/accounts/not-an-account/decision', {
+  assert.equal(Object.hasOwn(overviewData, 'pending_accounts'), false);
+  const removedApprovalEndpoint = await client('/api/admin/accounts/not-an-account/decision', {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ decision: 'approve' }),
   });
-  assert.equal(selfApproval.status, 409);
+  assert.equal(removedApprovalEndpoint.status, 404);
+});
+
+test('EJS pages render through Express and public assets remain available', async () => {
+  const pages = [
+    '/', '/index.html', '/signin.html', '/reader.html', '/books.html',
+    '/admin-dashboard.html', '/user-dashboard.html', '/amendments.html',
+    '/everyday-laws.html', '/fundamental-duties.html', '/fundamental-rights.html',
+    '/key-articles.html', '/origin-structure.html',
+  ];
+
+  for (const page of pages) {
+    const response = await fetch(`${baseUrl}${page}`);
+    assert.equal(response.status, 200, `${page} should render`);
+    assert.match(response.headers.get('content-type'), /text\/html/);
+    assert.match(await response.text(), /<!doctype html>/i);
+  }
+
+  const readerMarkup = await (await fetch(`${baseUrl}/reader.html`)).text();
+  assert.match(readerMarkup, /id="readerIdeaGrid"/);
+  assert.match(readerMarkup, /id="readerAssessmentStages"/);
+  assert.match(readerMarkup, /Practice, quiz &amp; test/);
+  assert.match(readerMarkup, /id="readerTextLarger"/);
+  const dashboardMarkup = await (await fetch(`${baseUrl}/user-dashboard.html`)).text();
+  assert.match(dashboardMarkup, /id="assessmentHistory"/);
+  assert.match(dashboardMarkup, /id="assessmentAccuracy"/);
+  assert.equal((await fetch(`${baseUrl}/css/styles.css`)).status, 200);
+  assert.equal((await fetch(`${baseUrl}/css/learning.css`)).status, 200);
+  assert.equal((await fetch(`${baseUrl}/js/app.js`)).status, 200);
+  assert.equal((await fetch(`${baseUrl}/js/reader.js`)).status, 200);
+  assert.equal((await fetch(`${baseUrl}/js/library.js`)).status, 200);
+  assert.equal((await fetch(`${baseUrl}/ipc-sections.json`)).status, 200);
+  assert.equal((await fetch(`${baseUrl}/src/views/pages/index.ejs`)).status, 404);
 });

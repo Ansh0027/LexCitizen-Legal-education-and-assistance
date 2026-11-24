@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="contributions.css" />
-    <link rel="stylesheet" href="origin-structure.css" />
-    <link rel="stylesheet" href="modern-ui.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/contributions.css" />
+    <link rel="stylesheet" href="css/origin-structure.css" />
+    <link rel="stylesheet" href="css/modern-ui.css" />
+    <link rel="stylesheet" href="css/learning.css" />
 </head>
   <body>
     <div class="app-shell">
@@ -153,9 +154,11 @@
               <button class="dark-button" data-guide="Why the Preamble still matters">Read today's brief <span>→</span></button>
             </div>
             <div class="timeline-card">
-              <div class="section-heading compact"><div><p class="section-eyebrow">On the timeline</p><h2>Constitutional moments</h2></div><button class="next-button" aria-label="Next timeline moment">→</button></div>
-              <div class="timeline-item"><span class="timeline-year">1950</span><div><strong>The Constitution comes into force</strong><p>26 January · Republic Day</p></div></div>
-              <div class="timeline-item"><span class="timeline-year">1976</span><div><strong>42nd Amendment</strong><p>“Socialist” and “secular” enter the Preamble</p></div></div>
+              <div class="section-heading compact"><div><p class="section-eyebrow">On the timeline</p><h2>Constitutional moments</h2></div><button class="next-button" id="nextTimelineMoment" type="button" aria-label="Show next constitutional moments" aria-controls="timelineMoments">→</button></div>
+              <div id="timelineMoments" aria-live="polite">
+                <div class="timeline-item"><span class="timeline-year">1950</span><div><strong>The Constitution comes into force</strong><p>26 January · Republic Day</p></div></div>
+                <div class="timeline-item"><span class="timeline-year">1976</span><div><strong>42nd Amendment</strong><p>“Socialist” and “secular” enter the Preamble</p></div></div>
+              </div>
             </div>
           </aside>
         </section>
@@ -172,6 +175,6 @@
     </div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <dialog class="guide-dialog" id="guideDialog"><button class="dialog-close" id="dialogClose" aria-label="Close guide">×</button><p class="section-eyebrow">LexCitizen explainer</p><h2 id="dialogTitle"></h2><p id="dialogBody"></p><div class="dialog-facts"><span><strong>Format</strong>Plain-English guide</span><span><strong>Level</strong>Start here</span></div><a class="solid-button" id="openFullArticle" href="signin.html">Open full reading <span>→</span></a><button class="solid-button" id="dialogSave">Save to reading list <span>+</span></button></dialog>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

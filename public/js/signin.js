@@ -179,7 +179,7 @@ if (loginForm) {
           remember: document.querySelector('#rememberMe').checked,
         });
         setMode('user');
-        showMessage('Account request submitted. An administrator must approve it before you can sign in.', 'success');
+        showMessage('Account created. You can now sign in with your email and password.', 'success');
         return;
       }
       const result = await sendRequest('/api/auth/login', {
