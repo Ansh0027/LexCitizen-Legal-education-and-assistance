@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620" role="img" aria-labelledby="title description">
+  <title id="title">The Preamble to the Constitution of India</title>
+  <desc id="description">A clear, typeset version of the Preamble on a warm paper background.</desc>
+  <rect width="520" height="620" fill="#f5f1e9"/>
+  <rect x="14" y="14" width="492" height="592" fill="none" stroke="#315e53" stroke-width="1.5"/>
+  <rect x="22" y="22" width="476" height="576" fill="none" stroke="#df7843" stroke-width="0.8"/>
+  <text x="260" y="61" fill="#df7843" font-family="Georgia,serif" font-size="12" letter-spacing="3" text-anchor="middle">THE CONSTITUTION OF INDIA</text>
+  <path d="M92 78h336" stroke="#d7ddd4"/>
+  <text x="260" y="112" fill="#19312e" font-family="Georgia,serif" font-size="27" font-weight="bold" letter-spacing="2" text-anchor="middle">PREAMBLE</text>
+  <text x="260" y="146" fill="#315e53" font-family="Georgia,serif" font-size="14" font-style="italic" text-anchor="middle">WE, THE PEOPLE OF INDIA,</text>
+  <text x="48" y="180" fill="#19312e" font-family="Georgia,serif" font-size="14">
+    <tspan x="48" dy="0">having solemnly resolved to constitute India into a</tspan>
+    <tspan x="48" dy="22">SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC</tspan>
+    <tspan x="48" dy="22">and to secure to all its citizens:</tspan>
+  </text>
+  <text x="48" y="268" fill="#19312e" font-family="Georgia,serif" font-size="14">
+    <tspan x="48" dy="0" font-weight="bold" fill="#315e53">JUSTICE,</tspan>
+    <tspan> social, economic and political;</tspan>
+    <tspan x="48" dy="30" font-weight="bold" fill="#315e53">LIBERTY</tspan>
+    <tspan> of thought, expression, belief, faith and worship;</tspan>
+    <tspan x="48" dy="30" font-weight="bold" fill="#315e53">EQUALITY</tspan>
+    <tspan> of status and of opportunity; and to promote</tspan>
+    <tspan x="48" dy="20">among them all</tspan>
+    <tspan x="48" dy="30" font-weight="bold" fill="#315e53">FRATERNITY</tspan>
+    <tspan> assuring the dignity of the individual and</tspan>
+    <tspan x="48" dy="20">the unity and integrity of the Nation;</tspan>
+  </text>
+  <path d="M92 430h336" stroke="#d7ddd4"/>
+  <text x="48" y="466" fill="#19312e" font-family="Georgia,serif" font-size="14">
+    <tspan x="48" dy="0">IN OUR CONSTITUENT ASSEMBLY this twenty-sixth</tspan>
+    <tspan x="48" dy="22">day of November, 1949, do HEREBY ADOPT, ENACT</tspan>
+    <tspan x="48" dy="22">AND GIVE TO OURSELVES THIS CONSTITUTION.</tspan>
+  </text>
+  <text x="260" y="558" fill="#60746e" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.5" text-anchor="middle">26 NOVEMBER 1949</text>
+</svg>

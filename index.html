@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="contributions.css" />
-  </head>
+    <link rel="stylesheet" href="origin-structure.css" />
+    <link rel="stylesheet" href="modern-ui.css" />
+</head>
   <body>
     <div class="app-shell">
       <header class="site-header">
@@ -21,6 +23,7 @@
         <nav class="main-nav" aria-label="Primary navigation">
           <a class="active" href="#explore">Explore</a>
           <a href="#daily">Daily brief</a>
+          <a href="books.html">Books</a>
           <a href="#explore">Browse guides</a>
           <a href="#communityUpdates">Verified updates</a>
           <a class="mobile-nav-signin" href="signin.html">Sign in</a>
@@ -31,6 +34,9 @@
 
       <main id="top">
         <section class="hero-section" aria-labelledby="hero-title">
+          <figure class="hero-preamble">
+            <img src="assets/india-preamble.svg" alt="The Preamble to the Constitution of India, typeset clearly on a paper background" />
+          </figure>
           <div class="hero-copy">
             <p class="kicker"><span class="kicker-line"></span> The citizen's field guide</p>
             <h1 id="hero-title">The Constitution,<br /><em>made legible.</em></h1>
@@ -67,6 +73,18 @@
           <button class="category" data-category="articles" id="articlesCategory"><span class="category-icon">§</span><span>Key articles</span><small>18</small></button>
           <button class="category" data-category="amendments" id="amendmentsCategory"><span class="category-icon">↻</span><span>Amendments</span><small>05</small></button>
           <button class="category" data-category="laws" id="lawsCategory"><span class="category-icon">▤</span><span>Everyday laws</span><small>12</small></button>
+        </section>
+
+        <section class="origin-feature" aria-label="Featured guide">
+          <a class="origin-feature-link" href="origin-structure.html">
+            <span class="origin-feature-icon" aria-hidden="true">§</span>
+            <span class="origin-feature-copy">
+              <span class="section-eyebrow">Featured guide · India's former criminal code</span>
+              <strong>Indian Penal Code (IPC)</strong>
+              <span>Learn how it was written, how it was organized, and what replaced it.</span>
+            </span>
+            <span class="origin-feature-arrow" aria-hidden="true">→</span>
+          </a>
         </section>
 
         <section class="content-grid" aria-live="polite">
