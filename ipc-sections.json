@@ -1,0 +1,4602 @@
+[
+  {
+    "chapter": 1,
+    "chapterTitle": "Introduction",
+    "sectionNumber": "1",
+    "title": "Title and extent of operation of the Code",
+    "summary": "The Code is named here, and this section says where it applies.",
+    "status": "provision"
+  },
+  {
+    "chapter": 1,
+    "chapterTitle": "Introduction",
+    "sectionNumber": "2",
+    "title": "Punishment of offences committed within India",
+    "summary": "People in India can be punished under the Code for acts or failures to act that break its rules.",
+    "status": "provision"
+  },
+  {
+    "chapter": 1,
+    "chapterTitle": "Introduction",
+    "sectionNumber": "3",
+    "title": "Punishment of offences committed beyond, but which by law may be tried within, India",
+    "summary": "The Code can apply to acts abroad when Indian law allows a trial in India.",
+    "status": "provision"
+  },
+  {
+    "chapter": 1,
+    "chapterTitle": "Introduction",
+    "sectionNumber": "4",
+    "title": "Extension of Code to extra-territorial offences",
+    "summary": "The Code also covers certain crimes committed outside India.",
+    "status": "provision"
+  },
+  {
+    "chapter": 1,
+    "chapterTitle": "Introduction",
+    "sectionNumber": "5",
+    "title": "Certain laws not to be affected by this Act",
+    "summary": "This Code does not replace certain other laws.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "6",
+    "title": "Definitions in the Code to be understood subject to exceptions",
+    "summary": "The Code definitions and crime rules must be read with the exceptions set out in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "7",
+    "title": "Sense of expression once explained",
+    "summary": "A term defined in the Code keeps that meaning wherever it is used.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "8",
+    "title": "Gender",
+    "summary": "Words for one gender can refer to any gender, unless the context shows otherwise.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "9",
+    "title": "Number",
+    "summary": "A word in the singular can also mean the plural, and the other way around.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "10",
+    "title": "“Man”, “Woman”",
+    "summary": "Explains how the Code uses the words man and woman.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "11",
+    "title": "“Person”",
+    "summary": "In the Code, a person can be an individual or an organization.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "12",
+    "title": "“Public”",
+    "summary": "Explains what public means in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "13",
+    "title": "Definition of “Queen”",
+    "summary": "This section once defined “Queen”. The source marks it omitted.",
+    "status": "omitted"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "14",
+    "title": "“Servant of Government”",
+    "summary": "A servant of Government means a person employed or paid by the Government.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "15",
+    "title": "Definition of “British India”",
+    "summary": "This section once defined “British India”. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "16",
+    "title": "Definition of “Government of India”",
+    "summary": "This section once defined “Government of India”. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "17",
+    "title": "“Government”",
+    "summary": "Explains what Government means in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "18",
+    "title": "“India”",
+    "summary": "Explains what India means in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "19",
+    "title": "“Judge”",
+    "summary": "Explains who counts as a judge under the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "20",
+    "title": "“Court of Justice”",
+    "summary": "Explains what counts as a court of justice.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "21",
+    "title": "“Public servant”",
+    "summary": "In this Code, a public servant is a person who holds or performs a public office or duty.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "22",
+    "title": "“Movable property”",
+    "summary": "Explains what counts as movable property; land and things fixed to it are excluded.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "23",
+    "title": "“Wrongful gain”",
+    "summary": "unlawful gain means getting property unlawfully; unlawful loss means someone unlawfully losing property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "24",
+    "title": "“Dishonestly”",
+    "summary": "A person acts dishonestly when they intend to cause unlawful gain or unlawful loss.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "25",
+    "title": "“Fraudulently”",
+    "summary": "A person acts fraudulently when they act with intent to defraud.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "26",
+    "title": "“Reason to believe”",
+    "summary": "A person has reason to believe something when there is enough cause to believe it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "27",
+    "title": "Property in possession of wife, clerk or servant",
+    "summary": "Property held by a wife, clerk, or servant for someone else is treated as being in that other person's possession.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "28",
+    "title": "“Counterfeit”",
+    "summary": "Counterfeiting means making one thing resemble another to deceive or assist deception.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "29",
+    "title": "“Document”",
+    "summary": "A document is recorded information that can be used as evidence.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "29A",
+    "title": "“Electronic record”",
+    "summary": "An electronic record has the meaning given to it by the information-technology law.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "30",
+    "title": "“Valuable security”",
+    "summary": "A valuable security (a document affecting legal rights) is a document that creates, changes, transfers, or ends a legal right or duty.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "31",
+    "title": "“A will”",
+    "summary": "A will is a document meant to take effect after its maker dies.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "32",
+    "title": "Words referring to acts include illegal omissions",
+    "summary": "References to acts can also include failures to do something required by law.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "33",
+    "title": "“Act”, “Omission”",
+    "summary": "Explains how the Code uses the words act and omission (a failure to act).",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "34",
+    "title": "Acts done by several persons in furtherance of common intention",
+    "summary": "When people act together with a shared purpose, each may be responsible for the shared act.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "35",
+    "title": "When such an act is criminal by reason of its being done with a criminal knowledge or intention",
+    "summary": "When a crime depends on a particular intention or knowledge, people acting together with that same intention or knowledge may each be responsible.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "36",
+    "title": "Effect caused partly by act and partly by omission",
+    "summary": "A result can be caused by an act, a failure to act, or both.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "37",
+    "title": "Co-operation by doing one of several acts constituting an offence",
+    "summary": "A person who deliberately helps carry out a crime by doing one of its component acts may be treated as a participant.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "38",
+    "title": "Persons concerned in criminal act may be guilty of different offences",
+    "summary": "People involved in the same act may be responsible for different crimes, depending on their own conduct and state of mind.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "39",
+    "title": "“Voluntarily”",
+    "summary": "deliberately or knowing the result was likely (intentionally or knowing the result was likely) means intending a result, or knowing or having reason to believe it is likely to happen.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "40",
+    "title": "“Offence”",
+    "summary": "In some sections, the word offence also includes certain punishable acts under other laws.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "41",
+    "title": "“Special law”",
+    "summary": "A special law applies to a particular subject.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "42",
+    "title": "“Local law”",
+    "summary": "A local law applies only in a particular part of the country.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "43",
+    "title": "“Illegal”, “Legally bound to do”",
+    "summary": "Illegal includes conduct that is a crime, forbidden by law, or grounds for a civil claim. A person is legally bound to do something if failing to do it is illegal.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "44",
+    "title": "“Injury”",
+    "summary": "Injury includes unlawful harm to a person's body, mind, reputation, or property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "45",
+    "title": "“Life”",
+    "summary": "Life means human life, unless the context indicates otherwise.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "46",
+    "title": "“Death”",
+    "summary": "Death means the death of a human being, unless the context indicates otherwise.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "47",
+    "title": "“Animal”",
+    "summary": "Animal means any living creature other than a human being.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "48",
+    "title": "“Vessel”",
+    "summary": "A vessel is anything made to carry people or property by water.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "49",
+    "title": "“Year”, “Month”",
+    "summary": "Year and month are counted by the British calendar.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "50",
+    "title": "“Section”",
+    "summary": "A section is a numbered part of a chapter in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "51",
+    "title": "“Oath”",
+    "summary": "Oath includes a legally accepted affirmation or declaration.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "52",
+    "title": "“Good faith”",
+    "summary": "good faith (with due care and attention) requires due care and attention.",
+    "status": "provision"
+  },
+  {
+    "chapter": 2,
+    "chapterTitle": "General Explanations",
+    "sectionNumber": "52A",
+    "title": "“Harbour”",
+    "summary": "Harbouring includes sheltering, supplying, or otherwise helping someone evade arrest, subject to the stated exceptions.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "53",
+    "title": "Punishments",
+    "summary": "Lists the punishments available under the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "53A",
+    "title": "Construction of reference to transportation",
+    "summary": "References to transportation in other laws are generally read as references to imprisonment for life or treated as omitted, depending on the wording.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "54",
+    "title": "Commutation of sentence of death",
+    "summary": "The appropriate Government may replace a death sentence with another punishment under the Code, without the person's consent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "55",
+    "title": "Commutation of sentence of imprisonment for life",
+    "summary": "The appropriate Government may replace a life sentence with imprisonment for a term of up to fourteen years.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "55A",
+    "title": "Definition of “appropriate Government”",
+    "summary": "Explains whether the Central or State Government is the appropriate Government for sections 54 and 55.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "56",
+    "title": "Sentence of Europeans and Americans to penal servitude. Proviso as to sentence for term exceeding ten years but not for life",
+    "summary": "This repealed section set out when Europeans and Americans could receive imprisonment with hard labour, including terms over ten years but not life.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "57",
+    "title": "Fractions of terms of punishment",
+    "summary": "For calculating fractions of a sentence, life imprisonment is counted as twenty years.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "58",
+    "title": "Offenders sentenced to transportation how dealt with until transported",
+    "summary": "This repealed section covered offenders sentenced to transportation how dealt with until transported. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "59",
+    "title": "Transportation instead of imprisonment",
+    "summary": "This section was repealed and no longer sets out a rule.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "60",
+    "title": "Sentence may be (in certain cases of imprisonment) wholly or partly rigorous or simple",
+    "summary": "When either kind of imprisonment is allowed, the court may choose rigorous imprisonment (with hard labour), simple imprisonment, or a mix.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "61",
+    "title": "Sentence of forfeiture of property",
+    "summary": "This repealed section covered sentence of forfeiture of property. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "62",
+    "title": "Forfeiture of property, in respect of offenders punishable with death, transportation or imprisonment",
+    "summary": "This repealed section allowed property to be taken for certain serious crimes. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "63",
+    "title": "Amount of fine",
+    "summary": "If a law sets no maximum fine, the court may set any amount, but it must not be excessive.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "64",
+    "title": "Sentence of imprisonment for non-payment of fine",
+    "summary": "A court may order imprisonment if a fine is not paid, in addition to any other sentence.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "65",
+    "title": "Limit to imprisonment for non-payment of fine, when imprisonment and fine awardable",
+    "summary": "For crimes punishable by both prison and a fine, the extra prison term for not paying the fine is limited.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "66",
+    "title": "Description of imprisonment for non-payment of fine",
+    "summary": "The extra imprisonment for not paying a fine may be of a kind allowed for the crime.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "67",
+    "title": "Imprisonment for non-payment of fine, when offence punishable with fine only",
+    "summary": "If a crime is punishable only by a fine, unpaid fines can lead only to simple imprisonment, subject to the stated limits.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "68",
+    "title": "Imprisonment to terminate on payment of fine",
+    "summary": "Imprisonment imposed for not paying a fine ends when the fine is paid or collected.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "69",
+    "title": "Termination of imprisonment on payment of proportional part of fine",
+    "summary": "Paying part of a fine can shorten the extra prison term in proportion to the amount paid.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "70",
+    "title": "Fine leviable within six years, or during imprisonment — Death not to discharge property from liability",
+    "summary": "A fine can generally be collected within six years, or before a longer prison term ends. The offender's death does not release property that remains legally liable for the debt.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "71",
+    "title": "Limit of punishment of offence made up of several offences",
+    "summary": "A person should not receive multiple or excessive punishments for one crime made up of overlapping crimes, unless the law expressly allows it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "72",
+    "title": "Punishment of person guilty of one of several offences, the judgment stating that it is doubtful of which",
+    "summary": "If the court is unsure which of several crimes was committed, it must impose the least severe available punishment.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "73",
+    "title": "Solitary confinement",
+    "summary": "A court may order a person serving rigorous imprisonment to spend limited periods alone, subject to strict time limits.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "74",
+    "title": "Limit of solitary confinement",
+    "summary": "Limits how long solitary confinement (being kept alone) may last at one time and requires breaks between periods.",
+    "status": "provision"
+  },
+  {
+    "chapter": 3,
+    "chapterTitle": "Of Punishments",
+    "sectionNumber": "75",
+    "title": "Enhanced punishment for certain offences under Chapter XII or Chapter XVII after previous conviction",
+    "summary": "A person previously convicted of certain theft- or property-related crimes may face a higher penalty for another such conviction.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "76",
+    "title": "Act done by a person bound, or by mistake of fact believing himself bound, by law",
+    "summary": "A person is not committing a crime when the law requires the act, or when an honest factual mistake makes them believe it is required.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "77",
+    "title": "Act of Judge when acting judicially",
+    "summary": "A judge is not committing a crime when acting judicially within legal authority.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "78",
+    "title": "Act done pursuant to the judgment or order of Court",
+    "summary": "An act carried out in good faith (with due care and attention) under a court order is not a crime while the order remains in force.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "79",
+    "title": "Act done by a person justified, or by mistake of fact believing himself justified, by law",
+    "summary": "A person is not committing a crime when the law justifies the act, or an honest factual mistake makes them believe it is justified.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "80",
+    "title": "Accident in doing a lawful act",
+    "summary": "An accidental result is excused when it happens during a lawful act done lawfully and with proper care.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "81",
+    "title": "Act likely to cause harm, but done without criminal intent, and to prevent other harm",
+    "summary": "An act likely to cause harm may be excused when done in good faith (with due care and attention) to prevent a greater harm, without criminal intent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "82",
+    "title": "Act of a child under seven years of age",
+    "summary": "A child under seven cannot commit a crime under the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "83",
+    "title": "Act of a child above seven and under twelve of immature understanding",
+    "summary": "A child aged seven to under twelve is excused if they lack enough understanding to judge the act and its consequences.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "84",
+    "title": "Act of a person of unsound mind",
+    "summary": "A person is excused if a serious mental condition made them unable to understand the act or that it was wrong or unlawful.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "85",
+    "title": "Act of a person incapable of judgment by reason of intoxication caused against his will",
+    "summary": "A person is excused for an act done while unable to understand it because someone intoxicated them without their knowledge or against their will.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "86",
+    "title": "Offence requiring a particular intent or knowledge committed by one who is intoxicated",
+    "summary": "Voluntary intoxication does not usually remove the knowledge required for a crime; the rule differs when the intoxicant was given without the person's knowledge or against their will.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "87",
+    "title": "Act not intended and not known to be likely to cause death or grievous hurt, done by consent",
+    "summary": "Consent can excuse harm only where death or serious injury was neither intended nor known to be likely, and the consenting person is an adult.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "88",
+    "title": "Act not intended to cause death, done by consent in good faith for person’s benefit",
+    "summary": "A good-faith act for someone's benefit may be excused if they consent, provided the act is not intended to cause death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "89",
+    "title": "Act done in good faith for benefit of child or insane person, by or by consent of guardian",
+    "summary": "A guardian may consent to certain good-faith acts for a child or person unable to make decisions, but the Code sets strict limits on death and serious injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "90",
+    "title": "Consent known to be given under fear or misconception",
+    "summary": "Consent is invalid if it results from fear or a serious misunderstanding, or if the person cannot understand the choice. A child under twelve generally cannot give consent for this purpose.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "91",
+    "title": "Exclusion of acts which are offences independently of harm caused",
+    "summary": "Consent does not excuse an act that is a crime regardless of whether it harms the person who agreed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "92",
+    "title": "Act done in good faith for benefit of a person without consent",
+    "summary": "A good-faith act for someone's benefit may be excused without consent when consent cannot be obtained in time, subject to limits including those on causing death or injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "93",
+    "title": "Communication made in good faith",
+    "summary": "A good-faith message for someone's benefit is not a crime merely because it harms them.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "94",
+    "title": "Act to which a person is compelled by threats",
+    "summary": "A person forced by a threat of immediate death may be excused, except for murder and certain crimes against the State.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "95",
+    "title": "Act causing slight harm",
+    "summary": "A harm so slight that an ordinary person would not complain is not a crime.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "96",
+    "title": "Things done in private defence",
+    "summary": "An act done to defend a person or property is not a crime when it falls within the right of private defence.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "97",
+    "title": "Right of private defence of the body and of property",
+    "summary": "A person may defend their own or another's body, and their own or another's property, within the Code's limits.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "98",
+    "title": "Right of private defence against the act of a person of unsound mind, etc",
+    "summary": "A person may defend against an act even when the actor is excused because of age, mental condition, intoxication, or mistake.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "99",
+    "title": "Acts against which there is no right of private defence",
+    "summary": "Private defence has limits: it cannot be used against certain good-faith official acts, when authorities can provide protection in time, or to cause more harm than necessary.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "100",
+    "title": "When the right of private defence of the body extends to causing death",
+    "summary": "In listed serious attacks, including attacks involving likely death, rape, kidnapping, or acid, private defence of the body may extend to causing death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "101",
+    "title": "When such right extends to causing any harm other than death",
+    "summary": "In other attacks, private defence of the body may cause harm but not death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "102",
+    "title": "Commencement and continuance of the right of private defence of the body",
+    "summary": "The right to defend the body starts when a reasonable threat arises and lasts while the danger continues.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "103",
+    "title": "When the right of private defence of property extends to causing death",
+    "summary": "Private defence of property may extend to causing death only for listed serious crimes, including robbery and nighttime breaking into a building.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "104",
+    "title": "When such right extends to causing any harm other than death",
+    "summary": "For other theft, property damage, or trespass, private defence may cause harm but not death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "105",
+    "title": "Commencement and continuance of the right of private defence of property",
+    "summary": "Explains when the right to defend property starts and how long it lasts for different crimes.",
+    "status": "provision"
+  },
+  {
+    "chapter": 4,
+    "chapterTitle": "General Exceptions",
+    "sectionNumber": "106",
+    "title": "Right of private defence against deadly assault when there is risk of harm to innocent person",
+    "summary": "A person defending against a deadly attack may risk accidentally harming an innocent person if there is no effective alternative.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "107",
+    "title": "Abetment of a thing",
+    "summary": "A person helps commit a crime by encouraging it, joining a qualifying plan, or intentionally assisting it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "108",
+    "title": "Abettor",
+    "summary": "An abettor is a person who encourages or helps a crime, even if the person they help cannot themselves be held responsible for it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "108A",
+    "title": "Abetment in India of offences outside India",
+    "summary": "A person in India may be liable for helping an act abroad that would be a crime if done in India.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "109",
+    "title": "Punishment of abetment if the act abetted is committed in consequence and where no express provision is made for its punishment",
+    "summary": "If the encouraged crime happens and no other penalty is specified, the helper may receive the same penalty as for that crime.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "110",
+    "title": "Punishment of abetment if person abetted does act with different intention from that of abettor",
+    "summary": "If the person helped acts with a different intention, the helper's punishment depends on the intention the helper had.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "111",
+    "title": "Liability of abettor when one act abetted and different act done",
+    "summary": "A helper may also be responsible for a different act if it was a likely result of the help or plan.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "112",
+    "title": "Abettor when liable to cumulative punishment for act abetted and for act done",
+    "summary": "If both the planned act and the different act are separate crimes, the helper may be punished for both.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "113",
+    "title": "Liability of abettor for an effect caused by the act abetted different from that intended by the abettor",
+    "summary": "A helper may be responsible for a different result if they knew that result was likely.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "114",
+    "title": "Abettor present when offence is committed",
+    "summary": "A helper who is present when the crime occurs may be treated as having committed it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "115",
+    "title": "Abetment of offence punishable with death or imprisonment for life—if offence not committed",
+    "summary": "Helping a crime punishable by death or life imprisonment can itself be punished even if the crime does not happen; greater harm can increase the penalty.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "116",
+    "title": "Abetment of offence punishable with imprisonment—if offence be not committed",
+    "summary": "Helping a crime punishable by imprisonment can be punished even if it does not happen; the penalty can be higher when a responsible public official is involved.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "117",
+    "title": "Abetting commission of offence by the public or by more than ten persons",
+    "summary": "Encouraging a crime by the public or by more than ten people is punishable.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "118",
+    "title": "Concealing design to commit offence punishable with death or imprisonment for life",
+    "summary": "Hiding or falsely describing a plan for a crime punishable by death or life imprisonment is punishable, whether or not the crime happens.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "119",
+    "title": "Public servant concealing design to commit offence which it is his duty to prevent",
+    "summary": "A public official who hides a plan for a crime they must prevent may be punished; the penalty depends on whether the crime occurs.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Of Abetment",
+    "sectionNumber": "120",
+    "title": "Concealing design to commit offence punishable with imprisonment",
+    "summary": "Hiding or lying about a plan for a crime punishable by imprisonment is punishable, with a higher penalty if the crime happens.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Criminal Conspiracy (Chapter V-A)",
+    "sectionNumber": "120A",
+    "title": "Definition of criminal conspiracy",
+    "summary": "A criminal conspiracy is an agreement by at least two people to commit an illegal act, or to use illegal means for a legal act. In some cases, another step beyond the agreement is required.",
+    "status": "provision"
+  },
+  {
+    "chapter": 5,
+    "chapterTitle": "Criminal Conspiracy (Chapter V-A)",
+    "sectionNumber": "120B",
+    "title": "Punishment of criminal conspiracy",
+    "summary": "Sets the penalty for joining a criminal conspiracy, an agreement to commit an illegal act. The penalty depends on the seriousness of the planned crime.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "121",
+    "title": "Waging, or attempting to wage war, or abetting waging of war, against the Government of India",
+    "summary": "Covers waging, or attempting to wage war, or abetting waging of war, against the Government of India.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "121A",
+    "title": "Conspiracy to commit offences punishable by section 121",
+    "summary": "Covers agreeing to wage war against India or to use force to overawe the Central or a State Government. No further act is required for this agreement to be covered.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "122",
+    "title": "Collecting arms, etc., with intention of waging war against the Government of India",
+    "summary": "Covers collecting arms, and similar conduct, with intention of waging war against the Government of India.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "123",
+    "title": "Concealing with intent to facilitate design to wage war",
+    "summary": "Covers hiding a plan to wage war against India to help that plan succeed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "124",
+    "title": "Assaulting President, Governor, etc., with intent to compel or restrain the exercise of any lawful power",
+    "summary": "Covers assaulting President, Governor, and similar conduct, with intent to compel or restrain the exercise of any lawful power.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "124A",
+    "title": "Sedition",
+    "summary": "Under this source text, sedition covers words, signs, or images that stir or try to stir hatred, contempt, or disloyalty toward the lawful government. It excludes certain lawful criticism.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "125",
+    "title": "Waging war against any Asiatic Power in alliance with the Government of India",
+    "summary": "Covers waging war against any Asiatic Power in alliance with the Government of India.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "126",
+    "title": "Committing depredation on territories of Power at peace with the Government of India",
+    "summary": "Covers committing depredation on territories of Power at peace with the Government of India.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "127",
+    "title": "Receiving property taken by war on depredation mentioned in sections 125 and 126",
+    "summary": "Covers receiving property taken by war on depredation mentioned in sections 125 and 126.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "128",
+    "title": "Public servant voluntarily allowing prisoner of State or war to escape",
+    "summary": "Covers public official deliberately or knowing the result was likely (intentionally or knowing the result was likely) allowing prisoner of State or war to escape.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "129",
+    "title": "Public servant negligently suffering such prisoner to escape",
+    "summary": "Covers public official negligently suffering such prisoner to escape.",
+    "status": "provision"
+  },
+  {
+    "chapter": 6,
+    "chapterTitle": "Of Offences Against the State",
+    "sectionNumber": "130",
+    "title": "Aiding escape of, rescuing or harbouring such prisoner",
+    "summary": "Covers helping a State prisoner or prisoner of war escape, taking them from custody, hiding them, or resisting their recapture.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "131",
+    "title": "Abetting mutiny, or attempting to seduce a soldier, sailor or airman from his duty",
+    "summary": "Covers helping a mutiny (a rebellion by armed forces), or trying to turn a soldier, sailor, or airman away from their duty.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "132",
+    "title": "Abetment of mutiny, if mutiny is committed in consequence thereof",
+    "summary": "Covers helping or encouraging a crime of mutiny, if mutiny is committed in consequence thereof.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "133",
+    "title": "Abetment of assault by soldier, sailor or airman on his superior officer, when in execution of his office",
+    "summary": "Covers helping or encouraging a crime of assault by soldier, sailor or airman on his superior officer, when in execution of his office.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "134",
+    "title": "Abetment of such assault, if the assault is committed",
+    "summary": "Covers helping or encouraging a crime of such assault, if the assault is committed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "135",
+    "title": "Abetment of desertion of soldier, sailor or airman",
+    "summary": "Covers helping or encouraging a crime of desertion of soldier, sailor or airman.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "136",
+    "title": "Harbouring deserter",
+    "summary": "Covers hiding or sheltering a soldier, sailor, or airman known to have deserted.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "137",
+    "title": "Deserter concealed on board merchant vessel through negligence of master",
+    "summary": "Covers deserter concealed on board merchant vessel through negligence of master.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "138",
+    "title": "Abetment of act of insubordination by soldier, sailor or airman",
+    "summary": "Covers helping or encouraging a crime of act of insubordination by soldier, sailor or airman.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "138A",
+    "title": "Application of foregoing sections to the Indian Marine Service",
+    "summary": "This repealed section covered application of foregoing sections to the Indian Marine Service. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "139",
+    "title": "Persons subject to certain Acts",
+    "summary": "People governed by specified military service laws are generally dealt with under those laws, not this Code, for offences in this chapter.",
+    "status": "provision"
+  },
+  {
+    "chapter": 7,
+    "chapterTitle": "Of Offences relating to the Army, Navy and Air Force",
+    "sectionNumber": "140",
+    "title": "Wearing garb or carrying token used by soldier, sailor or airman",
+    "summary": "Covers wearing garb or carrying token used by soldier, sailor or airman.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "141",
+    "title": "Unlawful assembly",
+    "summary": "An unlawful assembly is a group of five or more people gathered for one of the illegal purposes listed in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "142",
+    "title": "Being member of unlawful assembly",
+    "summary": "A person is a member of an unlawful assembly if they knowingly join or remain with the group.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "143",
+    "title": "Punishment",
+    "summary": "Sets the penalty for being a member of an unlawful assembly.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "144",
+    "title": "Joining unlawful assembly armed with deadly weapon",
+    "summary": "Sets the penalty for joining an unlawful assembly while carrying a weapon likely to cause death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "145",
+    "title": "Joining or continuing in unlawful assembly, knowing it has been commanded to disperse",
+    "summary": "Covers joining or continuing in unlawful assembly, knowing it has been commanded to disperse.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "146",
+    "title": "Rioting",
+    "summary": "A group commits rioting when it uses force or violence to carry out the unlawful assembly's shared purpose.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "147",
+    "title": "Punishment for rioting",
+    "summary": "States the possible penalty for rioting.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "148",
+    "title": "Rioting, armed with deadly weapon",
+    "summary": "Sets the penalty for rioting while armed with a weapon likely to cause death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "149",
+    "title": "Every member of unlawful assembly guilty of offence committed in prosecution of common object",
+    "summary": "A person in an unlawful assembly may be held responsible for a crime committed to carry out its shared purpose, or one the members knew was likely.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "150",
+    "title": "Hiring, or conniving at hiring, of persons to join unlawful assembly",
+    "summary": "Covers hiring, or conniving at hiring, of persons to join unlawful assembly.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "151",
+    "title": "Knowingly joining or continuing in assembly of five or more persons after it has been commanded to disperse",
+    "summary": "Covers knowingly joining or continuing in assembly of five or more persons after it has been commanded to disperse.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "152",
+    "title": "Assaulting or obstructing public servant when suppressing riot, etc",
+    "summary": "Covers assaulting or obstructing public official when suppressing riot, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "153",
+    "title": "Wantonly giving provocation with intent to cause riot—if rioting be committed—if not committed",
+    "summary": "Covers wantonly giving provocation with intent to cause riot—if rioting be committed—if not committed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "153A",
+    "title": "Promoting enmity between different groups on grounds of religion, race, place of birth, residence, language, etc., and doing acts prejudicial to maintenance of harmony",
+    "summary": "Covers stirring hostility between groups based on religion, race, birthplace, residence, or language, and acts that harm public harmony.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "153AA",
+    "title": "Punishment for knowingly carrying arms in any procession or organising, or holding or taking part in any mass drill or mass training with arms",
+    "summary": "States the possible penalty for knowingly carrying arms in any procession or organising, or holding or taking part in any mass drill or mass training with arms.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "153B",
+    "title": "Imputations, assertions prejudicial to national-integration",
+    "summary": "Covers statements or claims that promote hostility toward groups or undermine national unity.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "154",
+    "title": "Owner or occupier of land on which an unlawful assembly is held",
+    "summary": "Covers owner or occupier of land on which an unlawful assembly is held.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "155",
+    "title": "Liability of person for whose benefit riot is committed",
+    "summary": "Explains when person for whose benefit riot is committed may be held responsible.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "156",
+    "title": "Liability of agent of owner or occupier for whose benefit riot is committed",
+    "summary": "Explains when agent of owner or occupier for whose benefit riot is committed may be held responsible.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "157",
+    "title": "Harbouring persons hired for an unlawful assembly",
+    "summary": "Covers sheltering or helping people hired to join an unlawful assembly.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "158",
+    "title": "Being hired to take part in an unlawful assembly or riot",
+    "summary": "Covers being paid or hired to join an unlawful assembly or riot.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "159",
+    "title": "Affray",
+    "summary": "An affray is a public fight that disturbs the peace.",
+    "status": "provision"
+  },
+  {
+    "chapter": 8,
+    "chapterTitle": "Of Offences against the Public Tranquillity",
+    "sectionNumber": "160",
+    "title": "Punishment for committing affray",
+    "summary": "States the possible penalty for committing public fight.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "161",
+    "title": "Public servant taking a gratification other than legal remuneration, in respect of an official act",
+    "summary": "This repealed section covered a public official taking an unauthorized payment for an official act.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "162",
+    "title": "Taking a gratification, in order, by corrupt or illegal means, to influence a public servant",
+    "summary": "This repealed section covered paying someone to influence a public official through corrupt or illegal means.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "163",
+    "title": "Taking a gratification for the exercise of personal influence with a public servant",
+    "summary": "This repealed section covered paying someone to use personal influence over a public official.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "164",
+    "title": "Punishment for abetment by public servant of the offences above defined",
+    "summary": "This repealed section covered punishment for helping or encouraging a crime by public official of the crimes above defined. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "165",
+    "title": "Public servant obtaining any valuable thing, without consideration, from person concerned in any proceeding or business transacted by such public servant",
+    "summary": "This repealed section covered a public official accepting a valuable benefit from someone involved in official business without proper payment.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "165A",
+    "title": "Punishment for abetment of offences defined in section 161 or section 165",
+    "summary": "This repealed section covered helping with certain bribery offences by public officials.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "166",
+    "title": "Public servant disobeying law, with intent to cause injury to any person",
+    "summary": "Covers public official disobeying law, with intent to cause injury to any person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "166A",
+    "title": "Public servant disobeying direction under law",
+    "summary": "Covers a public official disobeying legal duties in specified cases, including certain investigations of sexual offences.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "166B",
+    "title": "Punishment for non-treatment of victim",
+    "summary": "States the possible penalty for non-treatment of victim.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "167",
+    "title": "Public servant framing an incorrect document with intent to cause injury",
+    "summary": "Covers public official framing an incorrect document with intent to cause injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "168",
+    "title": "Public servant unlawfully engaging in trade",
+    "summary": "Covers a public official trading in a way the law forbids.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "169",
+    "title": "Public servant unlawfully buying or bidding for property",
+    "summary": "Covers a public official buying or bidding on property they are legally barred from acquiring.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "170",
+    "title": "Personating a public servant",
+    "summary": "Covers pretending to be a public official in order to act in that role.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences by or relating to Public Servants",
+    "sectionNumber": "171",
+    "title": "Wearing garb or carrying token used by public servant with fraudulent intent",
+    "summary": "Covers wearing garb or carrying token used by public official with fraudulent intent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171A",
+    "title": "“Candidate”, “Electoral right” defined",
+    "summary": "Defines candidate and electoral right for the election-related sections that follow.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171B",
+    "title": "Bribery",
+    "summary": "Bribery means offering or accepting a benefit to influence how someone votes or acts in an election.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171C",
+    "title": "Undue influence at elections",
+    "summary": "Covers threats or other improper pressure intended to affect someone's free choice in an election.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171D",
+    "title": "Personation at elections",
+    "summary": "Covers voting, or trying to vote, as someone else in an election.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171E",
+    "title": "Punishment for bribery",
+    "summary": "States the possible penalty for bribery.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171F",
+    "title": "Punishment for undue influence or personation at an election",
+    "summary": "States the possible penalty for undue influence or personation at an election.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171G",
+    "title": "False statement in connection with an election",
+    "summary": "Covers knowingly making a false statement about a candidate's character or conduct to affect an election.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171H",
+    "title": "Illegal payments in connection with an election",
+    "summary": "Covers election spending made without the required authority.",
+    "status": "provision"
+  },
+  {
+    "chapter": 9,
+    "chapterTitle": "Of Offences relating to Elections (Chapter IX-A)",
+    "sectionNumber": "171I",
+    "title": "Failure to keep election accounts",
+    "summary": "Requires proper records of election expenses.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "172",
+    "title": "Absconding to avoid service of summons or other proceeding",
+    "summary": "Covers hiding to avoid receiving a summons or other legal notice.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "173",
+    "title": "Preventing service of summons or other proceeding, or preventing publication thereof",
+    "summary": "Covers preventing service of summons or other proceeding, or preventing publication thereof.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "174",
+    "title": "Non-attendance in obedience to an order from public servant",
+    "summary": "Covers failing to attend when an official legally orders someone to appear.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "174A",
+    "title": "Non-appearance in response to a proclamation under section 82 of Act 2 of 1974",
+    "summary": "Covers non-appearance in response to a proclamation under section 82 of Act 2 of 1974.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "175",
+    "title": "Omission to produce document or electronic record to public servant by person legally bound to produce it",
+    "summary": "Covers omission to produce document or electronic record to public official by person legally bound to produce it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "176",
+    "title": "Omission to give notice or information to public servant by person legally bound to give it",
+    "summary": "Covers omission to give notice or information to public official by person legally bound to give it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "177",
+    "title": "Furnishing false information",
+    "summary": "Covers knowingly giving false information when the law requires someone to provide correct information.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "178",
+    "title": "Refusing oath or affirmation when duly required by public servant to make it",
+    "summary": "Covers refusing oath or affirmation when duly required by public official to make it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "179",
+    "title": "Refusing to answer public servant authorised to question",
+    "summary": "Covers refusing to answer an official who is legally allowed to ask questions.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "180",
+    "title": "Refusing to sign statement",
+    "summary": "Covers refusing to sign a statement when legally required to do so.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "181",
+    "title": "False statement on oath or affirmation to public servant or person authorised to administer an oath or affirmation",
+    "summary": "Covers making a false statement under oath (a formal promise to tell the truth) to an official or another person authorized to administer an oath.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "182",
+    "title": "False information, with intent to cause public servant to use his lawful power to the injury of another person",
+    "summary": "Covers knowingly giving false information to make an official use their legal powers to harm someone.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "183",
+    "title": "Resistance to the taking of property by the lawful authority of a public servant",
+    "summary": "Covers resisting an official who is lawfully taking property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "184",
+    "title": "Obstructing sale of property offered for sale by authority of public servant",
+    "summary": "Covers obstructing a sale of property ordered by an official.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "185",
+    "title": "Illegal purchase or bid for property offered for sale by authority of public servant",
+    "summary": "Covers unlawfully buying or bidding on property sold under an official order.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "186",
+    "title": "Obstructing public servant in discharge of public functions",
+    "summary": "Covers obstructing an official while they perform public duties.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "187",
+    "title": "Omission to assist public servant when bound by law to give assistance",
+    "summary": "Covers failing to help an official when the law requires help.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "188",
+    "title": "Disobedience to order duly promulgated by public servant",
+    "summary": "Covers disobeying an official order that has been properly made public.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "189",
+    "title": "Threat of injury to public servant",
+    "summary": "Covers threatening injury to a public official to stop them doing a duty or because they performed it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 10,
+    "chapterTitle": "Of Contempts of the Lawful Authority of Public Servants",
+    "sectionNumber": "190",
+    "title": "Threat of injury to induce person to refrain from applying for protection to public servant",
+    "summary": "Covers threatening someone to stop them asking an official for protection.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "191",
+    "title": "Giving false evidence",
+    "summary": "Covers knowingly giving false evidence when legally required to tell the truth.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "192",
+    "title": "Fabricating false evidence",
+    "summary": "Covers creating false evidence to mislead a court or legal proceeding.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "193",
+    "title": "Punishment for false evidence",
+    "summary": "Sets the penalty for giving or creating false evidence; the penalty depends on where it is used.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "194",
+    "title": "Giving or fabricating false evidence with intent to procure conviction of capital offence",
+    "summary": "Covers giving or creating false evidence to secure a death sentence for someone who is innocent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "195",
+    "title": "Giving or fabricating false evidence with intent to procure conviction of offence punishable with imprisonment for life or imprisonment",
+    "summary": "Covers giving or creating false evidence to secure a life sentence or other prison term for someone who is innocent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "195A",
+    "title": "Threatening any person to give false evidence",
+    "summary": "Covers threatening someone to make them give false evidence.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "196",
+    "title": "Using evidence known to be false",
+    "summary": "Covers knowingly using evidence that is false or fabricated.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "197",
+    "title": "Issuing or signing false certificate",
+    "summary": "Covers issuing or signing a certificate known to be false.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "198",
+    "title": "Using as true a certificate known to be false",
+    "summary": "Covers knowingly using a false certificate as genuine.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "199",
+    "title": "False statement made in declaration which is by law receivable as evidence",
+    "summary": "Covers false statement made in declaration which is by law receivable as evidence.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "200",
+    "title": "Using as true such declaration knowing it to be false",
+    "summary": "Covers knowingly using a false declaration as if it were true.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "201",
+    "title": "Causing disappearance of evidence of offence, or giving false information to screen offender",
+    "summary": "Covers hiding or destroying evidence of a crime, or giving false information to protect the offender.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "202",
+    "title": "Intentional omission to give information of offence by person bound to inform",
+    "summary": "Covers intentional omission to give information of crime by person bound to inform.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "203",
+    "title": "Giving false information respecting an offence committed",
+    "summary": "Covers knowingly giving false information about a crime that has been committed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "204",
+    "title": "Destruction of document or electronic record to prevent its production as evidence",
+    "summary": "Covers destruction of document or electronic record to prevent its production as evidence.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "205",
+    "title": "False personation for purpose of act or proceeding in suit or prosecution",
+    "summary": "Covers false personation for purpose of act or proceeding in suit or prosecution.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "206",
+    "title": "Fraudulent removal or concealment of property to prevent its seizure as forfeited or in execution",
+    "summary": "Covers fraudulent removal or concealment of property to prevent its seizure as forfeited or in execution.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "207",
+    "title": "Fraudulent claim to property to prevent its seizure as forfeited or in execution",
+    "summary": "Covers fraudulent claim to property to prevent its seizure as forfeited or in execution.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "208",
+    "title": "Fraudulently suffering decree for sum not due",
+    "summary": "Covers dishonestly arranging for a court order requiring payment of money that is not owed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "209",
+    "title": "Dishonestly making false claim in Court",
+    "summary": "Covers knowingly making a false claim in court.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "210",
+    "title": "Fraudulently obtaining decree for sum not due",
+    "summary": "Covers dishonestly obtaining a court order for money that is not owed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "211",
+    "title": "False charge of offence made with intent to injure",
+    "summary": "Covers falsely accusing someone of a crime to harm them.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "212",
+    "title": "Harbouring offender",
+    "summary": "Covers helping an offender hide or escape punishment; the penalty depends on the crime and circumstances.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "213",
+    "title": "Taking gift, etc., to screen an offender from punishment",
+    "summary": "Covers accepting a benefit in exchange for helping an offender avoid punishment.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "214",
+    "title": "Offering gift or restoration of property in consideration of screening offender",
+    "summary": "Covers offering gift or restoration of property in consideration of screening offender.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "215",
+    "title": "Taking gift to help to recover stolen property, etc",
+    "summary": "Covers taking gift to help to recover stolen property, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "216",
+    "title": "Harbouring offender who has escaped from custody or whose apprehension has been ordered",
+    "summary": "Covers harbouring offender who has escaped from custody or whose apprehension has been ordered.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "216A",
+    "title": "Penalty for harbouring robbers or dacoits",
+    "summary": "States the possible penalty for harbouring robbers or dacoits.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "216B",
+    "title": "Definition of “harbour” in sections 212, 216 and 216A.",
+    "summary": "This section once defined “harbour” in sections 212, 216 and 216A. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "217",
+    "title": "Public servant disobeying direction of law with intent to save person from punishment or property from forfeiture",
+    "summary": "Covers public official disobeying direction of law with intent to save person from punishment or property from forfeiture.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "218",
+    "title": "Public servant framing incorrect record or writing with intent to save person from punishment or property from forfeiture",
+    "summary": "Covers public official framing incorrect record or writing with intent to save person from punishment or property from forfeiture.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "219",
+    "title": "Public servant in judicial proceeding corruptly making report, etc., contrary to law",
+    "summary": "Covers public official in judicial proceeding corruptly making report, and similar conduct, contrary to law.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "220",
+    "title": "Commitment for trial or confinement by person having authority who knows that he is acting contrary to law",
+    "summary": "Covers commitment for trial or confinement by person having authority who knows that he is acting contrary to law.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "221",
+    "title": "Intentional omission to apprehend on the part of public servant bound to apprehend",
+    "summary": "Covers intentional omission to apprehend on the part of public official bound to apprehend.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "222",
+    "title": "Intentional omission to apprehend on the part of public servant bound to apprehend person under sentence or lawfully committed",
+    "summary": "Covers intentional omission to apprehend on the part of public official bound to apprehend person under sentence or lawfully committed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "223",
+    "title": "Escape from confinement or custody negligently suffered by public servant",
+    "summary": "Covers escape from confinement or custody negligently suffered by public official.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "224",
+    "title": "Resistance or obstruction by a person to his lawful apprehension",
+    "summary": "Covers resistance or obstruction by a person to his lawful apprehension.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "225",
+    "title": "Resistance or obstruction to lawful apprehension of another person",
+    "summary": "Covers resistance or obstruction to lawful apprehension of another person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "225A",
+    "title": "Omission to apprehend, or sufferance of escape, on part of public servant, in cases not otherwise, provided for",
+    "summary": "Covers omission to apprehend, or sufferance of escape, on part of public official, in cases not otherwise, provided for.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "225B",
+    "title": "Resistance or obstruction to lawful apprehension, or escape or rescue in cases not otherwise provided for",
+    "summary": "Covers resistance or obstruction to lawful apprehension, or escape or rescue in cases not otherwise provided for.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "226",
+    "title": "Unlawful return from transportation",
+    "summary": "This repealed section covered unlawful return from transportation. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "227",
+    "title": "Violation of condition of remission of punishment",
+    "summary": "Covers breaking a condition attached to a reduced or cancelled sentence.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "228",
+    "title": "Intentional insult or interruption to public servant sitting in judicial proceeding",
+    "summary": "Covers intentional insult or interruption to public official sitting in judicial proceeding.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "228A",
+    "title": "Disclosure of identity of the victim of certain offences etc",
+    "summary": "Covers disclosure of identity of the victim of certain crimes and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "229",
+    "title": "Personation of a juror or assessor",
+    "summary": "Covers pretending to be a juror or assessor in a legal proceeding.",
+    "status": "provision"
+  },
+  {
+    "chapter": 11,
+    "chapterTitle": "Of False Evidence and Offences against Public Justice",
+    "sectionNumber": "229A",
+    "title": "Failure by person released on bail or bond to appear in Court",
+    "summary": "Covers failure by person released on bail or bond to appear in Court.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "230",
+    "title": "“Coin” defined",
+    "summary": "Explains what counts as a coin under the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "231",
+    "title": "Counterfeiting coin",
+    "summary": "Covers making or dealing in counterfeit coins.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "232",
+    "title": "Counterfeiting Indian coin",
+    "summary": "Covers counterfeiting Indian coins.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "233",
+    "title": "Making or selling instrument for counterfeiting coin",
+    "summary": "Covers making or selling tools intended for making counterfeit coins.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "234",
+    "title": "Making or selling instrument for counterfeiting Indian coin",
+    "summary": "Covers making or selling tools intended for making counterfeit Indian coins.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "235",
+    "title": "Possession of instrument, or material for the purpose of using the same for counterfeiting coin",
+    "summary": "Covers possession of instrument, or material for the purpose of using the same for counterfeiting coin.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "236",
+    "title": "Abetting in India the counterfeiting out of India of coin",
+    "summary": "Covers helping in India with counterfeiting coins outside India.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "237",
+    "title": "Import or export of counterfeit coin",
+    "summary": "Covers bringing counterfeit coins into India or sending them out.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "238",
+    "title": "Import or export of counterfeits of the Indian coin",
+    "summary": "Covers bringing counterfeit Indian coins into India or sending them out.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "239",
+    "title": "Delivery of coin, possessed with knowledge that it is counterfeit",
+    "summary": "Covers delivery of coin, possessed with knowledge that it is counterfeit.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "240",
+    "title": "Delivery of Indian coin, possessed with knowledge that it is counterfeit",
+    "summary": "Covers delivery of Indian coin, possessed with knowledge that it is counterfeit.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "241",
+    "title": "Delivery of coin as genuine, which, when first possessed, the deliverer did not know to be counterfeit",
+    "summary": "Covers delivery of coin as genuine, which, when first possessed, the deliverer did not know to be counterfeit.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "242",
+    "title": "Possession of counterfeit coin by person who knew it to be counterfeit when he became possessed thereof",
+    "summary": "Covers possession of counterfeit coin by person who knew it to be counterfeit when he became possessed thereof.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "243",
+    "title": "Possession of Indian coin by person who knew it to be counterfeit when he became possessed thereof",
+    "summary": "Covers possession of Indian coin by person who knew it to be counterfeit when he became possessed thereof.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "244",
+    "title": "Person employed in mint causing coin to be of different weight or composition from that fixed by law",
+    "summary": "Covers person employed in mint causing coin to be of different weight or composition from that fixed by law.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "245",
+    "title": "Unlawfully taking coining instrument from mint",
+    "summary": "Covers unlawfully taking a coin-making tool from a mint.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "246",
+    "title": "Fraudulently or dishonestly diminishing weight or altering composition of coin",
+    "summary": "Covers fraudulently or dishonestly diminishing weight or altering composition of coin.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "247",
+    "title": "Fraudulently or dishonestly diminishing weight or altering composition of Indian coin",
+    "summary": "Covers fraudulently or dishonestly diminishing weight or altering composition of Indian coin.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "248",
+    "title": "Altering appearance of coin with intent that it shall pass as coin of different description",
+    "summary": "Covers altering appearance of coin with intent that it shall pass as coin of different description.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "249",
+    "title": "Altering appearance of Indian coin with intent that it shall pass as coin of different description",
+    "summary": "Covers altering appearance of Indian coin with intent that it shall pass as coin of different description.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "250",
+    "title": "Delivery of coin, possessed with knowledge that it is altered",
+    "summary": "Covers delivery of coin, possessed with knowledge that it is altered.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "251",
+    "title": "Delivery of Indian coin, possessed with knowledge that it is altered",
+    "summary": "Covers delivery of Indian coin, possessed with knowledge that it is altered.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "252",
+    "title": "Possession of coin by person who knew it to be altered when he became possessed thereof",
+    "summary": "Covers possession of coin by person who knew it to be altered when he became possessed thereof.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "253",
+    "title": "Possession of Indian coin by person who knew it to be altered when he became possessed thereof",
+    "summary": "Covers possession of Indian coin by person who knew it to be altered when he became possessed thereof.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "254",
+    "title": "Delivery of coin as genuine, which, when first possessed, the deliverer did not know to be altered",
+    "summary": "Covers delivery of coin as genuine, which, when first possessed, the deliverer did not know to be altered.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "255",
+    "title": "Counterfeiting Government stamp",
+    "summary": "Covers making counterfeit Government stamps.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "256",
+    "title": "Having possession of instrument or material for counterfeiting Government stamp",
+    "summary": "Covers having possession of instrument or material for counterfeiting Government stamp.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "257",
+    "title": "Making or selling instrument for counterfeiting Government stamp",
+    "summary": "Covers making or selling instrument for counterfeiting Government stamp.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "258",
+    "title": "Sale of counterfeit Government stamp",
+    "summary": "Covers selling counterfeit Government stamps.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "259",
+    "title": "Having possession of counterfeit Government stamp",
+    "summary": "Covers possessing counterfeit Government stamps while knowing what they are.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "260",
+    "title": "Using as genuine a Government stamp known to be a counterfeit",
+    "summary": "Covers using as genuine a Government stamp known to be a counterfeit.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "261",
+    "title": "Effacing, writing from substance bearing Government stamp, or removing from document a stamp used for it, with intent to cause loss to Government",
+    "summary": "Covers effacing, writing from substance bearing Government stamp, or removing from document a stamp used for it, with intent to cause loss to Government.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "262",
+    "title": "Using Government stamp known to have been before used",
+    "summary": "Covers using a Government stamp while knowing it has already been used.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "263",
+    "title": "Erasure of mark denoting that stamp has been used",
+    "summary": "Covers removing or altering the mark showing that a stamp has been used.",
+    "status": "provision"
+  },
+  {
+    "chapter": 12,
+    "chapterTitle": "Of Offences relating to Coin and Government Stamps",
+    "sectionNumber": "263A",
+    "title": "Prohibition of fictitious stamps",
+    "summary": "Covers making, possessing, or using fictitious stamps.",
+    "status": "provision"
+  },
+  {
+    "chapter": 13,
+    "chapterTitle": "Of Offences relating to Weights and Measures",
+    "sectionNumber": "264",
+    "title": "Fraudulent use of false instrument for weighing",
+    "summary": "Covers using a false or inaccurate weighing instrument to cheat.",
+    "status": "provision"
+  },
+  {
+    "chapter": 13,
+    "chapterTitle": "Of Offences relating to Weights and Measures",
+    "sectionNumber": "265",
+    "title": "Fraudulent use of false weight or measure",
+    "summary": "Covers using a false weight or measure to cheat.",
+    "status": "provision"
+  },
+  {
+    "chapter": 13,
+    "chapterTitle": "Of Offences relating to Weights and Measures",
+    "sectionNumber": "266",
+    "title": "Being in possession of false weight or measure",
+    "summary": "Covers possessing a false weight or measure intending to use it fraudulently.",
+    "status": "provision"
+  },
+  {
+    "chapter": 13,
+    "chapterTitle": "Of Offences relating to Weights and Measures",
+    "sectionNumber": "267",
+    "title": "Making or selling false weight or measure",
+    "summary": "Covers making or selling a false weight or measure.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "268",
+    "title": "Public nuisance",
+    "summary": "A public nuisance is conduct that causes common harm, danger, or annoyance to the public.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "269",
+    "title": "Negligent act likely to spread infection of disease dangerous to life",
+    "summary": "Covers negligent act likely to spread infection of disease dangerous to life.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "270",
+    "title": "Malignant act likely to spread infection of disease dangerous to life",
+    "summary": "Covers malignant act likely to spread infection of disease dangerous to life.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "271",
+    "title": "Disobedience to quarantine rule",
+    "summary": "Covers disobeying a quarantine rule, which is an order restricting movement to control disease.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "272",
+    "title": "Adulteration of food or drink intended for sale",
+    "summary": "Covers making food or drink unsafe or impure when it is meant for sale.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "273",
+    "title": "Sale of noxious food or drink",
+    "summary": "Covers selling food or drink known to be harmful.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "274",
+    "title": "Adulteration of drugs",
+    "summary": "Covers making drugs impure or unsafe.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "275",
+    "title": "Sale of adulterated drugs",
+    "summary": "Covers selling drugs known to be impure or unsafe.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "276",
+    "title": "Sale of drug as a different drug or preparation",
+    "summary": "Covers selling one medicine as if it were a different medicine.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "277",
+    "title": "Fouling water of public spring or reservoir",
+    "summary": "Covers polluting water from a public spring or reservoir.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "278",
+    "title": "Making atmosphere noxious to health",
+    "summary": "Covers making the surrounding air harmful to health.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "279",
+    "title": "Rash driving or riding on a public way",
+    "summary": "Covers driving or riding dangerously on a public road.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "280",
+    "title": "Rash navigation of vessel",
+    "summary": "Covers navigating a vessel so carelessly that people or property may be endangered.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "281",
+    "title": "Exhibition of false light, mark or buoy",
+    "summary": "Covers showing a false light or navigation marker that could mislead people using a water route.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "282",
+    "title": "Conveying person by water for hire in unsafe or overloaded vessel",
+    "summary": "Covers conveying person by water for hire in unsafe or overloaded vessel.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "283",
+    "title": "Danger or obstruction in public way or line of navigation",
+    "summary": "Covers creating danger or obstruction on a public way or water route.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "284",
+    "title": "Negligent conduct with respect to poisonous substance",
+    "summary": "Covers careless handling of poisonous substances that may endanger others.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "285",
+    "title": "Negligent conduct with respect to fire or combustible matter",
+    "summary": "Covers careless handling of fire or flammable material that may endanger others.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "286",
+    "title": "Negligent conduct with respect to explosive substance",
+    "summary": "Covers careless handling of explosives that may endanger others.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "287",
+    "title": "Negligent conduct with respect to machinery",
+    "summary": "Covers careless use of machinery that may endanger others.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "288",
+    "title": "Negligent conduct with respect to pulling down or repairing buildings",
+    "summary": "Covers negligent conduct with respect to pulling down or repairing buildings.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "289",
+    "title": "Negligent conduct with respect to animal",
+    "summary": "Covers failing to control an animal when that failure may endanger others.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "290",
+    "title": "Punishment for public nuisance in cases not otherwise provided for",
+    "summary": "States the possible penalty for public nuisance in cases not otherwise provided for.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "291",
+    "title": "Continuance of nuisance after injunction to discontinue",
+    "summary": "Covers continuing a public nuisance after a court has ordered it to stop.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "292",
+    "title": "Sale, etc., of obscene books, etc",
+    "summary": "Covers sale, and similar conduct, of obscene books, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "293",
+    "title": "Sale, etc., of obscene objects to young person",
+    "summary": "Covers sale, and similar conduct, of obscene objects to young person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "294",
+    "title": "Obscene acts and songs",
+    "summary": "Covers obscene acts or songs in or near a public place.",
+    "status": "provision"
+  },
+  {
+    "chapter": 14,
+    "chapterTitle": "Of Offences affecting the Public Health, Safety, Convenience, Decency and Morals",
+    "sectionNumber": "294A",
+    "title": "Keeping lottery office",
+    "summary": "Covers keeping or managing an unauthorized lottery office.",
+    "status": "provision"
+  },
+  {
+    "chapter": 15,
+    "chapterTitle": "Of Offences relating to Religion",
+    "sectionNumber": "295",
+    "title": "Injuring or defiling place of worship with intent to insult the religion of any class",
+    "summary": "Covers injuring or defiling place of worship with intent to insult the religion of any class.",
+    "status": "provision"
+  },
+  {
+    "chapter": 15,
+    "chapterTitle": "Of Offences relating to Religion",
+    "sectionNumber": "295A",
+    "title": "Deliberate and malicious acts, intended to outrage religious feelings of any class by insulting its religion or religious beliefs",
+    "summary": "Covers deliberate and malicious acts, intended to outrage religious feelings of any class by insulting its religion or religious beliefs.",
+    "status": "provision"
+  },
+  {
+    "chapter": 15,
+    "chapterTitle": "Of Offences relating to Religion",
+    "sectionNumber": "296",
+    "title": "Disturbing religious assembly",
+    "summary": "Covers intentionally disturbing a religious gathering.",
+    "status": "provision"
+  },
+  {
+    "chapter": 15,
+    "chapterTitle": "Of Offences relating to Religion",
+    "sectionNumber": "297",
+    "title": "Trespassing on burial places, etc",
+    "summary": "Covers trespassing on burial places, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 15,
+    "chapterTitle": "Of Offences relating to Religion",
+    "sectionNumber": "298",
+    "title": "Uttering, words, etc., with deliberate intent to wound the religious feelings of any person",
+    "summary": "Covers uttering, words, and similar conduct, with deliberate intent to wound the religious feelings of any person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "299",
+    "title": "Culpable homicide",
+    "summary": "Culpable homicide is causing a person's death in one of the ways defined by the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "300",
+    "title": "Murder",
+    "summary": "Explains when culpable homicide is treated as murder under the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "301",
+    "title": "Culpable homicide by causing death of person other than person whose death was intended",
+    "summary": "Covers culpable homicide (unlawful killing) (unlawful killing) by causing death of person other than person whose death was intended.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "302",
+    "title": "Punishment for murder",
+    "summary": "States the possible penalty for murder.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "303",
+    "title": "Punishment for murder by life-convict",
+    "summary": "States the possible penalty for murder by life-convict.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "304",
+    "title": "Punishment for culpable homicide not amounting to murder",
+    "summary": "States the possible penalty for culpable homicide (unlawful killing) (unlawful killing) not amounting to murder.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "304A",
+    "title": "Causing death by negligence",
+    "summary": "Covers causing someone's death through a careless or reckless act that does not amount to murder.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "304B",
+    "title": "Dowry death",
+    "summary": "Covers a married woman's death within the stated period after marriage when dowry-related cruelty or harassment is linked to her death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "305",
+    "title": "Abetment of suicide of child or insane person",
+    "summary": "Covers helping or encouraging a crime of suicide of child or insane person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "306",
+    "title": "Abetment of suicide",
+    "summary": "Covers helping, encouraging, or arranging for another person to die by suicide.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "307",
+    "title": "Attempt to murder",
+    "summary": "Covers trying to kill someone, even if the attempt does not cause death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "308",
+    "title": "Attempt to commit culpable homicide",
+    "summary": "Covers attempt to commit culpable homicide (unlawful killing) (unlawful killing).",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "309",
+    "title": "Attempt to commit suicide",
+    "summary": "Covers trying to end one's own life.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "310",
+    "title": "Thug",
+    "summary": "A thug is a member of a group that habitually commits robbery or child-stealing.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "311",
+    "title": "Punishment",
+    "summary": "Sets the penalty for being a thug under the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "312",
+    "title": "Causing miscarriage",
+    "summary": "Covers causing a miscarriage, except where done in good faith to save the pregnant woman's life.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "313",
+    "title": "Causing miscarriage without woman’s consent",
+    "summary": "Covers causing a miscarriage without the pregnant woman's consent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "314",
+    "title": "Death caused by act done with intent to cause miscarriage",
+    "summary": "Covers causing a woman's death while trying to cause a miscarriage.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "315",
+    "title": "Act done with intent to prevent child being born alive or to cause it to die after birth",
+    "summary": "Covers act done with intent to prevent child being born alive or to cause it to die after birth.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "316",
+    "title": "Causing death of quick unborn child by act amounting to culpable homicide",
+    "summary": "Covers causing death of quick unborn child by act amounting to culpable homicide (unlawful killing) (unlawful killing).",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "317",
+    "title": "Exposure and abandonment of child under twelve years, by parent or person having care of it",
+    "summary": "Covers exposure and abandonment of child under twelve years, by parent or person having care of it.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "318",
+    "title": "Concealment of birth by secret disposal of dead body",
+    "summary": "Covers secretly disposing of a dead baby's body to hide the birth.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "319",
+    "title": "Hurt",
+    "summary": "Hurt means causing bodily pain, disease, or physical weakness.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "320",
+    "title": "Grievous hurt",
+    "summary": "Grievous hurt means one of the serious injuries specifically listed in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "321",
+    "title": "Voluntarily causing hurt",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing hurt.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "322",
+    "title": "Voluntarily causing grievous hurt",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing serious injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "323",
+    "title": "Punishment for voluntarily causing hurt",
+    "summary": "States the possible penalty for deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing hurt.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "324",
+    "title": "Voluntarily causing hurt by dangerous weapons or means",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing hurt by dangerous weapons or means.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "325",
+    "title": "Punishment for voluntarily causing grievous hurt",
+    "summary": "States the possible penalty for deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing serious injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "326",
+    "title": "Voluntarily causing grievous hurt by dangerous weapons or means",
+    "summary": "Covers deliberately causing, or knowingly risking, serious injury with a dangerous weapon or means.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "326A",
+    "title": "Voluntarily causing grievous hurt by use of acid, etc",
+    "summary": "Covers causing serious injury with acid or a similar substance, including attempts to cause such injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "326B",
+    "title": "Voluntarily throwing or attempting to throw acid",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) throwing or attempting to throw acid.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "327",
+    "title": "Voluntarily causing hurt to extort property, or to constrain to an illegal act",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing hurt to extort property, or to constrain to an illegal act.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "328",
+    "title": "Causing hurt by means of poison, etc., with intent to commit an offence",
+    "summary": "Covers causing hurt with poison or a similar substance in order to commit a crime.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "329",
+    "title": "Voluntarily causing grievous hurt to extort property, or to constrain to an illegal act",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing serious injury to extort property, or to constrain to an illegal act.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "330",
+    "title": "Voluntarily causing hurt to extort confession, or to compel restoration of property",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing hurt to extort confession, or to compel restoration of property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "331",
+    "title": "Voluntarily causing grievous hurt to extort confession, or to compel restoration of property",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing serious injury to extort confession, or to compel restoration of property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "332",
+    "title": "Voluntarily causing hurt to deter public servant from his duty",
+    "summary": "Covers intentionally hurting a public official, or knowing injury is likely, to stop them doing their job or because of something done in that job.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "333",
+    "title": "Voluntarily causing grievous hurt to deter public servant from his duty",
+    "summary": "Covers causing serious injury to a public official to stop them doing their job or because of something done in that job.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "334",
+    "title": "Voluntarily causing hurt on provocation",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing hurt on provocation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "335",
+    "title": "Voluntarily causing grievous hurt on provocation",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing serious injury on provocation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "336",
+    "title": "Act endangering life or personal safety of others",
+    "summary": "Covers reckless acts that put someone's life or personal safety at risk.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "337",
+    "title": "Causing hurt by act endangering life or personal safety of others",
+    "summary": "Covers causing hurt by act endangering life or personal safety of others.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "338",
+    "title": "Causing grievous hurt by act endangering life or personal safety of others",
+    "summary": "Covers causing serious injury by act endangering life or personal safety of others.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "339",
+    "title": "Wrongful restraint",
+    "summary": "Wrongful restraint means unlawfully stopping someone from going where they have a right to go.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "340",
+    "title": "Wrongful confinement",
+    "summary": "Wrongful confinement means unlawfully keeping someone within limits they cannot leave.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "341",
+    "title": "Punishment for wrongful restraint",
+    "summary": "States the possible penalty for unlawfully stopping someone from moving freely.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "342",
+    "title": "Punishment for wrongful confinement",
+    "summary": "States the possible penalty for unlawfully keeping someone in a place.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "343",
+    "title": "Wrongful confinement for three or more days",
+    "summary": "Covers unlawfully keeping someone confined for at least three days.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "344",
+    "title": "Wrongful confinement for ten or more days",
+    "summary": "Covers unlawfully keeping someone confined for at least ten days.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "345",
+    "title": "Wrongful confinement of person for whose liberation writ has been issued",
+    "summary": "Covers unlawfully keeping someone in a place of person for whose liberation writ has been issued.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "346",
+    "title": "Wrongful confinement in secret",
+    "summary": "Covers secretly keeping someone unlawfully confined.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "347",
+    "title": "Wrongful confinement to extort property, or constrain to illegal act",
+    "summary": "Covers unlawfully keeping someone in a place to extort property, or constrain to illegal act.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "348",
+    "title": "Wrongful confinement to extort confession, or compel restoration of property",
+    "summary": "Covers unlawfully keeping someone in a place to extort confession, or compel restoration of property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "349",
+    "title": "Force",
+    "summary": "Force includes causing movement or change in movement by physical action.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "350",
+    "title": "Criminal force",
+    "summary": "Criminal force means intentionally using force without consent to commit an offence, cause injury, fear, or annoyance.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "351",
+    "title": "Assault",
+    "summary": "Assault means a gesture or preparation that makes someone fear immediate use of criminal force.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "352",
+    "title": "Punishment for assault or criminal force otherwise than on grave provocation",
+    "summary": "States the possible penalty for assault or unlawful force otherwise than on grave provocation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "353",
+    "title": "Assault or criminal force to deter public servant from discharge of his duty",
+    "summary": "Covers assault or unlawful force to stop public official from discharge of his duty.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "354",
+    "title": "Assault or criminal force to woman with intent to outrage her modesty",
+    "summary": "Covers assault or unlawful force to woman with intent to outrage her modesty.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "354A",
+    "title": "Sexual harassment and punishment for sexual harassment",
+    "summary": "Explains conduct treated as sexual harassment and sets out its penalties.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "354B",
+    "title": "Assault or use of criminal force to woman with intent to disrobe",
+    "summary": "Covers assault or use of unlawful force to woman with intent to disrobe.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "354C",
+    "title": "Voyeurism",
+    "summary": "Voyeurism covers watching or recording someone in private circumstances without consent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "354D",
+    "title": "Stalking",
+    "summary": "Stalking covers repeatedly following or contacting someone, or monitoring their electronic communications, in circumstances set out in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "355",
+    "title": "Assault or criminal force with intent to dishonour person, otherwise than on grave provocation",
+    "summary": "Covers assault or unlawful force with intent to dishonour person, otherwise than on grave provocation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "356",
+    "title": "Assault or criminal force in attempt to commit theft of property carried by a person",
+    "summary": "Covers assault or unlawful force in attempt to commit theft of property carried by a person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "357",
+    "title": "Assault or criminal force in attempt wrongfully to confine a person",
+    "summary": "Covers assault or unlawful force in attempt wrongfully to confine a person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "358",
+    "title": "Assault or criminal force on grave provocation",
+    "summary": "Covers assaulting someone or using force against them after serious, sudden provocation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "359",
+    "title": "Kidnapping",
+    "summary": "Kidnapping covers taking someone from India or from a lawful guardian without the required consent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "360",
+    "title": "Kidnapping from India",
+    "summary": "Defines kidnapping from India as taking a person beyond the country's borders without the required consent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "361",
+    "title": "Kidnapping from lawful guardianship",
+    "summary": "Covers taking a child or a person unable to make the decision from their lawful guardian without consent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "362",
+    "title": "Abduction",
+    "summary": "Abduction means forcing someone, or deceiving them, into going from a place.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "363",
+    "title": "Punishment for kidnapping",
+    "summary": "States the possible penalty for kidnapping.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "363A",
+    "title": "Kidnapping or maiming a minor for purposes of begging",
+    "summary": "Covers kidnapping or injuring a child to use the child for begging.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "364",
+    "title": "Kidnapping or abducting in order to murder",
+    "summary": "Covers kidnapping or abducting someone in order to murder them.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "364A",
+    "title": "Kidnapping for ransom, etc",
+    "summary": "Covers kidnapping for ransom, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "365",
+    "title": "Kidnapping or abducting with intent secretly and wrongfully to confine person",
+    "summary": "Covers kidnapping or abducting with intent secretly and wrongfully to confine person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "366",
+    "title": "Kidnapping, abducting or inducing woman to compel her marriage, etc",
+    "summary": "Covers kidnapping, abducting or inducing woman to compel her marriage, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "366A",
+    "title": "Procuration of minor girl",
+    "summary": "Covers inducing a girl under eighteen to go somewhere or act so she may be forced or persuaded into unlawful sexual activity.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "366B",
+    "title": "Importation of girl from foreign country",
+    "summary": "Covers bringing a girl under twenty-one into India for unlawful sexual purposes.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "367",
+    "title": "Kidnapping or abducting in order to subject person to grievous hurt, slavery, etc",
+    "summary": "Covers kidnapping or abducting in order to subject person to serious injury, slavery, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "368",
+    "title": "Wrongfully concealing or keeping in confinement, kidnapped or abducted person",
+    "summary": "Covers wrongfully concealing or keeping in confinement, kidnapped or abducted person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "369",
+    "title": "Kidnapping or abducting child under ten years with intent to steal from its person",
+    "summary": "Covers kidnapping or abducting child under ten years with intent to steal from its person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "370",
+    "title": "Trafficking of a Person",
+    "summary": "Human trafficking covers specified acts of recruiting, moving, or keeping a person for exploitation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "370A",
+    "title": "Exploitation of a trafficked person",
+    "summary": "Covers knowingly engaging a trafficked person for sexual or other exploitation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "371",
+    "title": "Habitual dealing in slaves",
+    "summary": "Covers repeatedly buying, selling, or dealing in enslaved people.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "372",
+    "title": "Selling minor for purposes of prostitution, etc",
+    "summary": "Covers selling minor for purposes of prostitution, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "373",
+    "title": "Buying minor for purposes of prostitution, etc",
+    "summary": "Covers buying minor for purposes of prostitution, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "374",
+    "title": "Unlawful compulsory labour",
+    "summary": "Covers forcing someone to work against their will.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "375",
+    "title": "Rape",
+    "summary": "Defines rape and lists the acts and circumstances covered by that offence.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376",
+    "title": "Punishment for rape",
+    "summary": "States the possible penalty for rape.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376A",
+    "title": "Punishment for causing death or resulting in persistent vegetative state of victim",
+    "summary": "States the possible penalty for causing death or resulting in persistent vegetative state of victim.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376AB",
+    "title": "Punishment for rape on woman under twelve years of age",
+    "summary": "States the possible penalty for rape on woman under twelve years of age.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376B",
+    "title": "Sexual intercourse by husband upon his wife during separation",
+    "summary": "Covers sexual intercourse by husband upon his wife during separation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376C",
+    "title": "Sexual intercourse by a person in authority",
+    "summary": "Covers sexual intercourse by a person in authority when they misuse that position.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376D",
+    "title": "Gang rape",
+    "summary": "Sets the penalty for rape committed by a group acting together.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376DA",
+    "title": "Punishment for gang rape on woman under sixteen years of age",
+    "summary": "States the possible penalty for gang rape on woman under sixteen years of age.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376DB",
+    "title": "Punishment for gang rape on woman under twelve years of age",
+    "summary": "States the possible penalty for gang rape on woman under twelve years of age.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "376E",
+    "title": "Punishment for repeat offenders",
+    "summary": "States the possible penalty for repeat offenders.",
+    "status": "provision"
+  },
+  {
+    "chapter": 16,
+    "chapterTitle": "Of Offences Affecting the Human Body",
+    "sectionNumber": "377",
+    "title": "Unnatural offences",
+    "summary": "In the source-era text, this provision covered certain sexual acts between people or with animals that it described as \"against the order of nature.\" In 2018, the Supreme Court read Section 377 down so it does not criminalize consensual sexual acts between adults in private; the ruling did not strike down the section for non-consensual acts or acts involving minors.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "378",
+    "title": "Theft",
+    "summary": "Theft means dishonestly taking someone else's movable property without consent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "379",
+    "title": "Punishment for theft",
+    "summary": "States the possible penalty for theft.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "380",
+    "title": "Theft in dwelling house, etc",
+    "summary": "Covers theft in dwelling house, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "381",
+    "title": "Theft by clerk or servant of property in possession of master",
+    "summary": "Covers theft by clerk or servant of property in possession of master.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "382",
+    "title": "Theft after preparation made for causing death, hurt or restraint in order to the committing of the theft",
+    "summary": "Covers theft after preparation made for causing death, hurt or restraint in order to the committing of the theft.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "383",
+    "title": "Extortion",
+    "summary": "Extortion means getting property by putting someone in fear of harm.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "384",
+    "title": "Punishment for extortion",
+    "summary": "States the possible penalty for extortion.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "385",
+    "title": "Putting person in fear of injury in order to commit extortion",
+    "summary": "Covers putting person in fear of injury in order to commit extortion.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "386",
+    "title": "Extortion by putting a person in fear of death or grievous hurt",
+    "summary": "Covers extortion by putting a person in fear of death or serious injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "387",
+    "title": "Putting person in fear of death or of grievous hurt, in order to commit extortion",
+    "summary": "Covers putting person in fear of death or of serious injury, in order to commit extortion.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "388",
+    "title": "Extortion by threat of accusation of an offence punishable with death or imprisonment for life, etc",
+    "summary": "Covers using a threat to accuse someone of a crime punishable by death or imprisonment for life to obtain property or a benefit.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "389",
+    "title": "Putting person in fear of accusation of offence, in order to commit extortion",
+    "summary": "Covers putting person in fear of accusation of crime, in order to commit extortion.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "390",
+    "title": "Robbery",
+    "summary": "Robbery is theft or extortion involving immediate violence or fear of immediate harm.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "391",
+    "title": "Dacoity",
+    "summary": "Dacoity means robbery committed or attempted by a group of five or more people.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "392",
+    "title": "Punishment for robbery",
+    "summary": "States the possible penalty for robbery.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "393",
+    "title": "Attempt to commit robbery",
+    "summary": "Sets the penalty for trying to commit robbery, even if it is not completed.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "394",
+    "title": "Voluntarily causing hurt in committing robbery",
+    "summary": "Covers deliberately or knowing the result was likely (intentionally or knowing the result was likely) causing hurt in committing robbery.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "395",
+    "title": "Punishment for dacoity",
+    "summary": "States the possible penalty for robbery by five or more people.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "396",
+    "title": "Dacoity with murder",
+    "summary": "Covers a group robbery in which one member commits murder.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "397",
+    "title": "Robbery, or dacoity, with attempt to cause death or grievous hurt",
+    "summary": "Covers robbery, or robbery by five or more people, with attempt to cause death or serious injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "398",
+    "title": "Attempt to commit robbery or dacoity when armed with deadly weapon",
+    "summary": "Covers attempt to commit robbery or robbery by five or more people when armed with deadly weapon.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "399",
+    "title": "Making preparation to commit dacoity",
+    "summary": "Covers preparing to commit dacoity, meaning group robbery by five or more people.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "400",
+    "title": "Punishment for belonging to gang of dacoits",
+    "summary": "States the possible penalty for belonging to gang of dacoits.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "401",
+    "title": "Punishment for belonging to gang of thieves",
+    "summary": "States the possible penalty for belonging to gang of thieves.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "402",
+    "title": "Assembling for purpose of committing dacoity",
+    "summary": "Covers assembling for purpose of committing robbery by five or more people.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "403",
+    "title": "Dishonest misappropriation of property",
+    "summary": "Covers dishonestly taking or using someone else's property as one's own.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "404",
+    "title": "Dishonest misappropriation of property possessed by deceased person at the time of his death",
+    "summary": "Covers dishonest misappropriation of property possessed by deceased person at the time of his death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "405",
+    "title": "Criminal breach of trust",
+    "summary": "Criminal breach of trust means dishonestly misusing property entrusted to someone.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "406",
+    "title": "Punishment for criminal breach of trust",
+    "summary": "States the possible penalty for misuse of property entrusted to someone.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "407",
+    "title": "Criminal breach of trust by carrier, etc",
+    "summary": "Covers misuse of property entrusted to someone by carrier, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "408",
+    "title": "Criminal breach of trust by clerk or servant",
+    "summary": "Covers a clerk or employee dishonestly misusing property entrusted to them through their work.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "409",
+    "title": "Criminal breach of trust by public servant, or by banker, merchant or agent",
+    "summary": "Covers misuse of property entrusted to someone by public official, or by banker, merchant or agent.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "410",
+    "title": "Stolen property",
+    "summary": "Stolen property includes property obtained by theft, extortion, robbery, misappropriation, or breach of trust.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "411",
+    "title": "Dishonestly receiving stolen property",
+    "summary": "Covers dishonestly receiving or keeping property known to be stolen.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "412",
+    "title": "Dishonestly receiving property stolen in the commission of a dacoity",
+    "summary": "Covers dishonestly receiving property stolen in the commission of a robbery by five or more people.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "413",
+    "title": "Habitually dealing in stolen property",
+    "summary": "Covers repeatedly dealing in property known to be stolen.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "414",
+    "title": "Assisting in concealment of stolen property",
+    "summary": "Covers helping someone hide or dispose of stolen property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "415",
+    "title": "Cheating",
+    "summary": "Cheating means deceiving someone to make them hand over property or do or omit something that causes harm.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "416",
+    "title": "Cheating by personation",
+    "summary": "Cheating by personation means deceiving someone by pretending to be another person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "417",
+    "title": "Punishment for cheating",
+    "summary": "States the possible penalty for cheating.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "418",
+    "title": "Cheating with knowledge that wrongful loss may ensue to person whose interest offender is bound to protect",
+    "summary": "Covers cheating with knowledge that unlawful loss may ensue to person whose interest offender is bound to protect.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "419",
+    "title": "Punishment for cheating by personation",
+    "summary": "States the possible penalty for cheating by personation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "420",
+    "title": "Cheating and dishonestly inducing delivery of property",
+    "summary": "Covers cheating someone into handing over property or changing a valuable document.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "421",
+    "title": "Dishonest or fraudulent removal or concealment of property to prevent distribution among creditors",
+    "summary": "Covers dishonest or fraudulent removal or concealment of property to prevent distribution among creditors.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "422",
+    "title": "Dishonestly or fraudulently preventing debt being available for creditors",
+    "summary": "Covers dishonestly or fraudulently preventing debt being available for creditors.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "423",
+    "title": "Dishonest or fraudulent execution of deed of transfer containing false statement of consideration",
+    "summary": "Covers dishonest or fraudulent execution of deed of transfer containing false statement of consideration.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "424",
+    "title": "Dishonest or fraudulent removal or concealment of property",
+    "summary": "Covers dishonestly or fraudulently moving or hiding property to prevent its lawful use or recovery.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "425",
+    "title": "Mischief",
+    "summary": "Mischief means intentionally damaging property or reducing its value or usefulness.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "426",
+    "title": "Punishment for mischief",
+    "summary": "States the possible penalty for deliberate property damage.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "427",
+    "title": "Mischief causing damage to the amount of fifty rupees",
+    "summary": "Covers deliberate property damage causing damage to the amount of fifty rupees.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "428",
+    "title": "Mischief by killing or maiming animal of the value of ten rupees",
+    "summary": "Covers deliberate property damage by killing or maiming animal of the value of ten rupees.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "429",
+    "title": "Mischief by killing or maiming cattle, etc., of any value or any animal of the value of fifty rupees",
+    "summary": "Covers deliberate property damage by killing or maiming cattle, and similar conduct, of any value or any animal of the value of fifty rupees.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "430",
+    "title": "Mischief by injury to works of irrigation or by wrongfully diverting water",
+    "summary": "Covers deliberate property damage by injury to works of irrigation or by wrongfully diverting water.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "431",
+    "title": "Mischief by injury to public road, bridge, river or channel",
+    "summary": "Covers deliberate property damage by injury to public road, bridge, river or channel.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "432",
+    "title": "Mischief by causing inundation or obstruction to public drainage attended with damage",
+    "summary": "Covers deliberate property damage by causing inundation or obstruction to public drainage attended with damage.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "433",
+    "title": "Mischief by destroying, moving or rendering less useful a light-house or sea-mark",
+    "summary": "Covers deliberate property damage by destroying, moving or rendering less useful a light-house or sea-mark.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "434",
+    "title": "Mischief by destroying or moving, etc., a land-mark fixed by public authority",
+    "summary": "Covers deliberate property damage by destroying or moving, and similar conduct, a land-mark fixed by public authority.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "435",
+    "title": "Mischief by fire or explosive substance with intent to cause damage to amount of one hundred or (in case of agricultural produce) ten rupees",
+    "summary": "Covers deliberate property damage by fire or explosive substance with intent to cause damage to amount of one hundred or (in case of agricultural produce) ten rupees.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "436",
+    "title": "Mischief by fire or explosive substance with intent to destroy house, etc",
+    "summary": "Covers deliberate property damage by fire or explosive substance with intent to destroy house, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "437",
+    "title": "Mischief with intent to destroy or make unsafe a decked vessel or one of twenty tons burden",
+    "summary": "Covers deliberate property damage with intent to destroy or make unsafe a decked vessel or one of twenty tons burden.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "438",
+    "title": "Punishment for the mischief described in section 437 committed by fire or explosive substance",
+    "summary": "States the possible penalty for the deliberate property damage described in section 437 committed by fire or explosive substance.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "439",
+    "title": "Punishment for intentionally running vessel aground or ashore with intent to commit theft, etc",
+    "summary": "States the possible penalty for intentionally running vessel aground or ashore with intent to commit theft, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "440",
+    "title": "Mischief committed after preparation made for causing death or hurt",
+    "summary": "Covers deliberate property damage committed after preparation made for causing death or hurt.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "441",
+    "title": "Criminal trespass",
+    "summary": "Criminal trespass means unlawfully entering or staying on property with an intent listed in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "442",
+    "title": "House trespass",
+    "summary": "House-trespass means criminal trespass into a building, tent, or vessel used as a home or for property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "443",
+    "title": "Lurking house-trespass",
+    "summary": "Lurking house-trespass means entering or staying in such a place while hiding that entry from someone entitled to exclude the intruder.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "444",
+    "title": "Lurking house-trespass by night",
+    "summary": "Covers lurking unlawfully entering or staying in a building by night.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "445",
+    "title": "House breaking",
+    "summary": "House-breaking means entering or leaving a building by one of the specific methods listed in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "446",
+    "title": "House-breaking by night",
+    "summary": "Covers house-breaking at night. House-breaking means entering or leaving a building by one of the methods listed in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "447",
+    "title": "Punishment for criminal trespass",
+    "summary": "States the possible penalty for unlawfully entering or staying on property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "448",
+    "title": "Punishment for house-trespass",
+    "summary": "States the possible penalty for unlawfully entering or staying in a building.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "449",
+    "title": "House-trespass in order to commit offence punishable with death",
+    "summary": "Covers unlawfully entering or staying in a building in order to commit crime punishable with death.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "450",
+    "title": "House-trespass in order to commit offence punishable with imprisonment for life",
+    "summary": "Covers unlawfully entering or staying in a building in order to commit crime punishable with imprisonment for life.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "451",
+    "title": "House-trespass in order to commit offence punishable with imprisonment",
+    "summary": "Covers unlawfully entering or staying in a building in order to commit crime punishable with imprisonment.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "452",
+    "title": "House-trespass after preparation for hurt, assault or wrongful restraint",
+    "summary": "Covers unlawfully entering or staying in a building after preparation for hurt, assault or unlawfully stopping someone from moving freely.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "453",
+    "title": "Punishment for lurking house-trespass or house-breaking",
+    "summary": "States the possible penalty for lurking unlawfully entering or staying in a building or breaking into a building.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "454",
+    "title": "Lurking house-trespass or house-breaking in order to commit offence punishable with imprisonment",
+    "summary": "Covers lurking unlawfully entering or staying in a building or breaking into a building in order to commit crime punishable with imprisonment.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "455",
+    "title": "Lurking house-trespass or house-breaking after preparation for hurt, assault or wrongful restraint",
+    "summary": "Covers lurking unlawfully entering or staying in a building or breaking into a building after preparation for hurt, assault or unlawfully stopping someone from moving freely.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "456",
+    "title": "Punishment for lurking house-trespass or house-breaking by night",
+    "summary": "States the possible penalty for lurking unlawfully entering or staying in a building or breaking into a building by night.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "457",
+    "title": "Lurking house-trespass or house-breaking by night in order to commit offence punishable with imprisonment",
+    "summary": "Covers lurking unlawfully entering or staying in a building or breaking into a building by night in order to commit crime punishable with imprisonment.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "458",
+    "title": "Lurking house-trespass or house-breaking by night after preparation for hurt, assault, or wrongful restraint",
+    "summary": "Covers lurking unlawfully entering or staying in a building or breaking into a building by night after preparation for hurt, assault, or unlawfully stopping someone from moving freely.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "459",
+    "title": "Grievous hurt caused whilst committing lurking house trespass or house-breaking",
+    "summary": "Covers serious injury caused whilst committing lurking house trespass or breaking into a building.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "460",
+    "title": "All persons jointly concerned in lurking house-trespass or house-breaking by night punishable where death or grievous hurt caused by one of them",
+    "summary": "If people are jointly involved in a nighttime break-in and one causes death or serious injury, this section sets out the possible penalty for the group.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "461",
+    "title": "Dishonestly breaking open receptacle containing property",
+    "summary": "Covers dishonestly breaking open a container holding property.",
+    "status": "provision"
+  },
+  {
+    "chapter": 17,
+    "chapterTitle": "Of Offences against Property",
+    "sectionNumber": "462",
+    "title": "Punishment for same offence when committed by person entrusted with custody",
+    "summary": "States the possible penalty for same crime when committed by person entrusted with custody.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "463",
+    "title": "Forgery",
+    "summary": "Forgery means making a false document or electronic record with an intent listed in the Code.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "464",
+    "title": "Making a false document",
+    "summary": "Explains when a document or electronic record is treated as false.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "465",
+    "title": "Punishment for forgery",
+    "summary": "States the possible penalty for forgery.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "466",
+    "title": "Forgery of record of Court or of public register, etc",
+    "summary": "Covers forgery of record of Court or of public register, and similar conduct",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "467",
+    "title": "Forgery of valuable security, will, etc",
+    "summary": "Covers forging a valuable security (a document affecting legal rights), a will, or a similar document.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "468",
+    "title": "Forgery for purpose of cheating",
+    "summary": "Covers forging a document or electronic record to cheat someone.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "469",
+    "title": "Forgery for purpose of harming reputation",
+    "summary": "Covers forging a document or electronic record to harm someone's reputation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "470",
+    "title": "Forged document or electronic record",
+    "summary": "A forged document or electronic record is one made by forgery.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "471",
+    "title": "Using as genuine a forged document or electronic record",
+    "summary": "Covers passing off a forged document or electronic record as genuine, knowing it is forged.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "472",
+    "title": "Making or possessing counterfeit seal, etc., with intent to commit forgery punishable under section 467",
+    "summary": "Covers making or possessing counterfeit seal, and similar conduct, with intent to commit forgery punishable under section 467.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "473",
+    "title": "Making or possessing counterfeit seal, etc., with intent to commit forgery punishable otherwise",
+    "summary": "Covers making or possessing counterfeit seal, and similar conduct, with intent to commit forgery punishable otherwise.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "474",
+    "title": "Having possession of document described in section 466 or 467, knowing it to be forged and intending to use it as genuine",
+    "summary": "Covers having possession of document described in section 466 or 467, knowing it to be forged and intending to use it as genuine.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "475",
+    "title": "Counterfeiting device or mark used for authenticating documents described in section 467, or possessing counterfeit marked material",
+    "summary": "Covers counterfeiting device or mark used for authenticating documents described in section 467, or possessing counterfeit marked material.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "476",
+    "title": "Counterfeiting device or mark used for authenticating documents other than those described in section 467, or possessing counterfeit marked material",
+    "summary": "Covers counterfeiting device or mark used for authenticating documents other than those described in section 467, or possessing counterfeit marked material.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "477",
+    "title": "Fraudulent cancellation, destruction, etc., of will, authority to adopt, or valuable security",
+    "summary": "Covers fraudulently cancelling or destroying a will, adoption authority, or document affecting legal rights.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "477A",
+    "title": "Falsification of accounts",
+    "summary": "Covers deliberately falsifying accounts or records.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "478",
+    "title": "Trade Mark",
+    "summary": "This repealed section covered trade Mark. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "479",
+    "title": "Property mark",
+    "summary": "A property mark identifies goods or property as belonging to someone.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "480",
+    "title": "Using a false trade mark",
+    "summary": "This repealed section covered using a false trade mark. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "481",
+    "title": "Using a false property mark",
+    "summary": "Covers putting or using a false mark to make goods appear to belong to someone else.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "482",
+    "title": "Punishment for using a false property mark",
+    "summary": "States the possible penalty for using a false property mark.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "483",
+    "title": "Counterfeiting a property mark used by another",
+    "summary": "Covers making a fake property mark used by someone else.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "484",
+    "title": "Counterfeiting a mark used by a public servant",
+    "summary": "Covers making a fake mark used by a public official.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "485",
+    "title": "Making or possession of any instrument for counterfeiting a property mark",
+    "summary": "Covers making or possession of any instrument for counterfeiting a property mark.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "486",
+    "title": "Selling goods marked with a counterfeit property mark",
+    "summary": "Covers selling goods marked with a counterfeit property mark.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "487",
+    "title": "Making a false mark upon any receptacle containing goods",
+    "summary": "Covers putting a false mark on a container to mislead about the goods inside.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "488",
+    "title": "Punishment for making use of any such false mark",
+    "summary": "States the possible penalty for making use of any such false mark.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "489",
+    "title": "Tampering with property mark with intent to cause injury",
+    "summary": "Covers altering or removing a property mark to cause loss or injury.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "489A",
+    "title": "Counterfeiting currency-notes or bank-notes",
+    "summary": "Covers making counterfeit currency or bank notes.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "489B",
+    "title": "Using as genuine, forged or counterfeit currency-notes or bank-notes",
+    "summary": "Covers using as genuine, forged or counterfeit currency-notes or bank-notes.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "489C",
+    "title": "Possession of forged or counterfeit currency-notes or bank-notes",
+    "summary": "Covers possession of forged or counterfeit currency-notes or bank-notes.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "489D",
+    "title": "Making or possessing instruments or materials for forging or counterfeiting currency-notes or bank-notes",
+    "summary": "Covers making or possessing instruments or materials for forging or counterfeiting currency-notes or bank-notes.",
+    "status": "provision"
+  },
+  {
+    "chapter": 18,
+    "chapterTitle": "Of Offences Relating to Documents and to Property Marks",
+    "sectionNumber": "489E",
+    "title": "Making or using documents resembling currency-notes or bank-notes",
+    "summary": "Covers making or using documents resembling currency-notes or bank-notes.",
+    "status": "provision"
+  },
+  {
+    "chapter": 19,
+    "chapterTitle": "Of the Criminal Breach of Contracts of Service",
+    "sectionNumber": "490",
+    "title": "Breach of contract of service during voyage or journey",
+    "summary": "This repealed section covered breach of contract of service during voyage or journey. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 19,
+    "chapterTitle": "Of the Criminal Breach of Contracts of Service",
+    "sectionNumber": "491",
+    "title": "Breach of contract to attend on and supply wants of helpless person",
+    "summary": "Covers breach of contract to attend on and supply wants of helpless person.",
+    "status": "provision"
+  },
+  {
+    "chapter": 19,
+    "chapterTitle": "Of the Criminal Breach of Contracts of Service",
+    "sectionNumber": "492",
+    "title": "Breach of contract to serve at distant place to which servant is conveyed at master's expense",
+    "summary": "This repealed section covered breach of contract to serve at distant place to which servant is conveyed at master's expense. The source marks it repealed.",
+    "status": "repealed"
+  },
+  {
+    "chapter": 20,
+    "chapterTitle": "Of Offences relating to Marriage",
+    "sectionNumber": "493",
+    "title": "Cohabitation caused by a man deceitfully inducing a belief of lawful marriage",
+    "summary": "Covers cohabitation caused by a man deceitfully inducing a belief of lawful marriage.",
+    "status": "provision"
+  },
+  {
+    "chapter": 20,
+    "chapterTitle": "Of Offences relating to Marriage",
+    "sectionNumber": "494",
+    "title": "Marrying again during lifetime of husband or wife",
+    "summary": "Covers marrying again while a spouse is still alive, subject to the Code's exceptions.",
+    "status": "provision"
+  },
+  {
+    "chapter": 20,
+    "chapterTitle": "Of Offences relating to Marriage",
+    "sectionNumber": "495",
+    "title": "Same offence with concealment of former marriage from person with whom subsequent marriage is contracted",
+    "summary": "Covers same crime with concealment of former marriage from person with whom subsequent marriage is contracted.",
+    "status": "provision"
+  },
+  {
+    "chapter": 20,
+    "chapterTitle": "Of Offences relating to Marriage",
+    "sectionNumber": "496",
+    "title": "Marriage ceremony fraudulently gone through without lawful marriage",
+    "summary": "Covers marriage ceremony fraudulently gone through without lawful marriage.",
+    "status": "provision"
+  },
+  {
+    "chapter": 20,
+    "chapterTitle": "Of Offences relating to Marriage",
+    "sectionNumber": "497",
+    "title": "Adultery",
+    "summary": "The bare-act version describes adultery as an offence. The Supreme Court later struck this provision down.",
+    "status": "provision"
+  },
+  {
+    "chapter": 20,
+    "chapterTitle": "Of Offences relating to Marriage",
+    "sectionNumber": "498",
+    "title": "Enticing or taking away or detaining with criminal intent a married woman",
+    "summary": "Covers enticing or taking away or detaining with criminal intent a married woman.",
+    "status": "provision"
+  },
+  {
+    "chapter": 20,
+    "chapterTitle": "Of Cruelty by Husband or Relatives of Husband (Chapter XX-A)",
+    "sectionNumber": "498A",
+    "title": "Husband or relative of husband of a woman subjecting her to cruelty",
+    "summary": "Covers cruelty by a husband or one of his relatives toward a woman.",
+    "status": "provision"
+  },
+  {
+    "chapter": 21,
+    "chapterTitle": "Of Defamation",
+    "sectionNumber": "499",
+    "title": "Defamation",
+    "summary": "Defamation means making or publishing an imputation that harms someone's reputation, subject to the Code's exceptions.",
+    "status": "provision"
+  },
+  {
+    "chapter": 21,
+    "chapterTitle": "Of Defamation",
+    "sectionNumber": "500",
+    "title": "Punishment for defamation",
+    "summary": "States the possible penalty for defamation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 21,
+    "chapterTitle": "Of Defamation",
+    "sectionNumber": "501",
+    "title": "Printing or engraving matter known to be defamatory",
+    "summary": "Covers printing or engraving material known to harm someone's reputation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 21,
+    "chapterTitle": "Of Defamation",
+    "sectionNumber": "502",
+    "title": "Sale of printed or engraved substance containing defamatory matter",
+    "summary": "Covers sale of printed or engraved substance containing defamatory matter.",
+    "status": "provision"
+  },
+  {
+    "chapter": 22,
+    "chapterTitle": "Of Criminal Intimidation, Insult and Annoyance",
+    "sectionNumber": "503",
+    "title": "Criminal intimidation",
+    "summary": "Criminal intimidation means threatening injury to make someone feel alarm or force them to act or refrain from acting.",
+    "status": "provision"
+  },
+  {
+    "chapter": 22,
+    "chapterTitle": "Of Criminal Intimidation, Insult and Annoyance",
+    "sectionNumber": "504",
+    "title": "Intentional insult with intent to provoke breach of the peace",
+    "summary": "Covers intentional insult with intent to provoke breach of the peace.",
+    "status": "provision"
+  },
+  {
+    "chapter": 22,
+    "chapterTitle": "Of Criminal Intimidation, Insult and Annoyance",
+    "sectionNumber": "505",
+    "title": "Statements conducing to public mischief",
+    "summary": "Covers statements likely to cause public alarm, promote hostility between groups, or encourage offences against public order.",
+    "status": "provision"
+  },
+  {
+    "chapter": 22,
+    "chapterTitle": "Of Criminal Intimidation, Insult and Annoyance",
+    "sectionNumber": "506",
+    "title": "Punishment for criminal intimidation",
+    "summary": "States the possible penalty for criminal intimidation.",
+    "status": "provision"
+  },
+  {
+    "chapter": 22,
+    "chapterTitle": "Of Criminal Intimidation, Insult and Annoyance",
+    "sectionNumber": "507",
+    "title": "Criminal intimidation by an anonymous communication",
+    "summary": "Covers making a criminal threat through an anonymous message.",
+    "status": "provision"
+  },
+  {
+    "chapter": 22,
+    "chapterTitle": "Of Criminal Intimidation, Insult and Annoyance",
+    "sectionNumber": "508",
+    "title": "Act caused by inducing person to believe that he will be rendered an object of the Divine displeasure",
+    "summary": "Covers act caused by inducing person to believe that he will be rendered an object of the Divine displeasure.",
+    "status": "provision"
+  },
+  {
+    "chapter": 22,
+    "chapterTitle": "Of Criminal Intimidation, Insult and Annoyance",
+    "sectionNumber": "509",
+    "title": "Word, gesture or act intended to insult the modesty of a woman",
+    "summary": "Covers words, gestures, or acts intended to insult a woman's dignity or privacy.",
+    "status": "provision"
+  },
+  {
+    "chapter": 22,
+    "chapterTitle": "Of Criminal Intimidation, Insult and Annoyance",
+    "sectionNumber": "510",
+    "title": "Misconduct in public by a drunken person",
+    "summary": "Covers disorderly conduct in public by a person who is drunk.",
+    "status": "provision"
+  },
+  {
+    "chapter": 23,
+    "chapterTitle": "Of Attempts to Commit Offences",
+    "sectionNumber": "511",
+    "title": "Punishment for attempting to commit offences punishable with imprisonment for life or other imprisonment",
+    "summary": "Covers trying to commit a crime punishable by life imprisonment or another prison term, even if the attempt is incomplete.",
+    "status": "provision"
+  }
+]

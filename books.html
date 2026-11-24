@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the LexCitizen library of legal books and reading material." />
+    <title>Books | LexCitizen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="books.css" />
+    <script src="books.js" defer></script>
+    <link rel="stylesheet" href="modern-ui.css" />
+</head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="LexCitizen home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Lex<span class="brand-light">Citizen</span></span>
+        </a>
+        <nav class="main-nav" id="booksNavigation" aria-label="Primary navigation">
+          <a href="index.html#explore">Explore</a>
+          <a href="index.html#daily">Daily brief</a>
+          <a class="active" href="books.html" aria-current="page">Books</a>
+          <a href="index.html#communityUpdates">Verified updates</a>
+          <a class="mobile-nav-signin" href="signin.html">Sign in</a>
+        </nav>
+        <button class="icon-button menu-button" id="booksMenuButton" aria-label="Toggle navigation" aria-expanded="false" aria-controls="booksNavigation">☰</button>
+        <a class="outline-button header-button" href="signin.html">Sign in <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main class="books-page">
+        <section class="books-intro" aria-labelledby="books-title">
+          <p class="kicker"><span class="kicker-line"></span> The LexCitizen library</p>
+          <h1 id="books-title">Law books,<br /><em>all in one place.</em></h1>
+          <p>Browse legal books and learning resources. Open a PDF to read it online, or download a copy.</p>
+        </section>
+
+        <section class="books-shelf" aria-labelledby="books-shelf-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-eyebrow">Reading shelf</p>
+              <h2 id="books-shelf-title">Books and resources</h2>
+            </div>
+            <span class="books-count">4 PDFs available</span>
+          </div>
+
+          <div class="books-grid">
+            <article class="book-card">
+              <span class="book-number" aria-hidden="true">01</span>
+              <div>
+                <p class="section-eyebrow">Indian law · Historic code</p>
+                <h3>Indian Penal Code</h3>
+                <p class="book-author">Act No. 45 of 1860</p>
+              </div>
+              <p class="book-placeholder">Open the supplied PDF in a new tab or download it to your device.</p>
+              <div class="book-actions">
+                <a class="book-pdf-button" href="books/indian-penal-code.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Indian Penal Code PDF in a new tab">Open PDF <span aria-hidden="true">↗</span></a>
+                <a class="book-download-link" href="books/indian-penal-code.pdf" download aria-label="Download Indian Penal Code PDF">Download PDF</a>
+              </div>
+              <div class="book-resource">
+                <p class="section-eyebrow">Related PDF</p>
+                <h4>Transition from IPC to Bharatiya Nyaya Sanhita: A Critical Analysis</h4>
+                <div class="book-actions">
+                  <a class="book-pdf-button" href="books/TransitionfromIPCtoBNSConcise.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Transition from IPC to Bharatiya Nyaya Sanhita PDF in a new tab">Open PDF <span aria-hidden="true">↗</span></a>
+                  <a class="book-download-link" href="books/TransitionfromIPCtoBNSConcise.pdf" download aria-label="Download Transition from IPC to Bharatiya Nyaya Sanhita PDF">Download PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <span class="book-number" aria-hidden="true">02</span>
+              <div>
+                <p class="section-eyebrow">Criminal procedure · 2023</p>
+                <h3>Bharatiya_Nagarik_Suraksha_Sanhita,_2023.pdf</h3>
+                <p class="book-author">Act consolidating and amending criminal procedure law</p>
+              </div>
+              <p class="book-placeholder">Open the supplied PDF in a new tab or download it to your device.</p>
+              <div class="book-actions">
+                <a class="book-pdf-button" href="books/Bharatiya_Nagarik_Suraksha_Sanhita,_2023.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Bharatiya Nagarik Suraksha Sanhita 2023 PDF in a new tab">Open PDF <span aria-hidden="true">↗</span></a>
+                <a class="book-download-link" href="books/Bharatiya_Nagarik_Suraksha_Sanhita,_2023.pdf" download aria-label="Download Bharatiya Nagarik Suraksha Sanhita 2023 PDF">Download PDF</a>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <span class="book-number" aria-hidden="true">03</span>
+              <div>
+                <p class="section-eyebrow">Criminal law · Comparative study</p>
+                <h3>Interplay between the Indian Penal Code and the Bharatiya Nyaya Sanhita</h3>
+                <p class="book-author">Special focus on newly created and deleted offences</p>
+              </div>
+              <p class="book-placeholder">Open the supplied PDF in a new tab or download it to your device.</p>
+              <div class="book-actions">
+                <a class="book-pdf-button" href="books/ipc-and-bns.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Interplay between IPC and BNS PDF in a new tab">Open PDF <span aria-hidden="true">↗</span></a>
+                <a class="book-download-link" href="books/ipc-and-bns.pdf" download aria-label="Download Interplay between IPC and BNS PDF">Download PDF</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer"><span>LexCitizen</span><span>Learn the law. Live your rights.</span><span>India · Open knowledge project</span></footer>
+    </div>
+  </body>
+</html>
