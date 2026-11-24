@@ -1,4 +1,5 @@
 module.exports = {
+  AIStudyAid: require('./ai-study-aid.model'),
   EditorialSubmission: require('./editorial-submission.model'),
   LearningAttempt: require('./learning-attempt.model'),
   Material: require('./material.model'),

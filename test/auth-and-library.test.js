@@ -90,6 +90,8 @@ before(async () => {
       SESSION_SECRET: 'test-session-secret-is-long-enough-to-run-safely',
       ADMIN_EMAIL: adminEmail,
       ADMIN_PASSWORD: adminPassword,
+      OPENAI_API_KEY: '',
+      OPENAI_MODEL: 'test-model',
       NODE_ENV: 'test',
     },
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -148,6 +150,66 @@ test('existing pending accounts are unlocked and obsolete approval flags are rem
   });
   assert.equal(login.status, 200);
   assert.equal((await client('/api/me/library')).status, 200);
+});
+
+test('AI study aids require sign-in, report missing configuration, and remain private per user', async () => {
+  const guest = makeClient();
+  assert.equal((await guest('/api/me/study-aids/article-21-right-to-life')).status, 401);
+
+  const owner = makeClient();
+  const login = await owner('/api/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      identity: 'legacy-pending@example.test',
+      password: 'LegacyCitizen123!',
+      mode: 'user',
+    }),
+  });
+  assert.equal(login.status, 200);
+
+  const missingKey = await owner('/api/me/study-aids/article-21-right-to-life', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ type: 'summary' }),
+  });
+  assert.equal(missingKey.status, 503);
+  assert.match((await missingKey.json()).error, /OPENAI_API_KEY/);
+
+  const account = (await (await owner('/api/auth/me')).json()).user;
+  assert.equal(account.id, 'legacy-pending-account');
+  const mongoClient = new MongoClient(mongoUri);
+  await mongoClient.connect();
+  const database = mongoClient.db(testDatabaseName);
+  const admin = await database.collection('users').findOne({ role: 'admin' });
+  const storedAid = (userId, type, content) => ({
+    _id: crypto.randomUUID(),
+    user_id: userId,
+    material_slug: 'article-21-right-to-life',
+    type,
+    content,
+    model: 'test-model',
+    material_fingerprint: 'test-fingerprint',
+    generated_at: new Date(),
+    created_at: new Date(),
+    updated_at: new Date(),
+  });
+  await database.collection('ai_study_aids').insertMany([
+    storedAid(account.id, 'summary', { summary: 'Private summary.', key_points: ['Point one'] }),
+    storedAid(admin._id, 'flashcards', { cards: [{ front: 'Hidden?', back: 'Not for this user.' }] }),
+  ]);
+  assert.ok(await database.collection('ai_study_aids').findOne({
+    user_id: account.id,
+    material_slug: 'article-21-right-to-life',
+    type: 'summary',
+  }));
+  await mongoClient.close();
+
+  const response = await owner('/api/me/study-aids/article-21-right-to-life');
+  assert.equal(response.status, 200);
+  const { aids } = await response.json();
+  assert.deepEqual(Object.keys(aids), ['summary']);
+  assert.equal(aids.summary.content.summary, 'Private summary.');
 });
 
 test('users register with hashed passwords and persist private reading data', async () => {

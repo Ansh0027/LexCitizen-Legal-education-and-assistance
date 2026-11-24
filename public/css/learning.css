@@ -969,6 +969,122 @@ input:focus-visible {
   to { transform: scale(1) rotate(0); opacity: 1; }
 }
 
+.reader-ai-section {
+  margin: 42px 0;
+  padding: clamp(20px, 4vw, 34px);
+  border: 1px solid #d5e5dc;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f8fbf8, #fff 70%);
+}
+
+.reader-ai-section .reader-section-heading {
+  margin-bottom: 18px;
+}
+
+.reader-ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.reader-ai-actions button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.reader-ai-disclaimer,
+.reader-ai-signin,
+.reader-ai-message {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.reader-ai-signin a {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.reader-ai-message.error {
+  color: #873d2f;
+}
+
+.reader-ai-message.success {
+  color: var(--green);
+}
+
+.reader-ai-results {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.reader-ai-aid {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  animation: learning-card-enter .35s ease both;
+}
+
+.reader-ai-aid h3,
+.reader-ai-aid h4 {
+  margin: 0 0 9px;
+}
+
+.reader-ai-aid p,
+.reader-ai-aid li {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.reader-ai-aid ul {
+  margin: 8px 0 0;
+  padding-left: 22px;
+}
+
+.reader-ai-flashcard {
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfcfb;
+}
+
+.reader-ai-flashcard + .reader-ai-flashcard {
+  margin-top: 8px;
+}
+
+.reader-ai-flashcard summary {
+  color: var(--green);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reader-ai-flashcard p {
+  margin: 10px 0 0;
+}
+
+.reader-ai-aid-meta {
+  margin: 12px 0 0 !important;
+  color: var(--muted) !important;
+  font-size: 11px !important;
+}
+
+.reader-ai-regenerate {
+  margin-top: 12px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--green);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 @media (max-width: 760px) {
   .reader-hero {
     grid-template-columns: minmax(0, 1fr) 180px;
@@ -1065,6 +1181,10 @@ input:focus-visible {
 
   .reader-check-intro {
     gap: 10px;
+  }
+
+  .reader-ai-actions {
+    display: grid;
   }
 }
 

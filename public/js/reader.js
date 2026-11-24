@@ -7,6 +7,17 @@ if (readerPage) {
   const progressLabel = document.querySelector('#readerProgressLabel');
   const progressTrack = document.querySelector('.reader-progress-track[role="progressbar"]');
   const progressFill = document.querySelector('#readerProgressFill');
+  const studyAidTypes = ['summary', 'flashcards', 'notes'];
+  const studyAidLabels = {
+    summary: 'summary',
+    flashcards: 'flashcards',
+    notes: 'short notes',
+  };
+  const studyAidResults = document.querySelector('#readerAiResults');
+  const studyAidMessage = document.querySelector('#readerAiMessage');
+  const studyAidSignin = document.querySelector('#readerAiSignin');
+  const studyAidSigninLink = document.querySelector('#readerAiSigninLink');
+  const savedStudyAids = {};
   let saved = false;
   let signedIn = false;
   let progressTimer;
@@ -91,6 +102,122 @@ if (readerPage) {
     message.textContent = text;
     message.className = `reader-message ${type}`;
     message.hidden = false;
+  }
+
+  function showStudyAidMessage(text, type = 'error') {
+    studyAidMessage.textContent = text;
+    studyAidMessage.className = `reader-ai-message ${type}`;
+    studyAidMessage.hidden = false;
+  }
+
+  function makeTextElement(tag, className, text) {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    element.textContent = text;
+    return element;
+  }
+
+  function renderStudyAid(type, aid) {
+    const card = document.createElement('article');
+    card.className = 'reader-ai-aid';
+    const content = aid.content;
+
+    if (type === 'summary') {
+      card.append(makeTextElement('h3', '', 'AI summary'));
+      card.append(makeTextElement('p', '', content.summary));
+      card.append(makeTextElement('h4', '', 'Key points'));
+      const points = document.createElement('ul');
+      content.key_points.forEach((point) => points.append(makeTextElement('li', '', point)));
+      card.append(points);
+    } else if (type === 'flashcards') {
+      card.append(makeTextElement('h3', '', 'Revision flashcards'));
+      content.cards.forEach((flashcard) => {
+        const details = document.createElement('details');
+        details.className = 'reader-ai-flashcard';
+        const question = makeTextElement('summary', '', flashcard.front);
+        const answer = makeTextElement('p', '', flashcard.back);
+        details.append(question, answer);
+        card.append(details);
+      });
+    } else {
+      card.append(makeTextElement('h3', '', content.title));
+      content.sections.forEach((section) => {
+        card.append(makeTextElement('h4', '', section.heading));
+        const bullets = document.createElement('ul');
+        section.bullets.forEach((bullet) => bullets.append(makeTextElement('li', '', bullet)));
+        card.append(bullets);
+      });
+    }
+
+    const generatedAt = aid.generated_at ? new Date(aid.generated_at).toLocaleString() : '';
+    const details = [aid.model, generatedAt].filter(Boolean).join(' · ');
+    if (details) card.append(makeTextElement('p', 'reader-ai-aid-meta', `Generated with ${details}`));
+    if (aid.stale) {
+      card.append(makeTextElement('p', 'reader-ai-aid-meta', 'The source reading has changed. Regenerate this aid to update it.'));
+    }
+
+    const regenerate = makeTextElement('button', 'reader-ai-regenerate', `Regenerate ${studyAidLabels[type]}`);
+    regenerate.type = 'button';
+    regenerate.addEventListener('click', () => generateStudyAid(type, true));
+    card.append(regenerate);
+    return card;
+  }
+
+  function renderSavedStudyAids() {
+    studyAidResults.replaceChildren(...studyAidTypes
+      .filter((type) => savedStudyAids[type])
+      .map((type) => renderStudyAid(type, savedStudyAids[type])));
+    document.querySelectorAll('[data-ai-study-type]').forEach((button) => {
+      const type = button.dataset.aiStudyType;
+      const action = savedStudyAids[type] ? 'Regenerate' : 'Make';
+      button.textContent = `${action} ${studyAidLabels[type]}`;
+    });
+  }
+
+  async function loadSavedStudyAids() {
+    if (!signedIn) {
+      studyAidSigninLink.href = signInUrl();
+      studyAidSignin.hidden = false;
+      return;
+    }
+    studyAidSignin.hidden = true;
+    try {
+      const { aids } = await apiRequest(`/api/me/study-aids/${encodeURIComponent(slug)}`);
+      Object.assign(savedStudyAids, aids);
+      renderSavedStudyAids();
+    } catch (error) {
+      showStudyAidMessage(error.message);
+    }
+  }
+
+  async function generateStudyAid(type, force = false) {
+    if (!signedIn) {
+      window.location.href = signInUrl();
+      return;
+    }
+    const button = document.querySelector(`[data-ai-study-type="${type}"]`);
+    const originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = `Generating ${studyAidLabels[type]}...`;
+    studyAidMessage.hidden = true;
+    try {
+      const result = await apiRequest(`/api/me/study-aids/${encodeURIComponent(slug)}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type, force }),
+      });
+      savedStudyAids[type] = result.aid;
+      renderSavedStudyAids();
+      showStudyAidMessage(
+        result.cached ? 'Your saved study aid is ready.' : 'Generated and saved privately to your account.',
+        'success',
+      );
+    } catch (error) {
+      showStudyAidMessage(error.message);
+      button.textContent = originalText;
+    } finally {
+      button.disabled = false;
+    }
   }
 
   function currentProgress() {
@@ -354,6 +481,7 @@ if (readerPage) {
       } catch (error) {
         if (error.message !== 'Not signed in.' && error.message !== 'Please sign in to continue.') throw error;
       }
+      await loadSavedStudyAids();
       document.title = `${material.title} | LexCitizen`;
       document.querySelector('#readerCategory').textContent = material.category;
       document.querySelector('#readerTitle').textContent = material.title;
@@ -440,6 +568,13 @@ if (readerPage) {
   document.querySelector('#readerTextLarger').addEventListener('click', () => {
     textScale = Math.min(1.3, Number((textScale + 0.05).toFixed(2)));
     readerPage.style.setProperty('--reader-text-scale', String(textScale));
+  });
+
+  document.querySelectorAll('[data-ai-study-type]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const type = button.dataset.aiStudyType;
+      generateStudyAid(type, Boolean(savedStudyAids[type] && !savedStudyAids[type].stale));
+    });
   });
 
   document.querySelector('#readerLogout').addEventListener('click', async () => {

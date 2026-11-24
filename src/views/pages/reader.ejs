@@ -57,6 +57,7 @@
         <nav class="reader-jump-nav" aria-label="On this page">
           <a href="#readerBody">The explainer</a>
           <a href="#readerKeyIdeas">Key ideas</a>
+          <a href="#readerAiStudyAids">AI study tools</a>
           <a href="#readerCheck">Practice &amp; test</a>
         </nav>
 
@@ -91,6 +92,23 @@
             <p>Open a card to pause on one useful idea before you move on.</p>
           </div>
           <div class="reader-idea-grid" id="readerIdeaGrid"></div>
+        </section>
+
+        <section class="reader-ai-section reveal-on-scroll" id="readerAiStudyAids" aria-labelledby="readerAiStudyAidsHeading">
+          <div class="reader-section-heading">
+            <p class="section-eyebrow">Personal revision tools</p>
+            <h2 id="readerAiStudyAidsHeading">Study with AI</h2>
+            <p>Create a source-based summary, interactive flashcards, or short revision notes. Your generated materials are saved privately to your account.</p>
+          </div>
+          <div class="reader-ai-actions" role="group" aria-label="Choose an AI study tool">
+            <button class="outline-button" type="button" data-ai-study-type="summary">Make a summary</button>
+            <button class="outline-button" type="button" data-ai-study-type="flashcards">Create flashcards</button>
+            <button class="outline-button" type="button" data-ai-study-type="notes">Make short notes</button>
+          </div>
+          <p class="reader-ai-disclaimer">AI-generated learning aids can be inaccurate and are not legal advice. Check important points against the official source. The selected reading text is sent to OpenAI to generate these aids.</p>
+          <p class="reader-ai-signin" id="readerAiSignin" hidden>Sign in to generate and privately save study materials. <a id="readerAiSigninLink">Sign in</a></p>
+          <p class="reader-ai-message" id="readerAiMessage" role="status" aria-live="polite" hidden></p>
+          <div class="reader-ai-results" id="readerAiResults" aria-live="polite"></div>
         </section>
 
         <section class="reader-check-section reveal-on-scroll" id="readerCheck" aria-labelledby="readerCheckHeading" hidden>

@@ -6,10 +6,15 @@ const { rateLimit } = require('express-rate-limit');
 const multer = require('multer');
 const models = require('../models');
 const { assessmentTypes, getPublicAssessments, gradeAssessment } = require('../modules/learning-assessments');
+const {
+  fingerprintMaterial,
+  generateStudyAid,
+  StudyAidError,
+} = require('../modules/openai-study-aids');
 
 const authenticationLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  limit: 10,
+  limit: process.env.NODE_ENV === 'test' ? 100 : 10,
   standardHeaders: 'draft-8',
   legacyHeaders: false,
   message: { error: 'Too many account attempts. Please wait a few minutes and try again.' },
@@ -29,6 +34,14 @@ const learningAttemptLimiter = rateLimit({
   standardHeaders: 'draft-8',
   legacyHeaders: false,
   message: { error: 'You have submitted several learning attempts recently. Please try again later.' },
+});
+
+const aiStudyAidLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  limit: 12,
+  standardHeaders: 'draft-8',
+  legacyHeaders: false,
+  message: { error: 'You have reached the AI study-tool limit. Please try again later.' },
 });
 
 const evidenceUpload = multer({
@@ -207,6 +220,113 @@ module.exports = function registerApiRoutes(app, { evidenceDirectory, production
       slug: material_slug, position_percent, updated_at,
     }));
     return response.json({ saved, progress });
+  });
+
+  app.get('/api/me/study-aids/:slug', authenticated, async (request, response) => {
+    const material = await models.Material.findOne({ slug: request.params.slug })
+      .select('slug title category excerpt source body').lean();
+    if (!material) return response.status(404).json({ error: 'This reading is not available.' });
+
+    const fingerprint = fingerprintMaterial(material);
+    const records = await models.AIStudyAid.find({
+      user_id: request.account.id,
+      material_slug: material.slug,
+    }).select('type content model generated_at updated_at material_fingerprint').lean();
+    const aids = Object.fromEntries(records.map((record) => [record.type, {
+      type: record.type,
+      content: record.content,
+      model: record.model,
+      generated_at: record.generated_at,
+      updated_at: record.updated_at,
+      stale: record.material_fingerprint !== fingerprint,
+    }]));
+    return response.json({ aids });
+  });
+
+  app.post('/api/me/study-aids/:slug', authenticated, aiStudyAidLimiter, async (request, response) => {
+    const payload = request.body && typeof request.body === 'object' && !Array.isArray(request.body)
+      ? request.body
+      : {};
+    if (!['summary', 'flashcards', 'notes'].includes(payload.type)) {
+      return response.status(400).json({ error: 'Choose summary, flashcards, or short notes.' });
+    }
+    if (payload.force !== undefined && typeof payload.force !== 'boolean') {
+      return response.status(400).json({ error: 'The regenerate option must be true or false.' });
+    }
+
+    const material = await models.Material.findOne({ slug: request.params.slug })
+      .select('slug title category excerpt source body').lean();
+    if (!material) return response.status(404).json({ error: 'This reading is not available.' });
+    const fingerprint = fingerprintMaterial(material);
+    const existing = await models.AIStudyAid.findOne({
+      user_id: request.account.id,
+      material_slug: material.slug,
+      type: payload.type,
+    }).lean();
+    if (existing && existing.material_fingerprint === fingerprint && payload.force !== true) {
+      return response.json({
+        aid: {
+          type: existing.type,
+          content: existing.content,
+          model: existing.model,
+          generated_at: existing.generated_at,
+          updated_at: existing.updated_at,
+          stale: false,
+        },
+        cached: true,
+      });
+    }
+
+    let generated;
+    try {
+      generated = await generateStudyAid(payload.type, material);
+    } catch (error) {
+      if (error instanceof StudyAidError) {
+        return response.status(error.status).json({ error: error.message });
+      }
+      throw error;
+    }
+
+    let aid;
+    try {
+      aid = await models.AIStudyAid.findOneAndUpdate(
+        { user_id: request.account.id, material_slug: material.slug, type: payload.type },
+        {
+          $set: {
+            content: generated.content,
+            model: generated.model,
+            material_fingerprint: fingerprint,
+            generated_at: new Date(),
+          },
+          $setOnInsert: {
+            user_id: request.account.id,
+            material_slug: material.slug,
+            type: payload.type,
+          },
+        },
+        { new: true, upsert: true, runValidators: true },
+      ).lean();
+    } catch (error) {
+      if (error.code !== 11000) throw error;
+      aid = await models.AIStudyAid.findOne({
+        user_id: request.account.id,
+        material_slug: material.slug,
+        type: payload.type,
+      }).lean();
+      if (!aid) throw error;
+    }
+
+    return response.json({
+      aid: {
+        type: aid.type,
+        content: aid.content,
+        model: aid.model,
+        generated_at: aid.generated_at,
+        updated_at: aid.updated_at,
+        stale: false,
+      },
+      cached: false,
+    });
   });
 
   app.get('/api/me/assessments', authenticated, async (request, response) => {
